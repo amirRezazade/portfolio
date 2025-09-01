@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="font-[iran-sans] text-white">
+    <div id="scene" class="fixed top-0 left-0 -z-10">
+      <div id="star1"></div>
+      <div id="star2"></div>
+      <div id="star3"></div>
+      <div id="star4"></div>
+      <div id="star5"></div>
+      <div id="star6"></div>
+      <div id="star7"></div>
+      <div id="star8"></div>
+      <div id="star9"></div>
+      <div id="star10"></div>
+      <div id="star11"></div>
+    </div>
+
+    <nav
+      class="flex justify-between sticky z-99 top-0 items-center px-5 lg:px-10 container mx-auto backdrop-blur-lg"
+    >
+      <button id="switch-theme" class="cursor-pointer">
+        <span class="hidden"
+          ><svg
+            width="22px"
+            height="22px"
+            viewBox="0 0 36 36"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            class="iconify iconify--twemoji"
+            preserveAspectRatio="xMidYMid meet"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill="#ffe042"
+                d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"
+              ></path>
+              <circle fill="#ffe042" cx="18" cy="18" r="10"></circle>
+            </g></svg
+        ></span>
+        <span
+          ><svg
+            width="22px"
+            height="22px"
+            viewBox="-22.5 0 301 301"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            preserveAspectRatio="xMidYMid"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <defs>
+                <linearGradient
+                  x1="2.17771739%"
+                  y1="34.7938955%"
+                  x2="92.7221942%"
+                  y2="91.3419405%"
+                  id="linearGradient-1"
+                >
+                  <stop stop-color="#41A7EF" offset="0%"></stop>
+                  <stop stop-color="#813DDE" offset="54.2186236%"></stop>
+                  <stop stop-color="#8F2EE2" offset="74.4988788%"></stop>
+                  <stop stop-color="#A11CE6" offset="100%"></stop>
+                </linearGradient>
+              </defs>
+              <g>
+                <path
+                  d="M124.183681,101.699 C124.183681,66.515 136.256681,34.152 156.486681,8.525 C159.197681,5.092 156.787681,0.069 152.412681,0.012 C151.775681,0.004 151.136681,0 150.497681,0 C67.6206813,0 0.390681343,66.99 0.00168134279,149.775 C-0.386318657,232.369 66.4286813,300.195 149.019681,300.988 C189.884681,301.381 227.036681,285.484 254.376681,259.395 C257.519681,256.396 255.841681,251.082 251.548681,250.42 C179.413681,239.291 124.183681,176.949 124.183681,101.699"
+                  fill="url(#linearGradient-1)"
+                ></path>
+              </g>
+            </g></svg
+        ></span>
+      </button>
+
+      <ul
+        id="nav-menu"
+        class="w-full flex justify-between pr-5 xs:px-5 grow xs:justify-center py-5 xs:py-0 text-[10px] xs:text-xs sm:text-sm xs:gap-5 md:gap-8 xl:gap-10"
+      >
+        <li class="nav-item-active">
+          <a
+            href="#"
+            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            >خانه</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            >درباره من</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            >مهارت ها
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            >پروژه ها</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            >تماس با من</a
+          >
+        </li>
+      </ul>
+      <a
+        href="index.html"
+        class="hidden xs:inline-block w-15 h-15 md:w-30 md:h-20 md:order-3"
+      >
+        <img class="object-cover" src="happy-developer-red.gif" alt="" />
+      </a>
+    </nav>
+    <header id="home" class="h-[90vh] relative">
+      <div class="text-center absolute top-1/3 w-full">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">
+          سلام من <span class="font-extrabold text-violet-500">امیر </span>هستم
+        </h1>
+        <p id="app" class="mt-7 leading-8 sm:text-lg"></p>
+        <div class="flex justify-center gap-4">
+          <a href="#" class="btn-style mt-6 inline-block">
+            <span>نمونه کار های من</span>
+          </a>
+          <a href="maxresdefault.jpg" download class="btn-style mt-6">
+            <span class="inline-flex items-center gap-2">
+              دانلود رزومه
+              <svg
+                width="17px"
+                height="17px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffffff"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z"
+                    fill="#ffffff"
+                  ></path>
+                  <path
+                    d="M3.75 15C3.75 14.5858 3.41422 14.25 3 14.25C2.58579 14.25 2.25 14.5858 2.25 15V15.0549C2.24998 16.4225 2.24996 17.5248 2.36652 18.3918C2.48754 19.2919 2.74643 20.0497 3.34835 20.6516C3.95027 21.2536 4.70814 21.5125 5.60825 21.6335C6.47522 21.75 7.57754 21.75 8.94513 21.75H15.0549C16.4225 21.75 17.5248 21.75 18.3918 21.6335C19.2919 21.5125 20.0497 21.2536 20.6517 20.6516C21.2536 20.0497 21.5125 19.2919 21.6335 18.3918C21.75 17.5248 21.75 16.4225 21.75 15.0549V15C21.75 14.5858 21.4142 14.25 21 14.25C20.5858 14.25 20.25 14.5858 20.25 15C20.25 16.4354 20.2484 17.4365 20.1469 18.1919C20.0482 18.9257 19.8678 19.3142 19.591 19.591C19.3142 19.8678 18.9257 20.0482 18.1919 20.1469C17.4365 20.2484 16.4354 20.25 15 20.25H9C7.56459 20.25 6.56347 20.2484 5.80812 20.1469C5.07435 20.0482 4.68577 19.8678 4.40901 19.591C4.13225 19.3142 3.9518 18.9257 3.85315 18.1919C3.75159 17.4365 3.75 16.4354 3.75 15Z"
+                    fill="#ffffff"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-center w-full absolute bottom-0">
+        <span class="flex flex-col items-center gap-2 animate-bounce text-sm">
+          scroll
+          <svg
+            fill="#8e51ff"
+            width="22px"
+            height="22px"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M5.293,16.707a1,1,0,0,1,1.414-1.414L11,19.586V2a1,1,0,0,1,2,0V19.586l4.293-4.293a1,1,0,0,1,1.414,1.414l-6,6a1,1,0,0,1-1.414,0Z"
+              ></path>
+            </g>
+          </svg>
+        </span>
+      </div>
+    </header>
+
+    <!-- start about me section  -->
+    <section id="about" class="min-h-screen centered text-center">
+      <div class="container mx-auto max-w-5xl">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">
+          درباره <span class="text-violet-500">من</span>
+        </h1>
+        <div
+          class="flex flex-col-reverse md:flex-row-reverse md:justify-center md:items-center gap-4 mt-5 sm:mt-10 md:mt-20"
+        >
+          <div class="px-8 md:px-4 md:w-1/2 flex flex-col gap-6">
+            <div class="gradient-border p-6 card-hover bg-slate-800">
+              <div class="flex items-start gap-4">
+                <div class="p-3 rounded-full bg-primary/10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-code h-6 w-6 text-primary"
+                    aria-hidden="true"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <h4 class="font-semibold text-lg">Web Development</h4>
+                  <p class="text-muted-foreground">
+                    Creating responsive websites and web applications with
+                    modern frameworks.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="gradient-border p-6 card-hover bg-slate-800">
+              <div class="flex items-start gap-4">
+                <div class="p-3 rounded-full bg-primary/10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-code h-6 w-6 text-primary"
+                    aria-hidden="true"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <h4 class="font-semibold text-lg">Web Development</h4>
+                  <p class="text-muted-foreground">
+                    Creating responsive websites and web applications with
+                    modern frameworks.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="gradient-border p-6 card-hover bg-slate-800">
+              <div class="flex items-start gap-4">
+                <div class="p-3 rounded-full bg-primary/10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-code h-6 w-6 text-primary"
+                    aria-hidden="true"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <h4 class="font-semibold text-lg">Web Development</h4>
+                  <p class="text-muted-foreground">
+                    Creating responsive websites and web applications with
+                    modern frameworks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-8 md:px-4 text-center md:w-1/2">
+            <h1 class="text-xl sm:text-2xl">
+              توسعه دهنده‌ وب - برنامه نویس فرانت اند
+            </h1>
+            <p class="my-4 text-sm sm:text-base leading-6">
+              سلام! من امیر رضازاده هستم، توسعه‌دهنده‌ی فرانت‌اند و علاقه‌مند به
+              دنیای طراحی و برنامه‌نویسی وب. حدود دو ساله که مسیر یادگیری HTML،
+              CSS، JavaScript و React رو شروع کردم و هر روز با انگیزه بیشتری در
+              حال تمرین و ساخت پروژه‌های مختلف هستم.
+            </p>
+            <p class="my-4 text-sm sm:text-base leading-6">
+              من به تجربه کاربری، طراحی مینیمال و نوشتن کد تمیز علاقه‌مندم. در
+              کنار یادگیری تکنولوژی‌ها، به درک بهتر اصول طراحی و رفتار کاربر هم
+              توجه می‌کنم. هدفم اینه که به عنوان یک توسعه‌دهنده‌ی حرفه‌ای وارد
+              دنیای کار بشم، در تیم‌های خلاق همکاری کنم و پروژه‌هایی بسازم که هم
+              زیبا باشن و هم کاربردی.
+            </p>
+            <div
+              class="flex flex-col gap-3 px-5 my-6 text-sm sm:text-base sm:flex-row sm:justify-center"
+            >
+              <a href="#" class="btn-style inline-block">
+                <span>تماس با من</span>
+              </a>
+              <a href="maxresdefault.jpg" download class="btn-style">
+                <span class="inline-flex items-center gap-2">
+                  دانلود رزومه
+                  <svg
+                    width="17px"
+                    height="17px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    stroke="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z"
+                        fill="#ffffff"
+                      ></path>
+                      <path
+                        d="M3.75 15C3.75 14.5858 3.41422 14.25 3 14.25C2.58579 14.25 2.25 14.5858 2.25 15V15.0549C2.24998 16.4225 2.24996 17.5248 2.36652 18.3918C2.48754 19.2919 2.74643 20.0497 3.34835 20.6516C3.95027 21.2536 4.70814 21.5125 5.60825 21.6335C6.47522 21.75 7.57754 21.75 8.94513 21.75H15.0549C16.4225 21.75 17.5248 21.75 18.3918 21.6335C19.2919 21.5125 20.0497 21.2536 20.6517 20.6516C21.2536 20.0497 21.5125 19.2919 21.6335 18.3918C21.75 17.5248 21.75 16.4225 21.75 15.0549V15C21.75 14.5858 21.4142 14.25 21 14.25C20.5858 14.25 20.25 14.5858 20.25 15C20.25 16.4354 20.2484 17.4365 20.1469 18.1919C20.0482 18.9257 19.8678 19.3142 19.591 19.591C19.3142 19.8678 18.9257 20.0482 18.1919 20.1469C17.4365 20.2484 16.4354 20.25 15 20.25H9C7.56459 20.25 6.56347 20.2484 5.80812 20.1469C5.07435 20.0482 4.68577 19.8678 4.40901 19.591C4.13225 19.3142 3.9518 18.9257 3.85315 18.1919C3.75159 17.4365 3.75 16.4354 3.75 15Z"
+                        fill="#ffffff"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- finish about me section  -->
+    <!-- start my skills section  -->
+    <section id="skills" class="mt-10 sm:mt-15 md:my-20">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center ">مهارت های <span class="text-violet-500">من</span></h1>
+      <div class="flex flex-wrap justify-center gap-6 container mx-auto mt-5 sm:mt-10 md:mt-20">
+
+        <div
+          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+        >
+          <div class="card">
+            <span class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#E65100"
+                  d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"
+                ></path>
+                <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                <path
+                  fill="#FFF"
+                  d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"
+                ></path>
+                <path
+                  fill="#EEE"
+                  d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"
+                ></path>
+              </svg>
+            </span>
+            <span class="text-sm text-white"> HTML </span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+        <div
+          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+        >
+          <div class="card">
+            <span class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <linearGradient
+                  id="TQDriqswrKwPOniLrPT12a_7gdY5qNXaKC0_gr1"
+                  x1="16.33"
+                  x2="32.293"
+                  y1="-2.748"
+                  y2="41.109"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#2aa4f4"></stop>
+                  <stop offset="1" stop-color="#007ad9"></stop>
+                </linearGradient>
+                <path
+                  fill="url(#TQDriqswrKwPOniLrPT12a_7gdY5qNXaKC0_gr1)"
+                  d="M7.192,7.176l2.627,29.77c0.109,1.237,0.97,2.28,2.164,2.621l10.643,3.041	c0.898,0.257,1.849,0.257,2.747,0l10.643-3.041c1.194-0.341,2.055-1.383,2.164-2.621l2.627-29.77C40.911,6.006,39.99,5,38.816,5	H9.184C8.01,5,7.089,6.006,7.192,7.176z"
+                ></path>
+                <path
+                  fill="#35c1f1"
+                  d="M24,8v31.9l9.876-2.822c0.797-0.228,1.371-0.924,1.443-1.749l2.286-26.242	C37.656,8.502,37.196,8,36.609,8H24z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M33.1,13H24v4h4.9l-0.3,4H24v4h4.4l-0.3,4.5L24,30.9v4.2l7.9-2.6L32.6,21l0,0L33.1,13z"
+                ></path>
+                <path
+                  fill="#d6e0e9"
+                  d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4	L19.8,27z"
+                ></path>
+                <path
+                  d="M33.1,13l-0.5,8l-0.7,11.5L24,35.1l-7.9-2.6L15.8,27h4l0.1,2.5l4.1,1.4l4.1-1.4l0.3-4.5H24h-4.4l-0.2-4H24h4.6l0.3-4H24 h-8.9l-0.3-4H24H33.1 M34.164,12H33.1H24h-9.2h-1.078l0.081,1.075l0.3,4L14.172,18H15.1H24h3.822l-0.15,2H24h-4.6h-1.051 l0.052,1.05l0.2,4L18.649,26H15.8h-1.056l0.058,1.054l0.3,5.5l0.037,0.682l0.649,0.214l7.9,2.6L24,36.153l0.313-0.103l7.9-2.6 l0.644-0.212l0.041-0.677l0.7-11.5l0.5-7.998L34.164,12L34.164,12z M20.761,26H24h3.331l-0.185,2.769L24,29.843l-3.128-1.068 l-0.073-1.815L20.761,26L20.761,26z"
+                  opacity=".05"
+                ></path>
+                <path
+                  d="M33.1,13l-0.5,8l-0.7,11.5L24,35.1l-7.9-2.6L15.8,27h4l0.1,2.5l4.1,1.4l4.1-1.4l0.3-4.5H24h-4.4l-0.2-4H24h4.6l0.3-4H24 h-8.9l-0.3-4H24H33.1 M33.632,12.5H33.1H24h-9.2h-0.539l0.04,0.537l0.3,4l0.035,0.463H15.1H24h4.361l-0.225,3H24h-4.6h-0.526 l0.026,0.525l0.2,4l0.024,0.475H19.6H24h3.866l-0.242,3.634L24,30.372l-3.614-1.234L20.3,26.98L20.28,26.5H19.8h-4h-0.528 l0.029,0.527l0.3,5.5l0.019,0.341l0.324,0.107l7.9,2.6L24,35.626l0.156-0.051l7.9-2.6l0.322-0.106l0.021-0.339l0.7-11.5l0.5-7.999 L33.632,12.5L33.632,12.5z"
+                  opacity=".07"
+                ></path>
+              </svg>
+            </span>
+            <span class="text-sm text-white">CSS </span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+        <div
+          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+        >
+          <div class="card">
+            <span class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <path fill="#f7df1e" d="M6,42V6h36v36H6z"></path>
+                <path
+                  fill="#000001"
+                  d="M29.538,32.947c0.692,1.124,1.444,2.201,3.037,2.201c1.338,0,2.04-0.665,2.04-1.585 c0-1.101-0.726-1.492-2.198-2.133l-0.807-0.344c-2.329-0.988-3.878-2.226-3.878-4.841c0-2.41,1.845-4.244,4.728-4.244 c2.053,0,3.528,0.711,4.592,2.573l-2.514,1.607c-0.553-0.988-1.151-1.377-2.078-1.377c-0.946,0-1.545,0.597-1.545,1.377 c0,0.964,0.6,1.354,1.985,1.951l0.807,0.344C36.452,29.645,38,30.839,38,33.523C38,36.415,35.716,38,32.65,38 c-2.999,0-4.702-1.505-5.65-3.368L29.538,32.947z M17.952,33.029c0.506,0.906,1.275,1.603,2.381,1.603 c1.058,0,1.667-0.418,1.667-2.043V22h3.333v11.101c0,3.367-1.953,4.899-4.805,4.899c-2.577,0-4.437-1.746-5.195-3.368 L17.952,33.029z"
+                ></path>
+              </svg>
+            </span>
+            <span class="text-sm text-white">JavaScript </span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+        <div
+          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+        >
+          <div class="card">
+            <span class="">
+             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+<path fill="#00acc1" d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"></path>
+</svg>
+            </span>
+            <span class="text-sm text-white">Tailwind CSS </span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+        <div
+          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+        >
+          <div class="card">
+            <span class="">
+             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+<path fill="#F4511E" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"></path>
+</svg>
+            </span>
+            <span class="text-sm text-white">Git</span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+        <div
+          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+        >
+          <div class="card">
+            <span class="">
+           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+<path fill="#d50000" d="M0,15h48v17H24v3H13v-3H0V15z"></path><path fill="#fff" d="M3 29L8 29 8 21 11 21 11 29 13 29 13 18 3 18zM16 18v14h5v-3h5V18H16zM24 26h-3v-5h3V26zM29 18L29 29 34 29 34 21 37 21 37 29 40 29 40 21 43 21 43 29 45 29 45 18z"></path>
+</svg>
+            </span>
+            <span class="text-sm text-white">NPM</span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+        <div
+          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+        >
+          <div class="card">
+            <span class="">
+       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+<linearGradient id="Q_pn21O5LDDqwJlze0Upoa_g9mmSxx3SwAI_gr1" x1="24" x2="24" y1="41" y2="7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#643499"></stop><stop offset=".011" stop-color="#68369f"></stop><stop offset=".135" stop-color="#773db6"></stop><stop offset=".193" stop-color="#8042c3"></stop><stop offset=".248" stop-color="#8343c8"></stop><stop offset=".388" stop-color="#8444c9"></stop><stop offset=".732" stop-color="#9751d2"></stop><stop offset=".997" stop-color="#9c55d4"></stop><stop offset=".998" stop-color="#9c55d4"></stop><stop offset="1" stop-color="#9c55d4"></stop></linearGradient><path fill="url(#Q_pn21O5LDDqwJlze0Upoa_g9mmSxx3SwAI_gr1)" d="M7.373,11.443C7.293,9.132,9.094,7,11.529,7h24.946c2.435,0,4.236,2.132,4.155,4.443	c-0.077,2.221,0.023,5.097,0.747,7.443c0.681,2.207,1.801,3.652,3.593,3.981c0.206,0.038,0.363,0.205,0.363,0.415v1.438	c0,0.21-0.157,0.377-0.363,0.415c-1.792,0.328-2.912,1.773-3.593,3.981c-0.724,2.345-0.824,5.222-0.747,7.443	C40.71,38.868,38.909,41,36.475,41H11.529c-2.434,0-4.236-2.132-4.155-4.443c0.077-2.221-0.023-5.097-0.747-7.443	c-0.681-2.207-1.804-3.652-3.596-3.981c-0.206-0.038-0.363-0.205-0.363-0.415v-1.438c0-0.21,0.157-0.377,0.363-0.415	c1.792-0.328,2.915-1.773,3.596-3.981C7.35,16.54,7.451,13.664,7.373,11.443z"></path><path fill="#fff" d="M27.073,23.464v-0.028c1.853-0.32,3.299-2.057,3.299-3.97c0-1.352-0.52-2.498-1.504-3.312	c-0.981-0.812-2.357-1.241-3.981-1.241H17.45V33.08h7.475c1.942,0,3.555-0.474,4.663-1.372c1.109-0.899,1.696-2.207,1.696-3.783	C31.283,25.544,29.593,23.756,27.073,23.464z M23.59,22.608h-3.181V17.29h3.784c2.076,0,3.219,0.911,3.219,2.565	C27.413,21.63,26.055,22.608,23.59,22.608z M20.409,24.834h3.759c2.716,0,4.092,0.981,4.092,2.916c0,1.932-1.357,2.953-3.925,2.953	h-3.926V24.834z"></path>
+</svg>
+            </span>
+            <span class="text-sm text-white">Bootstrap</span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- finish my skills section  -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!-- https://github.com/emmabostian/developer-portfolios?fbclid=PAZXh0bgNhZW0CMTEAAafIXrTqBFnLcdSH8dRat7mTCNAtsKq2f48HD3K2uxby-UzTusYsUykaRySecg_aem_JgMBtfrSpzoP-nnCSHHBIg -->
