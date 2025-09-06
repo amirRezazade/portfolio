@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="test.css" />
     <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/github-calendar/dist/github-calendar-responsive.css"
+    />
+
     <title>Document</title>
   </head>
   <body class="font-[iran-sans] text-white">
@@ -99,38 +104,38 @@
         id="nav-menu"
         class="w-full flex justify-between pr-5 xs:px-5 grow xs:justify-center py-5 xs:py-0 text-[10px] xs:text-xs sm:text-sm xs:gap-5 md:gap-8 xl:gap-10"
       >
-        <li class="nav-item-active">
+        <li class="">
           <a
             href="#"
-            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            class="nav-item-active text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >خانه</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            class="text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >درباره من</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            class="text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >مهارت ها
           </a>
         </li>
         <li>
           <a
             href="#"
-            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            class="text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >پروژه ها</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="hover:text-violet-500 transition-colors block px-1 py-1"
+            class="text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >تماس با من</a
           >
         </li>
@@ -364,16 +369,20 @@
             </div>
           </div>
         </div>
+        <div class="calendar">Loading contributions...</div>
       </div>
     </section>
     <!-- finish about me section  -->
     <!-- start my skills section  -->
     <section id="skills" class="mt-10 sm:mt-15 md:my-20">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center ">مهارت های <span class="text-violet-500">من</span></h1>
-      <div class="flex flex-wrap justify-center gap-6 container mx-auto mt-5 sm:mt-10 md:mt-20">
-
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
+        مهارت های <span class="text-violet-500">من</span>
+      </h1>
+      <div
+        class="flex flex-wrap justify-center gap-6 container max-w-7xl mx-auto mt-5 sm:mt-10 md:mt-20"
+      >
         <div
-          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
             <span class="">
@@ -406,7 +415,7 @@
           </div>
         </div>
         <div
-          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
             <span class="">
@@ -461,7 +470,7 @@
           </div>
         </div>
         <div
-          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
             <span class="">
@@ -486,43 +495,25 @@
           </div>
         </div>
         <div
-          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
             <span class="">
-             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
-<path fill="#00acc1" d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"></path>
-</svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#00acc1"
+                  d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"
+                ></path>
+              </svg>
             </span>
             <span class="text-sm text-white">Tailwind CSS </span>
-
-            <div class="skill-card-star">✨</div>
-          </div>
-        </div>
-        <div
-          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
-        >
-          <div class="card">
-            <span class="">
-             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
-<path fill="#F4511E" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"></path>
-</svg>
-            </span>
-            <span class="text-sm text-white">Git</span>
-
-            <div class="skill-card-star">✨</div>
-          </div>
-        </div>
-        <div
-          class="glow-card w-30  md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
-        >
-          <div class="card">
-            <span class="">
-           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
-<path fill="#d50000" d="M0,15h48v17H24v3H13v-3H0V15z"></path><path fill="#fff" d="M3 29L8 29 8 21 11 21 11 29 13 29 13 18 3 18zM16 18v14h5v-3h5V18H16zM24 26h-3v-5h3V26zM29 18L29 29 34 29 34 21 37 21 37 29 40 29 40 21 43 21 43 29 45 29 45 18z"></path>
-</svg>
-            </span>
-            <span class="text-sm text-white">NPM</span>
 
             <div class="skill-card-star">✨</div>
           </div>
@@ -532,21 +523,381 @@
         >
           <div class="card">
             <span class="">
-       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
-<linearGradient id="Q_pn21O5LDDqwJlze0Upoa_g9mmSxx3SwAI_gr1" x1="24" x2="24" y1="41" y2="7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#643499"></stop><stop offset=".011" stop-color="#68369f"></stop><stop offset=".135" stop-color="#773db6"></stop><stop offset=".193" stop-color="#8042c3"></stop><stop offset=".248" stop-color="#8343c8"></stop><stop offset=".388" stop-color="#8444c9"></stop><stop offset=".732" stop-color="#9751d2"></stop><stop offset=".997" stop-color="#9c55d4"></stop><stop offset=".998" stop-color="#9c55d4"></stop><stop offset="1" stop-color="#9c55d4"></stop></linearGradient><path fill="url(#Q_pn21O5LDDqwJlze0Upoa_g9mmSxx3SwAI_gr1)" d="M7.373,11.443C7.293,9.132,9.094,7,11.529,7h24.946c2.435,0,4.236,2.132,4.155,4.443	c-0.077,2.221,0.023,5.097,0.747,7.443c0.681,2.207,1.801,3.652,3.593,3.981c0.206,0.038,0.363,0.205,0.363,0.415v1.438	c0,0.21-0.157,0.377-0.363,0.415c-1.792,0.328-2.912,1.773-3.593,3.981c-0.724,2.345-0.824,5.222-0.747,7.443	C40.71,38.868,38.909,41,36.475,41H11.529c-2.434,0-4.236-2.132-4.155-4.443c0.077-2.221-0.023-5.097-0.747-7.443	c-0.681-2.207-1.804-3.652-3.596-3.981c-0.206-0.038-0.363-0.205-0.363-0.415v-1.438c0-0.21,0.157-0.377,0.363-0.415	c1.792-0.328,2.915-1.773,3.596-3.981C7.35,16.54,7.451,13.664,7.373,11.443z"></path><path fill="#fff" d="M27.073,23.464v-0.028c1.853-0.32,3.299-2.057,3.299-3.97c0-1.352-0.52-2.498-1.504-3.312	c-0.981-0.812-2.357-1.241-3.981-1.241H17.45V33.08h7.475c1.942,0,3.555-0.474,4.663-1.372c1.109-0.899,1.696-2.207,1.696-3.783	C31.283,25.544,29.593,23.756,27.073,23.464z M23.59,22.608h-3.181V17.29h3.784c2.076,0,3.219,0.911,3.219,2.565	C27.413,21.63,26.055,22.608,23.59,22.608z M20.409,24.834h3.759c2.716,0,4.092,0.981,4.092,2.916c0,1.932-1.357,2.953-3.925,2.953	h-3.926V24.834z"></path>
-</svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <linearGradient
+                  id="Q_pn21O5LDDqwJlze0Upoa_g9mmSxx3SwAI_gr1"
+                  x1="24"
+                  x2="24"
+                  y1="41"
+                  y2="7"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#643499"></stop>
+                  <stop offset=".011" stop-color="#68369f"></stop>
+                  <stop offset=".135" stop-color="#773db6"></stop>
+                  <stop offset=".193" stop-color="#8042c3"></stop>
+                  <stop offset=".248" stop-color="#8343c8"></stop>
+                  <stop offset=".388" stop-color="#8444c9"></stop>
+                  <stop offset=".732" stop-color="#9751d2"></stop>
+                  <stop offset=".997" stop-color="#9c55d4"></stop>
+                  <stop offset=".998" stop-color="#9c55d4"></stop>
+                  <stop offset="1" stop-color="#9c55d4"></stop>
+                </linearGradient>
+                <path
+                  fill="url(#Q_pn21O5LDDqwJlze0Upoa_g9mmSxx3SwAI_gr1)"
+                  d="M7.373,11.443C7.293,9.132,9.094,7,11.529,7h24.946c2.435,0,4.236,2.132,4.155,4.443	c-0.077,2.221,0.023,5.097,0.747,7.443c0.681,2.207,1.801,3.652,3.593,3.981c0.206,0.038,0.363,0.205,0.363,0.415v1.438	c0,0.21-0.157,0.377-0.363,0.415c-1.792,0.328-2.912,1.773-3.593,3.981c-0.724,2.345-0.824,5.222-0.747,7.443	C40.71,38.868,38.909,41,36.475,41H11.529c-2.434,0-4.236-2.132-4.155-4.443c0.077-2.221-0.023-5.097-0.747-7.443	c-0.681-2.207-1.804-3.652-3.596-3.981c-0.206-0.038-0.363-0.205-0.363-0.415v-1.438c0-0.21,0.157-0.377,0.363-0.415	c1.792-0.328,2.915-1.773,3.596-3.981C7.35,16.54,7.451,13.664,7.373,11.443z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M27.073,23.464v-0.028c1.853-0.32,3.299-2.057,3.299-3.97c0-1.352-0.52-2.498-1.504-3.312	c-0.981-0.812-2.357-1.241-3.981-1.241H17.45V33.08h7.475c1.942,0,3.555-0.474,4.663-1.372c1.109-0.899,1.696-2.207,1.696-3.783	C31.283,25.544,29.593,23.756,27.073,23.464z M23.59,22.608h-3.181V17.29h3.784c2.076,0,3.219,0.911,3.219,2.565	C27.413,21.63,26.055,22.608,23.59,22.608z M20.409,24.834h3.759c2.716,0,4.092,0.981,4.092,2.916c0,1.932-1.357,2.953-3.925,2.953	h-3.926V24.834z"
+                ></path>
+              </svg>
             </span>
             <span class="text-sm text-white">Bootstrap</span>
 
             <div class="skill-card-star">✨</div>
           </div>
         </div>
+        <div
+          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+        >
+          <div class="card">
+            <span class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#F4511E"
+                  d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"
+                ></path>
+              </svg>
+            </span>
+            <span class="text-sm text-white">Git</span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+        <div
+          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
+        >
+          <div class="card">
+            <span class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <path fill="#d50000" d="M0,15h48v17H24v3H13v-3H0V15z"></path>
+                <path
+                  fill="#fff"
+                  d="M3 29L8 29 8 21 11 21 11 29 13 29 13 18 3 18zM16 18v14h5v-3h5V18H16zM24 26h-3v-5h3V26zM29 18L29 29 34 29 34 21 37 21 37 29 40 29 40 21 43 21 43 29 45 29 45 18z"
+                ></path>
+              </svg>
+            </span>
+            <span class="text-sm text-white">NPM</span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- finish my skills section  -->
+    <!-- start my project section  -->
+    <section id="project" class="mt-10 sm:mt-15 md:my-20">
+      <div class="container max-w-7xl mx-auto">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
+          پروژه های <span class="text-violet-500">من</span>
+        </h1>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6"
+        >
+          <div class="">
+            <div class="group relative w-full">
+              <div
+                class="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-purple-500/20"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"
+                ></div>
+                <div class="relative p-5 z-10">
+                  <div class="relative overflow-hidden rounded-lg">
+                    <img
+                      src="https://abhishekganvir.vercel.app/blendy.png"
+                      alt="digi-media"
+                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <h3
+                      class="text-xl font-semibold bg-gradient-to-r from-blue-200 from-50% to-violet-300 bg-clip-text text-transparent"
+                    >
+                      digi-media
+                    </h3>
+                    <p
+                      class="text-gray-100 text-sm leading-relaxed line-clamp-2"
+                    >
+                      یک وبسایت زیبا و مدرن برای جستجوی فیلم و سریال
+                    </p>
+                    <div class="flex items-center justify-end gap-2 pt-2 text-[10px]">
+                      <span class="px-2.5 py-0.5 border rounded-full text-slate-300">API</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-cyan-400">Tailwind</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-amber-300">JS</span>
+                    </div>
+                    <div class="pt-4 flex items-center justify-between">
+                      <a
+                        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105"
+                        href="/project/Blendy"
+                        data-discover="true"
+                      >
+                        <svg
+                          width="22px"
+                          height="22px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z"
+                              fill="#ffffff"
+                            ></path>
+                          </g>
+                        </svg>
+                        <span class="text-sm font-medium">Details</span>
+                      </a>
+                      <a
+                        href="https://blendy-download.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-start gap-1.5 justify-center text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-external-link w-4 h-4"
+                        >
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          ></path>
+                        </svg>
+                        <span class="text-sm font-medium">Live Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="group relative w-full">
+              <div
+                class="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-purple-500/20"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"
+                ></div>
+                <div class="relative p-5 z-10">
+                  <div class="relative overflow-hidden rounded-lg">
+                    <img
+                      src="https://abhishekganvir.vercel.app/blendy.png"
+                      alt="Blendy"
+                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <h3
+                      class="text-xl font-semibold bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent"
+                    >
+                      Blendy
+                    </h3>
+                    <p
+                      class="text-gray-300/80 text-sm leading-relaxed line-clamp-2"
+                    >
+                      A social app where you can connect in real-time, log in
+                      with one click, share moments, posts instantly.
+                    </p>
+                    <div class="pt-4 flex items-center justify-between">
+                      <a
+                        href="https://blendy-download.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                        ><span class="text-sm font-medium">Live Demo</span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-external-link w-4 h-4"
+                        >
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          ></path></svg></a
+                      ><a
+                        class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                        href="/project/Blendy"
+                        data-discover="true"
+                        ><span class="text-sm font-medium">جزئیات</span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-arrow-right w-4 h-4"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="m12 5 7 7-7 7"></path></svg
+                      ></a>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="group relative w-full">
+              <div
+                class="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-purple-500/20"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"
+                ></div>
+                <div class="relative p-5 z-10">
+                  <div class="relative overflow-hidden rounded-lg">
+                    <img
+                      src="https://abhishekganvir.vercel.app/blendy.png"
+                      alt="Blendy"
+                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <h3
+                      class="text-xl font-semibold bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent"
+                    >
+                      Blendy
+                    </h3>
+                    <p
+                      class="text-gray-300/80 text-sm leading-relaxed line-clamp-2"
+                    >
+                      A social app where you can connect in real-time, log in
+                      with one click, share moments, posts instantly.
+                    </p>
+                    <div class="pt-4 flex items-center justify-between">
+                      <a
+                        href="https://blendy-download.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                        ><span class="text-sm font-medium">Live Demo</span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-external-link w-4 h-4"
+                        >
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          ></path></svg></a
+                      ><a
+                        class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                        href="/project/Blendy"
+                        data-discover="true"
+                        ><span class="text-sm font-medium">Details</span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-arrow-right w-4 h-4"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="m12 5 7 7-7 7"></path></svg
+                      ></a>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- finish my skills section  -->
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!-- finish my project section  -->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/github-calendar/dist/github-calendar.min.js"></script>
+    <script>
+      GitHubCalendar(".calendar", "amirRezazade", { responsive: true });
+    </script>
   </body>
 </html>
 

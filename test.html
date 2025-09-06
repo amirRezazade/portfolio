@@ -3,51 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="test.css">
-  <title>Document</title>
+  <title>Custom GitHub Contributions</title>
+  <link rel="stylesheet" href="https://unpkg.com/github-calendar/dist/github-calendar-responsive.css"/>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+      background: #f9fafb;
+    }
+    .calendar {
+      max-width: 1000px;
+    }
+
+    .ContributionCalendar-day[data-level='0']{
+      background-color: #141a21 !important;
+    }
+  </style>
 </head>
-<style>
-
-</style>
 <body>
- <div class="glow-card" >
-  <span class="glow"></span>
-  <div>
-     <svg
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                role="img"
-                viewBox="0 0 24 24"
-                class="text-5xl"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"
-                ></path>
-              </svg>
-  Amir
-  </div>
-</div>
+  <div class="calendar">Loading contributions...</div>
 
-
-
-<script>
-
-// if (typeof window.CSS.registerProperty === 'function') {
-//   console.log('CSS.registerProperty supported 🎉')
-//   document.body.style.setProperty('--supported', 1);
-//   document.body.classList.add('registerProperty-supported')
-// } else {
-//   console.log('CSS.registerProperty not supported ❌')
-//   document.body.style.setProperty('--not-supported', 1);
-//   document.body.classList.add('registerProperty-not-supported')
-// }
-
-</script>
-
-
+  <script src="https://unpkg.com/github-calendar/dist/github-calendar.min.js"></script>
+  <script>
+    GitHubCalendar(".calendar", "amirRezazade", { responsive: true });
+  </script>
 </body>
 </html>
