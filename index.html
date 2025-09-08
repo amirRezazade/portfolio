@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" class="scroll-smooth ">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="test.css" />
     <link rel="stylesheet" href="src/output.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/github-calendar/dist/github-calendar-responsive.css"
-    />
-
     <title>Document</title>
   </head>
   <body class="font-[iran-sans] text-white">
@@ -106,36 +101,36 @@
       >
         <li class="">
           <a
-            href="#"
-            class="nav-item-active text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+            href="#home"
+            class="home  text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >خانه</a
           >
         </li>
         <li>
           <a
-            href="#"
-            class="text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+            href="#about"
+            class="about text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >درباره من</a
           >
         </li>
         <li>
           <a
-            href="#"
-            class="text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+            href="#skills"
+            class="skills text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >مهارت ها
           </a>
         </li>
         <li>
           <a
-            href="#"
-            class="text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+            href="#project"
+            class="project text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >پروژه ها</a
           >
         </li>
         <li>
           <a
-            href="#"
-            class="text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+            href="#contact"
+            class="contact text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
             >تماس با من</a
           >
         </li>
@@ -147,57 +142,61 @@
         <img class="object-cover" src="happy-developer-red.gif" alt="" />
       </a>
     </nav>
-    <header id="home" class="h-[90vh] relative">
+    <header id="home" class="nav-control h-[90vh] relative">
       <div class="h-full flex flex-col md:flex-row">
-
-        <div class=" centered top-1/3 w-1/2 h-full">
+        <div class="centered top-1/3 w-1/2 h-full">
           <div class="">
-          <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">
-            سلام من <span class="font-extrabold text-violet-500">امیر </span>هستم
-          </h1>
-          <p id="app" class="mt-7 leading-8 sm:text-lg"></p>
-          <div class="flex justify-center gap-4">
-            <a href="#" class="btn-style mt-6 inline-block">
-              <span>نمونه کار های من</span>
-            </a>
-            <a href="maxresdefault.jpg" download class="btn-style mt-6">
-              <span class="inline-flex items-center gap-2">
-                دانلود رزومه
-                <svg
-                  width="17px"
-                  height="17px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z"
-                      fill="#ffffff"
-                    ></path>
-                    <path
-                      d="M3.75 15C3.75 14.5858 3.41422 14.25 3 14.25C2.58579 14.25 2.25 14.5858 2.25 15V15.0549C2.24998 16.4225 2.24996 17.5248 2.36652 18.3918C2.48754 19.2919 2.74643 20.0497 3.34835 20.6516C3.95027 21.2536 4.70814 21.5125 5.60825 21.6335C6.47522 21.75 7.57754 21.75 8.94513 21.75H15.0549C16.4225 21.75 17.5248 21.75 18.3918 21.6335C19.2919 21.5125 20.0497 21.2536 20.6517 20.6516C21.2536 20.0497 21.5125 19.2919 21.6335 18.3918C21.75 17.5248 21.75 16.4225 21.75 15.0549V15C21.75 14.5858 21.4142 14.25 21 14.25C20.5858 14.25 20.25 14.5858 20.25 15C20.25 16.4354 20.2484 17.4365 20.1469 18.1919C20.0482 18.9257 19.8678 19.3142 19.591 19.591C19.3142 19.8678 18.9257 20.0482 18.1919 20.1469C17.4365 20.2484 16.4354 20.25 15 20.25H9C7.56459 20.25 6.56347 20.2484 5.80812 20.1469C5.07435 20.0482 4.68577 19.8678 4.40901 19.591C4.13225 19.3142 3.9518 18.9257 3.85315 18.1919C3.75159 17.4365 3.75 16.4354 3.75 15Z"
-                      fill="#ffffff"
-                    ></path>
-                  </g>
-                </svg>
-              </span>
-            </a>
-          </div>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">
+              سلام من
+              <span class="font-extrabold text-violet-500">امیر </span>هستم
+            </h1>
+            <p id="app" class="mt-7 leading-8 sm:text-lg"></p>
+            <div class="flex justify-center gap-4">
+              <a href="#project" class="btn-style mt-6 inline-block">
+                <span>نمونه کار های من</span>
+              </a>
+              <a href="maxresdefault.jpg" download class="btn-style mt-6">
+                <span class="inline-flex items-center gap-2">
+                  دانلود رزومه
+                  <svg
+                    width="17px"
+                    height="17px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    stroke="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z"
+                        fill="#ffffff"
+                      ></path>
+                      <path
+                        d="M3.75 15C3.75 14.5858 3.41422 14.25 3 14.25C2.58579 14.25 2.25 14.5858 2.25 15V15.0549C2.24998 16.4225 2.24996 17.5248 2.36652 18.3918C2.48754 19.2919 2.74643 20.0497 3.34835 20.6516C3.95027 21.2536 4.70814 21.5125 5.60825 21.6335C6.47522 21.75 7.57754 21.75 8.94513 21.75H15.0549C16.4225 21.75 17.5248 21.75 18.3918 21.6335C19.2919 21.5125 20.0497 21.2536 20.6517 20.6516C21.2536 20.0497 21.5125 19.2919 21.6335 18.3918C21.75 17.5248 21.75 16.4225 21.75 15.0549V15C21.75 14.5858 21.4142 14.25 21 14.25C20.5858 14.25 20.25 14.5858 20.25 15C20.25 16.4354 20.2484 17.4365 20.1469 18.1919C20.0482 18.9257 19.8678 19.3142 19.591 19.591C19.3142 19.8678 18.9257 20.0482 18.1919 20.1469C17.4365 20.2484 16.4354 20.25 15 20.25H9C7.56459 20.25 6.56347 20.2484 5.80812 20.1469C5.07435 20.0482 4.68577 19.8678 4.40901 19.591C4.13225 19.3142 3.9518 18.9257 3.85315 18.1919C3.75159 17.4365 3.75 16.4354 3.75 15Z"
+                        fill="#ffffff"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="w-1/2 h-full" >
-           <img class="object-cover w-full" src="happy-developer-red.gif" alt="">
+        <div class="w-1/2 h-full">
+          <img
+            class="object-cover w-full"
+            src="coding.gif"
+            alt=""
+          />
         </div>
       </div>
-      <div class="flex justify-center w-full absolute bottom-0">
+      <div class="flex justify-center w-full absolute bottom-7">
         <span class="flex flex-col items-center gap-2 animate-bounce text-sm">
           scroll
           <svg
@@ -222,9 +221,9 @@
         </span>
       </div>
     </header>
-    
+
     <!-- start about me section  -->
-    <section id="about" class="min-h-screen centered text-center">
+    <section id="about" class="nav-control min-h-screen centered text-center">
       <div class="container mx-auto max-w-5xl">
         <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">
           درباره <span class="text-violet-500">من</span>
@@ -341,7 +340,7 @@
             <div
               class="flex flex-col gap-3 px-5 my-6 text-sm sm:text-base sm:flex-row sm:justify-center"
             >
-              <a href="#" class="btn-style inline-block">
+              <a href="#contact" class="btn-style inline-block">
                 <span>تماس با من</span>
               </a>
               <a href="maxresdefault.jpg" download class="btn-style">
@@ -377,12 +376,14 @@
             </div>
           </div>
         </div>
-        <div class="calendar">Loading contributions...</div>
+        <div class="mt-7 md:mt-10">
+          <img class="w-full h-auto object-cover" src="https://ghchart.rshah.org/amirRezazade" alt="my GitHub Contributions">
+        </div>
       </div>
     </section>
     <!-- finish about me section  -->
     <!-- start my skills section  -->
-    <section id="skills" class="mt-10 sm:mt-15 md:my-20">
+    <section id="skills" class="nav-control mt-10 sm:mt-15 md:my-20">
       <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
         مهارت های <span class="text-violet-500">من</span>
       </h1>
@@ -626,7 +627,7 @@
     </section>
     <!-- finish my skills section  -->
     <!-- start my project section  -->
-    <section id="project" class="mt-10 sm:mt-15 md:my-20">
+    <section id="project" class="nav-control mt-10 sm:mt-15 md:my-20">
       <div class="container max-w-7xl mx-auto">
         <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
           پروژه های <span class="text-violet-500">من</span>
@@ -964,32 +965,22 @@
     <!-- finish my project section  -->
 
     <!-- start contact me section  -->
-    <section id="contact" class="mt-10 sm:mt-15 md:my-20">
+    <section id="contact" class="nav-control mt-10 sm:mt-15 md:my-20">
       <div class="container mx-auto">
         <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
           تماس با <span class="text-violet-500">من</span>
         </h1>
 
-
         <div
-          class=" max-w-2xl mx-auto rounded-3xl p-3 py-3 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6 "
+          class="max-w-2xl mx-auto rounded-3xl p-3 py-3 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6"
         >
-          <div class="bg-slate-900 rounded-2xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 border border-transparent  hover:border-purple-500/50 hover:shadow-[#6366f1]/10 aos-init aos-animate">
-            <div class="flex justify-between items-start mb-8">
-              <div>
-            
-                <p class="text-gray-300">
-                     چیزی برای بحث دارید؟ به من پیام دهید تا صحبت کنیم.
+          <div
+            class="bg-slate-900 rounded-2xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 border border-transparent hover:border-purple-500/50 hover:shadow-[#6366f1]/10 "
+          >
+                <p class="text-gray-300 mb-7">
+                  چیزی برای بحث دارید؟ به من پیام دهید تا صحبت کنیم.
                 </p>
-              </div>
-             
-            </div>
-            <form
-              action=""
-              method="POST"
-              class="space-y-6"
-            >
-             
+            <form action="" method="POST" class="space-y-6">
               <div
                 data-aos="fade-up"
                 data-aos-delay="100"
@@ -1100,39 +1091,174 @@
                 >ارسال پیام
               </button>
             </form>
-            <div class="flex justify-center items-center gap-2">
-              <a href=""></a>
+            <div class="flex justify-center items-center gap-3 mt-7 ">
+              <a
+                href=""
+                class="group relative w-12 h-12 border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#40b3e0] hover:border-[#40b3e0]"
+              >
+                <span
+                  class="fill-[#40b3e0] group-hover:fill-white transition-colors z-10"
+                >
+                  <svg
+                    fill=""
+                    width="22px"
+                    height="22px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                <span
+                  class="bg-[#40b3e0] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
+                ></span>
+              </a>
+              <a
+                href=""
+                class="group relative w-12 h-12 border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#e54b57] hover:border-[#e54b57]"
+              >
+                <span class=" z-10">
+                  <svg
+                    class="fill-[#e54b57] group-hover:fill-white transition-colors "
+                    width="22px"
+                    height="22px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                        fill=""
+                      ></path>
+                      <path
+                        d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                        fill=""
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                        fill=""
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                <span
+                  class="bg-[#e54b57] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
+                ></span>
+              </a>
+              <a
+                href=""
+                class="group relative w-12 h-12 border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#007ebb] hover:border-[#007ebb]"
+              >
+                <span class="z-10 ">
+                  <svg
+                    class=""
+                    width="22px"
+                    height="22px"
+                    viewBox="0 -2 44 44"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    fill=""
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <title>LinkedIn-color</title>
+                      <desc>Created with Sketch.</desc>
+                      <defs></defs>
+                      <g
+                        id="Icons"
+                        stroke="none"
+                        stroke-width="1"
+                        class="fill-[#007ebb] group-hover:fill-white transition-colors"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          id="Color-"
+                          transform="translate(-702.000000, -265.000000)"
+                          fill=""
+                        >
+                          <path
+                            d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
+                            id="LinkedIn"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  <!-- <svg  width="22px" height="22px" viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>LinkedIn-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-702.000000, -265.000000)" fill=""> <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn"> </path> </g> </g> </g></svg> -->
+                </span>
+                <span
+                  class="bg-[#007ebb] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
+                ></span>
+              </a>
+              <a
+                href=""
+                class="group relative w-12 h-12 border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white"
+              >
+                <span class=" z-10">
+                  <svg class="fill-white group-hover:fill-black transition-colors "
+                    fill=""
+                    width="22px"
+                    height="22px"
+                    viewBox="0 0 1920 1920"
+                    xmlns="http://www.w3.org/2000/svg"
+                    stroke=""
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M1821.63 637.76c0-130.027-43.627-236.373-116.054-319.68 11.627-30.187 50.347-151.36-11.2-315.307 0 0-94.72-32-310.4 122.134-90.133-26.454-186.773-39.68-282.773-40.107-96 .427-192.64 13.653-282.667 40.107C602.749-29.227 507.923 2.773 507.923 2.773c-61.547 163.947-22.72 285.12-11.094 315.307-72.32 83.307-116.266 189.653-116.266 319.68 0 456.533 263.68 558.72 514.453 588.8 0 0-180.267 111.68-180.267 299.413-64.32 30.507-336.533 123.947-437.333-58.133 0 0-59.627-114.347-173.013-122.773 0 0-110.294-1.494-7.787 72.426 0 0 74.027 36.694 125.44 174.294 0 0 57.173 289.92 489.067 159.68 4.373 2.24 1.6 140.266 1.6 168.533h777.173s1.28-277.013 1.28-365.12c0-216.64-144.64-292.48-185.28-329.28 251.627-29.44 515.733-130.133 515.733-587.84"
+                        fill-rule="evenodd"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                <span
+                  class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
+                ></span>
+              </a>
             </div>
-           
           </div>
         </div>
       </div>
     </section>
-    <div class="flex justify-center items-center gap-3">
-      <a href="" class=" group relative w-12 h-12 border-2 rounded-full  transition-colors duration-400 inline-flex justify-center items-center border-[#40b3e0] hover:border-[#40b3e0] ">
-         <span class="fill-[#40b3e0] group-hover:fill-white transition-colors">
-          <svg fill="" width="22px" height="22px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"></path> </g></svg>
-        </span>
-        <span class=" bg-[#40b3e0] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-10   group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
-      </a>
-      <a href="" class=" group relative w-12 h-12 border-2 rounded-full  transition-colors duration-400 inline-flex justify-center items-center border-[#e54b57] hover:border-[#e54b57] ">
-          <span class="fill-[#fff] group-hover:fill-white transition-colors">
-             <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C9.284 2 8.944 2.01133 7.87733 2.06C6.81267 2.10867 6.08533 2.278 5.44933 2.52533C4.78267 2.776 4.178 3.16933 3.678 3.67867C3.16948 4.17809 2.77591 4.78233 2.52467 5.44933C2.27867 6.08533 2.10867 6.81333 2.06 7.878C2.012 8.944 2 9.28333 2 12C2 14.7167 2.01133 15.056 2.06 16.1227C2.10867 17.1873 2.278 17.9147 2.52533 18.5507C2.776 19.2173 3.16933 19.822 3.67867 20.322C4.1781 20.8305 4.78234 21.2241 5.44933 21.4753C6.08533 21.722 6.81267 21.8913 7.87733 21.94C8.944 21.9887 9.284 22 12 22C14.716 22 15.056 21.9887 16.1227 21.94C17.1873 21.8913 17.9147 21.722 18.5507 21.4747C19.2173 21.224 19.822 20.8307 20.322 20.3213C20.8305 19.8219 21.2241 19.2177 21.4753 18.5507C21.722 17.9147 21.8913 17.1873 21.94 16.1227C21.9887 15.056 22 14.716 22 12C22 9.284 21.9887 8.944 21.94 7.87733C21.8913 6.81267 21.722 6.08533 21.4747 5.44933C21.2236 4.78204 20.83 4.17755 20.3213 3.678C19.8219 3.16948 19.2177 2.77591 18.5507 2.52467C17.9147 2.27867 17.1867 2.10867 16.122 2.06C15.056 2.012 14.7167 2 12 2ZM12 3.802C14.67 3.802 14.9867 3.812 16.0413 3.86C17.016 3.90467 17.5453 4.06667 17.898 4.20467C18.3647 4.38533 18.698 4.60267 19.048 4.952C19.398 5.302 19.6147 5.63533 19.7953 6.102C19.9327 6.45467 20.0953 6.984 20.14 7.95867C20.188 9.01333 20.198 9.33 20.198 12C20.198 14.67 20.188 14.9867 20.14 16.0413C20.0953 17.016 19.9333 17.5453 19.7953 17.898C19.6353 18.3324 19.3799 18.7253 19.048 19.048C18.7254 19.38 18.3324 19.6354 17.898 19.7953C17.5453 19.9327 17.016 20.0953 16.0413 20.14C14.9867 20.188 14.6707 20.198 12 20.198C9.32933 20.198 9.01333 20.188 7.95867 20.14C6.984 20.0953 6.45467 19.9333 6.102 19.7953C5.66764 19.6353 5.27467 19.3799 4.952 19.048C4.62012 18.7253 4.36475 18.3323 4.20467 17.898C4.06733 17.5453 3.90467 17.016 3.86 16.0413C3.812 14.9867 3.802 14.67 3.802 12C3.802 9.33 3.812 9.01333 3.86 7.95867C3.90467 6.984 4.06667 6.45467 4.20467 6.102C4.38533 5.63533 4.60267 5.302 4.952 4.952C5.27463 4.62003 5.66761 4.36465 6.102 4.20467C6.45467 4.06733 6.984 3.90467 7.95867 3.86C9.01333 3.812 9.33 3.802 12 3.802Z" fill="#000000"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.3367C11.5618 15.3367 11.128 15.2504 10.7231 15.0827C10.3183 14.915 9.95047 14.6692 9.64064 14.3594C9.3308 14.0495 9.08502 13.6817 8.91734 13.2769C8.74965 12.8721 8.66335 12.4382 8.66335 12C8.66335 11.5618 8.74965 11.1279 8.91734 10.7231C9.08502 10.3183 9.3308 9.95046 9.64064 9.64062C9.95047 9.33078 10.3183 9.08501 10.7231 8.91732C11.128 8.74964 11.5618 8.66333 12 8.66333C12.885 8.66333 13.7336 9.01487 14.3594 9.64062C14.9851 10.2664 15.3367 11.1151 15.3367 12C15.3367 12.8849 14.9851 13.7336 14.3594 14.3594C13.7336 14.9851 12.885 15.3367 12 15.3367ZM12 6.86C10.6368 6.86 9.32942 7.40153 8.36549 8.36547C7.40155 9.32941 6.86002 10.6368 6.86002 12C6.86002 13.3632 7.40155 14.6706 8.36549 15.6345C9.32942 16.5985 10.6368 17.14 12 17.14C13.3632 17.14 14.6706 16.5985 15.6345 15.6345C16.5985 14.6706 17.14 13.3632 17.14 12C17.14 10.6368 16.5985 9.32941 15.6345 8.36547C14.6706 7.40153 13.3632 6.86 12 6.86ZM18.6353 6.76667C18.6353 7.0889 18.5073 7.39794 18.2795 7.6258C18.0516 7.85366 17.7426 7.98167 17.4204 7.98167C17.0981 7.98167 16.7891 7.85366 16.5612 7.6258C16.3334 7.39794 16.2053 7.0889 16.2053 6.76667C16.2053 6.44443 16.3334 6.13539 16.5612 5.90753C16.7891 5.67968 17.0981 5.55167 17.4204 5.55167C17.7426 5.55167 18.0516 5.67968 18.2795 5.90753C18.5073 6.13539 18.6353 6.44443 18.6353 6.76667Z" fill=""></path> </g></svg>
-            </span>
-            <span class=" bg-[#e54b57] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-10   group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
-      </a>
-
-    </div>
 
     <!-- finish contact me section  -->
-    <br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script> 
     <script src="index.js"></script>
-    <script src="https://unpkg.com/github-calendar/dist/github-calendar.min.js"></script>
-    <script>
-      GitHubCalendar(".calendar", "amirRezazade", { responsive: true });
-    </script>
+  
   </body>
 </html>
 

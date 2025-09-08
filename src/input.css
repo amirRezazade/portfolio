@@ -290,48 +290,13 @@
 
 /* start toggle menu btn style   */
 .nav-item-active {
-  position: relative;
-}
-.nav-item-active::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1px;
-  width: 0;
-  background-color: oklch(60.6% 0.25 292.717);
-  transition: all 0.3s ease;
-}
-.nav-item-active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 1px;
-  width: 0;
-  background-color: oklch(60.6% 0.25 292.717);
-  transition: all 0.3s ease;
-}
-.nav-item-active:hover.nav-item-active::after,
-.nav-item-active:hover.nav-item-active::before {
-  width: 100%;
+ @apply bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text font-extrabold text-transparent
 }
 
-.ContributionCalendar-day[data-level="0"] {
-  /* background-color: red !important; */
+html::-webkit-scrollbar{
+  display: none;
 }
 
-.calendar {
-  max-width: 1000px;
-  min-height: auto !important;
-  border: none !important;
-}
-.calendar a {
-  display: none !important;
-}
-.contrib-column {
-  display: none !important;
-}
 
 
 /* https://abhishekganvir.vercel.app/ */

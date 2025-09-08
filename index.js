@@ -1,49 +1,51 @@
-const switchThemeBtn = document.querySelector('#switch-theme')
-const navMenu = document.querySelector('#nav-menu')
+const sections = document.querySelectorAll(".nav-control");
+const navLinks = document.querySelectorAll("#nav-menu li a");
 
-
-switchThemeBtn.addEventListener('click' , ()=>{
-  if(switchThemeBtn.firstElementChild.classList.contains('hidden')){
-    switchThemeBtn.firstElementChild.classList.remove('hidden')
-    switchThemeBtn.lastElementChild.classList.add('hidden')
-  }
-  else{
-    switchThemeBtn.lastElementChild.classList.remove('hidden')
-    switchThemeBtn.firstElementChild.classList.add('hidden')
-  }
-  
-})
-// navToggleBtn.addEventListener('click' , ()=>{
-//   if(navMenu.classList.contains('left-2/1')) openMenu()
-//   else closeMenu()
-// })
-navMenu.addEventListener('click' , (e)=>{
-  if(e.target==navMenu)closeMenu()
-})
-
-let app = document.getElementById('app');
+let app = document.getElementById("app");
 let typewriter = new Typewriter(app, {
-    loop: true,
-    delay: 75,
+  loop: true,
+  delay: 75,
 });
 
-typewriter.typeString('دانشجوی رشته کامپیوتر')
-    .pauseFor(2000)
-    .deleteAll()
-    .typeString('توسعه‌ دهنده‌ی فرانت‌ اند')
-    .pauseFor(2000)
-     .deleteAll()
-    .typeString('<strong class="text-violet-500">عاشق دنیای  برنامه نویسی</strong>')
-    .pauseFor(2500)
-    .start();
+typewriter
+  .typeString("دانشجوی رشته کامپیوتر")
+  .pauseFor(2000)
+  .deleteAll()
+  .typeString("توسعه‌ دهنده‌ی فرانت‌ اند")
+  .pauseFor(2000)
+  .deleteAll()
+  .typeString(
+    '<strong class="text-violet-500">عاشق دنیای  برنامه نویسی</strong>'
+  )
+  .pauseFor(2500)
+  .start();
+
+window.addEventListener("scroll", activateNavLink);
+window.addEventListener("DOMContentLoaded", activateNavLink);
+
+function activateNavLink() {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    // حذف کلاس active از همه لینک‌ها
+    navLinks.forEach(link => {
+        link.classList.remove('nav-item-active');
+        if (link.classList.contains(current)) {
+            link.classList.add('nav-item-active');
+        }
+    });
+}
 
 
-    function openMenu(){
-      navMenu.classList.replace('left-2/1' , 'left-0')
-      navMenu.classList.replace('-top-2/1' , 'top-0')
-    }
-    function closeMenu(){
-      navMenu.classList.replace( 'left-0' ,'left-2/1')
-      navMenu.classList.replace( 'top-0' ,'-top-2/1')
-
-    }
+// Initialize Lenis for smooth scroll
+const lenis = new Lenis({
+  autoRaf: true,
+});
