@@ -15,7 +15,7 @@ typewriter
   .pauseFor(2000)
   .deleteAll()
   .typeString(
-    '<strong class="text-violet-500">عاشق دنیای  برنامه نویسی</strong>'
+    '<strong class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text font-extrabold text-transparent">عاشق دنیای  برنامه نویسی</strong>'
   )
   .pauseFor(2500)
   .start();
