@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" class="scroll-smooth ">
+<html lang="fa" dir="rtl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#4b4ef4b4">
-    <link rel="icon" type="image/svg+xml" href="images/logo.png">
+    <meta name="theme-color" content="#4b4ef4b4" />
+    <link rel="icon" type="image/svg+xml" href="images/logo.png" />
     <link rel="stylesheet" href="test.css" />
     <link rel="stylesheet" href="src/output.css" />
+    <link href="assets/aos.css" rel="stylesheet" />
     <title>Amir Rezazade</title>
   </head>
   <body class="font-[iran-sans] text-white">
@@ -24,73 +25,94 @@
       <div id="star11"></div>
     </div>
 
-    <nav
-      class=" sticky z-99 top-0 bg-gray-950 "
-    >
-    <div class="container flex justify-between items-center px-5 lg:px-10  mx-auto">
-       <a
-        href="https://github.com/amirRezazade" target="-blank"
-        class="inline-block w-15 h-15  "
+    <nav class="sticky z-99 top-0 bg-gray-950">
+      <div
+        class="container flex justify-between items-center px-5 lg:px-10 mx-auto"
       >
-        <img class="object-cover" src="images/github-logo.gif" alt="" />
-      </a>
+        <a
+          href="https://github.com/amirRezazade"
+          target="-blank"
+          class="inline-block w-15 h-15"
+        >
+          <img class="object-cover" src="images/github-logo.gif" alt="" />
+        </a>
 
-      <ul
-        id="nav-menu"
-        class="w-full flex justify-between pr-5 xs:px-5 grow xs:justify-center py-5 xs:py-0 text-[10px] xs:text-xs sm:text-sm xs:gap-5 md:gap-8 xl:gap-10"
-      >
-        <li class="">
-          <a
-            href="#home"
-            class="home  text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-            >خانه</a
-          >
-        </li>
-        <li>
-          <a
-            href="#about"
-            class="about text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-            >درباره من</a
-          >
-        </li>
-        <li>
-          <a
-            href="#skills"
-            class="skills text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-            >مهارت ها
-          </a>
-        </li>
-        <li>
-          <a
-            href="#project"
-            class="project text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-            >پروژه ها</a
-          >
-        </li>
-        <li>
-          <a
-            href="#contact"
-            class="contact text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-            >تماس با من</a
-          >
-        </li>
-      </ul>
-    </div>
-     
+        <ul
+          id="nav-menu"
+          class="w-full flex justify-between pr-5 xs:px-5 grow xs:justify-center py-5 xs:py-0 text-[10px] xs:text-xs sm:text-sm xs:gap-5 md:gap-8 xl:gap-10"
+        >
+          <li class="">
+            <a
+              href="#home"
+              class="home text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+              >خانه</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="about text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+              >درباره من</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="skills text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+              >مهارت ها
+            </a>
+          </li>
+          <li>
+            <a
+              href="#project"
+              class="project text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+              >پروژه ها</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="contact text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
+              >تماس با من</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
-    <header id="home" class="nav-control sm:h-[50vh] md:h-[70vh] lg:h-[90vh] relative ">
+    <header
+      id="home"
+      class="nav-control sm:h-[50vh] md:h-[70vh] lg:h-[90vh] relative"
+    >
       <div class="h-full flex flex-col sm:flex-row pb-15">
-
-        <div class="centered sm:w-1/2  h-full">
+        <div class="centered sm:w-1/2 h-full">
           <div class="w-full pt-14 sm:pt-7 px-7 md:pt-0 text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">
+            <h1
+              data-aos="fade-up"
+              data-aos-delay="700"
+              data-aos-duration="900"
+              class="text-3xl sm:text-4xl md:text-5xl font-bold"
+            >
               سلام من
-              <span class="font-extrabold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent ">امیر </span>هستم
+              <span
+                class="font-extrabold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
+                >امیر </span
+              >هستم
             </h1>
-            <p id="app" class="mt-7 md:mt-11 leading-8 sm:text-lg md:text-xl lg:text-2xl"></p>
-            <div class="flex justify-center gap-4 sm:gap-1 md:gap-6 my-8">
-              <a href="#project" class="btn-style mt-6 inline-block ">
-                <span >نمونه کار های من</span>
+            <p
+              data-aos="fade-up"
+              data-aos-delay="800"
+              data-aos-duration="900"
+              id="app"
+              class="mt-7 md:mt-11 leading-8 sm:text-lg md:text-xl lg:text-2xl"
+            ></p>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="900"
+              data-aos-duration="900"
+              class="flex justify-center gap-4 sm:gap-1 md:gap-6 my-8"
+            >
+              <a href="#project" class="btn-style mt-6 inline-block">
+                <span>نمونه کار های من</span>
               </a>
               <a href="maxresdefault.jpg" download class="btn-style mt-6">
                 <span class="inline-flex items-center gap-2">
@@ -123,9 +145,50 @@
                 </span>
               </a>
             </div>
-             <div class="flex justify-center items-center gap-5 mt-7 ">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="1000"
+              data-aos-duration="900"
+              class="flex justify-center items-center gap-5 mt-7"
+            >
               <a
-                href="https://t.me/amir_rezade" target="-blank"
+                href="https://github.com/amirRezazade"
+                target="-blank"
+                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white"
+              >
+                <span class="z-10">
+                  <svg
+                    class="fill-white group-hover:fill-black transition-colors"
+                    fill=""
+                    width="22px"
+                    height="22px"
+                    viewBox="0 0 1920 1920"
+                    xmlns="http://www.w3.org/2000/svg"
+                    stroke=""
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M1821.63 637.76c0-130.027-43.627-236.373-116.054-319.68 11.627-30.187 50.347-151.36-11.2-315.307 0 0-94.72-32-310.4 122.134-90.133-26.454-186.773-39.68-282.773-40.107-96 .427-192.64 13.653-282.667 40.107C602.749-29.227 507.923 2.773 507.923 2.773c-61.547 163.947-22.72 285.12-11.094 315.307-72.32 83.307-116.266 189.653-116.266 319.68 0 456.533 263.68 558.72 514.453 588.8 0 0-180.267 111.68-180.267 299.413-64.32 30.507-336.533 123.947-437.333-58.133 0 0-59.627-114.347-173.013-122.773 0 0-110.294-1.494-7.787 72.426 0 0 74.027 36.694 125.44 174.294 0 0 57.173 289.92 489.067 159.68 4.373 2.24 1.6 140.266 1.6 168.533h777.173s1.28-277.013 1.28-365.12c0-216.64-144.64-292.48-185.28-329.28 251.627-29.44 515.733-130.133 515.733-587.84"
+                        fill-rule="evenodd"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                <span
+                  class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
+                ></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">amirRezazade</span>
+
+              </a>
+              <a
+                href="https://t.me/amir_rezade"
+                target="-blank"
                 class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#40b3e0] hover:border-[#40b3e0]"
               >
                 <span
@@ -154,14 +217,17 @@
                 <span
                   class="bg-[#40b3e0] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
                 ></span>
+                  <span class="social-icon-tooltip" onclick="event.preventDefault()">amir_rezade</span>
+
               </a>
               <a
-                href="https://www.instagram.com/amir._.xpx" target="-blank"
+                href="https://www.instagram.com/amir._.xpx"
+                target="-blank"
                 class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#e54b57] hover:border-[#e54b57]"
               >
-                <span class=" z-10">
+                <span class="z-10">
                   <svg
-                    class="fill-[#e54b57] group-hover:fill-white transition-colors "
+                    class="fill-[#e54b57] group-hover:fill-white transition-colors"
                     width="22px"
                     height="22px"
                     viewBox="0 0 24 24"
@@ -197,12 +263,15 @@
                 <span
                   class="bg-[#e54b57] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
                 ></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">amir._.xpx</span>
+
               </a>
               <a
-                href="https://www.linkedin.com/in/amir-rezazadeh-7086a6345/" target="-blank"
+                href="https://www.linkedin.com/in/amir-rezazadeh-7086a6345/"
+                target="-blank"
                 class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#007ebb] hover:border-[#007ebb]"
               >
-                <span class="z-10 ">
+                <span class="z-10">
                   <svg
                     class=""
                     width="22px"
@@ -248,19 +317,24 @@
                 <span
                   class="bg-[#007ebb] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
                 ></span>
+                  <span class="social-icon-tooltip" onclick="event.preventDefault()">AmirRezazadeh</span>
+
               </a>
               <a
-                href="https://github.com/amirRezazade" target="-blank"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=amirrezazadeh.job@gmail.com"
+                target="-blank"
                 class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white"
               >
-                <span class=" z-10">
-                  <svg class="fill-white group-hover:fill-black transition-colors "
-                    fill=""
-                    width="22px"
-                    height="22px"
-                    viewBox="0 0 1920 1920"
+                <span class="z-10">
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    stroke=""
+                    aria-label="Gmail"
+                    role="img"
+                    viewBox="0 0 512 512"
+                    width="27px"
+                    height="27px"
+                    fill="#000000"
+                    stroke="#000000"
                   >
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g
@@ -269,9 +343,31 @@
                       stroke-linejoin="round"
                     ></g>
                     <g id="SVGRepo_iconCarrier">
+                      <rect
+                        width="512"
+                        height="512"
+                        rx="15%"
+                        fill="#ffffff00"
+                      ></rect>
                       <path
-                        d="M1821.63 637.76c0-130.027-43.627-236.373-116.054-319.68 11.627-30.187 50.347-151.36-11.2-315.307 0 0-94.72-32-310.4 122.134-90.133-26.454-186.773-39.68-282.773-40.107-96 .427-192.64 13.653-282.667 40.107C602.749-29.227 507.923 2.773 507.923 2.773c-61.547 163.947-22.72 285.12-11.094 315.307-72.32 83.307-116.266 189.653-116.266 319.68 0 456.533 263.68 558.72 514.453 588.8 0 0-180.267 111.68-180.267 299.413-64.32 30.507-336.533 123.947-437.333-58.133 0 0-59.627-114.347-173.013-122.773 0 0-110.294-1.494-7.787 72.426 0 0 74.027 36.694 125.44 174.294 0 0 57.173 289.92 489.067 159.68 4.373 2.24 1.6 140.266 1.6 168.533h777.173s1.28-277.013 1.28-365.12c0-216.64-144.64-292.48-185.28-329.28 251.627-29.44 515.733-130.133 515.733-587.84"
-                        fill-rule="evenodd"
+                        d="M158 391v-142l-82-63V361q0 30 30 30"
+                        fill="#4285f4"
+                      ></path>
+                      <path
+                        d="M 154 248l102 77l102-77v-98l-102 77l-102-77"
+                        fill="#ea4335"
+                      ></path>
+                      <path
+                        d="M354 391v-142l82-63V361q0 30-30 30"
+                        fill="#34a853"
+                      ></path>
+                      <path
+                        d="M76 188l82 63v-98l-30-23c-27-21-52 0-52 26"
+                        fill="#c5221f"
+                      ></path>
+                      <path
+                        d="M436 188l-82 63v-98l30-23c27-21 52 0 52 26"
+                        fill="#fbbc04"
                       ></path>
                     </g>
                   </svg>
@@ -279,14 +375,20 @@
                 <span
                   class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
                 ></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">amirrezazadeh.job@gmail.com</span>
               </a>
             </div>
           </div>
         </div>
 
-        <div class=" sm:w-1/2 h-auto centered px-10 lg:px-25">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="800"
+          data-aos-duration="900"
+          class="sm:w-1/2 h-auto centered px-10 lg:px-25"
+        >
           <img
-            class=" object-cover w-full aspect-square"
+            class="object-cover w-full aspect-square"
             src="coding.gif"
             alt=""
           />
@@ -320,15 +422,30 @@
     </header>
 
     <!-- start about me section  -->
-    <section id="about" class="nav-control min-h-screen centered text-center mt-10 sm:mt-15 ">
+    <section
+      id="about"
+      class="nav-control min-h-screen centered text-center mt-10 sm:mt-15"
+    >
       <div class="container mx-auto max-w-5xl">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">
-          درباره <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">من</span>
+        <h1
+          data-aos="zoom-in-up"
+          data-aos-duration="800"
+          class="text-2xl sm:text-3xl md:text-4xl font-bold"
+        >
+          درباره
+          <span
+            class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
+            >من</span
+          >
         </h1>
         <div
           class="flex flex-col-reverse md:flex-row-reverse md:justify-center md:items-center gap-4 mt-5 sm:mt-10 md:mt-20"
         >
-          <div class="px-8 md:px-4 md:w-1/2 flex flex-col gap-6">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1600"
+            class="px-8 md:px-4 md:w-1/2 flex flex-col gap-6"
+          >
             <div class="gradient-border p-6 card-hover bg-slate-800">
               <div class="flex items-start gap-4">
                 <div class="p-3 rounded-full bg-primary/10">
@@ -417,17 +534,21 @@
               </div>
             </div>
           </div>
-          <div class="px-8 md:px-4 text-center md:w-1/2">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1600"
+            class="px-8 md:px-4 text-center md:w-1/2"
+          >
             <h1 class="text-xl sm:text-2xl">
               توسعه دهنده‌ وب - برنامه نویس فرانت اند
             </h1>
-            <p class="my-4 text-sm sm:text-base leading-6">
+            <p class="my-4 text-sm sm:text-base leading-6 md:leading-7">
               سلام! من امیر رضازاده هستم، توسعه‌دهنده‌ی فرانت‌اند و علاقه‌مند به
-              دنیای طراحی و برنامه‌نویسی وب. حدود دو ساله که مسیر یادگیری HTML،
-              CSS، JavaScript و React رو شروع کردم و هر روز با انگیزه بیشتری در
-              حال تمرین و ساخت پروژه‌های مختلف هستم.
+              دنیای طراحی و برنامه‌نویسی وب. از سال 1402 مسیر یادگیری HTML، CSS،
+              JavaScript و React رو شروع کردم و هر روز با انگیزه بیشتری در حال
+              تمرین و ساخت پروژه‌های مختلف هستم.
             </p>
-            <p class="my-4 text-sm sm:text-base leading-6">
+            <p class="my-4 text-sm sm:text-base leading-6 md:leading-7">
               من به تجربه کاربری، طراحی مینیمال و نوشتن کد تمیز علاقه‌مندم. در
               کنار یادگیری تکنولوژی‌ها، به درک بهتر اصول طراحی و رفتار کاربر هم
               توجه می‌کنم. هدفم اینه که به عنوان یک توسعه‌دهنده‌ی حرفه‌ای وارد
@@ -473,21 +594,35 @@
             </div>
           </div>
         </div>
-        <div class="mt-7 md:mt-10">
-          <img class="w-full h-auto object-cover" src="https://ghchart.rshah.org/amirRezazade" alt="my GitHub Contributions">
+        <div data-aos="fade-up" data-aos-duration="1200" class="mt-7 md:mt-10">
+          <img
+            class="w-full h-auto object-cover"
+            src="https://ghchart.rshah.org/amirRezazade"
+            alt="my GitHub Contributions"
+          />
         </div>
       </div>
     </section>
     <!-- finish about me section  -->
     <!-- start my skills section  -->
     <section id="skills" class="nav-control mt-10 sm:mt-15 md:my-20">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
-        مهارت های <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">من</span>
+      <h1
+        data-aos="zoom-in-up"
+        data-aos-duration="800"
+        class="text-2xl sm:text-3xl md:text-4xl font-bold text-center"
+      >
+        مهارت های
+        <span
+          class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
+          >من</span
+        >
       </h1>
       <div
         class="flex flex-wrap justify-center gap-6 container max-w-7xl mx-auto mt-5 sm:mt-10 md:mt-20"
       >
         <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
           class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
@@ -521,6 +656,8 @@
           </div>
         </div>
         <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
           class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
@@ -576,6 +713,8 @@
           </div>
         </div>
         <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
           class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
@@ -601,6 +740,8 @@
           </div>
         </div>
         <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
           class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
@@ -625,6 +766,8 @@
           </div>
         </div>
         <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
           class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
@@ -672,6 +815,8 @@
           </div>
         </div>
         <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
           class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
@@ -696,6 +841,8 @@
           </div>
         </div>
         <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
           class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
         >
           <div class="card">
@@ -726,13 +873,21 @@
     <!-- start my project section  -->
     <section id="project" class="nav-control mt-10 sm:mt-15 md:my-20">
       <div class="container max-w-7xl mx-auto">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
-          پروژه های <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">من</span>
+        <h1
+          data-aos="zoom-in-up"
+          data-aos-duration="800"
+          class="text-2xl sm:text-3xl md:text-4xl font-bold text-center"
+        >
+          پروژه های
+          <span
+            class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
+            >من</span
+          >
         </h1>
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6"
         >
-          <div class="">
+          <div data-aos="fade-left" data-aos-duration="1000" class="">
             <div class="group relative w-full">
               <div
                 class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20"
@@ -840,7 +995,7 @@
               </div>
             </div>
           </div>
-          <div class="">
+          <div data-aos="fade-up" data-aos-duration="1000" class="">
             <div class="group relative w-full">
               <div
                 class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20"
@@ -948,7 +1103,7 @@
               </div>
             </div>
           </div>
-          <div class="">
+          <div data-aos="fade-right" data-aos-duration="1000" class="">
             <div class="group relative w-full">
               <div
                 class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20"
@@ -1064,24 +1219,40 @@
     <!-- start contact me section  -->
     <section id="contact" class="nav-control mt-10 sm:mt-15 md:my-20">
       <div class="container mx-auto">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
-          تماس با <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">من</span>
+        <h1
+          data-aos="zoom-in-up"
+          data-aos-duration="800"
+          class="text-2xl sm:text-3xl md:text-4xl font-bold text-center"
+        >
+          تماس با
+          <span
+            class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
+            >من</span
+          >
         </h1>
 
         <div
           class="max-w-2xl mx-auto rounded-3xl p-3 py-3 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6"
         >
           <div
-            class="bg-slate-900 rounded-2xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 border border-transparent hover:border-purple-500/50 hover:shadow-[#6366f1]/10 "
+            class="bg-slate-900 rounded-2xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 border border-transparent hover:border-purple-500/50 hover:shadow-[#6366f1]/10"
           >
-                <p class="text-gray-300 mb-7">
-                  چیزی برای بحث دارید؟ به من پیام دهید تا صحبت کنیم.
-                </p>
-            <form action="" method="POST" class="space-y-6">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="50"
+              class="text-gray-300 mb-7"
+            >
+              چیزی برای بحث دارید؟ به من پیام دهید تا صحبت کنیم.
+            </p>
+            <form
+              action="https://formspree.io/f/mblawear"
+              method="POST"
+              class="space-y-6"
+            >
               <div
                 data-aos="fade-up"
                 data-aos-delay="100"
-                class="relative group aos-init aos-animate"
+                class="relative group"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1109,7 +1280,7 @@
               <div
                 data-aos="fade-up"
                 data-aos-delay="200"
-                class="relative group aos-init aos-animate"
+                class="relative group"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1139,7 +1310,7 @@
               <div
                 data-aos="fade-up"
                 data-aos-delay="300"
-                class="relative group aos-init aos-animate"
+                class="relative group"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1167,7 +1338,7 @@
                 data-aos="fade-up"
                 data-aos-delay="400"
                 type="submit"
-                class="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 aos-init"
+                class="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1188,10 +1359,50 @@
                 >ارسال پیام
               </button>
             </form>
-            
-            <div class="flex justify-center items-center gap-3 mt-7 ">
+
+            <div
+              data-aos="fade-up"
+              data-aos-delay="500"
+              class="flex justify-center items-center gap-3 mt-7"
+            >
                   <a
-                href="https://t.me/amir_rezade" target="-blank"
+                href="https://github.com/amirRezazade"
+                target="-blank"
+                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white"
+              >
+                <span class="z-10">
+                  <svg
+                    class="fill-white group-hover:fill-black transition-colors"
+                    fill=""
+                    width="22px"
+                    height="22px"
+                    viewBox="0 0 1920 1920"
+                    xmlns="http://www.w3.org/2000/svg"
+                    stroke=""
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M1821.63 637.76c0-130.027-43.627-236.373-116.054-319.68 11.627-30.187 50.347-151.36-11.2-315.307 0 0-94.72-32-310.4 122.134-90.133-26.454-186.773-39.68-282.773-40.107-96 .427-192.64 13.653-282.667 40.107C602.749-29.227 507.923 2.773 507.923 2.773c-61.547 163.947-22.72 285.12-11.094 315.307-72.32 83.307-116.266 189.653-116.266 319.68 0 456.533 263.68 558.72 514.453 588.8 0 0-180.267 111.68-180.267 299.413-64.32 30.507-336.533 123.947-437.333-58.133 0 0-59.627-114.347-173.013-122.773 0 0-110.294-1.494-7.787 72.426 0 0 74.027 36.694 125.44 174.294 0 0 57.173 289.92 489.067 159.68 4.373 2.24 1.6 140.266 1.6 168.533h777.173s1.28-277.013 1.28-365.12c0-216.64-144.64-292.48-185.28-329.28 251.627-29.44 515.733-130.133 515.733-587.84"
+                        fill-rule="evenodd"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                <span
+                  class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
+                ></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">amirRezazade</span>
+
+              </a>
+              <a
+                href="https://t.me/amir_rezade"
+                target="-blank"
                 class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#40b3e0] hover:border-[#40b3e0]"
               >
                 <span
@@ -1220,14 +1431,17 @@
                 <span
                   class="bg-[#40b3e0] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
                 ></span>
+                  <span class="social-icon-tooltip" onclick="event.preventDefault()">amir_rezade</span>
+
               </a>
               <a
-                href="https://www.instagram.com/amir._.xpx" target="-blank"
+                href="https://www.instagram.com/amir._.xpx"
+                target="-blank"
                 class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#e54b57] hover:border-[#e54b57]"
               >
-                <span class=" z-10">
+                <span class="z-10">
                   <svg
-                    class="fill-[#e54b57] group-hover:fill-white transition-colors "
+                    class="fill-[#e54b57] group-hover:fill-white transition-colors"
                     width="22px"
                     height="22px"
                     viewBox="0 0 24 24"
@@ -1263,12 +1477,15 @@
                 <span
                   class="bg-[#e54b57] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
                 ></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">amir._.xpx</span>
+
               </a>
               <a
-                href="https://www.linkedin.com/in/amir-rezazadeh-7086a6345/" target="-blank"
+                href="https://www.linkedin.com/in/amir-rezazadeh-7086a6345/"
+                target="-blank"
                 class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#007ebb] hover:border-[#007ebb]"
               >
-                <span class="z-10 ">
+                <span class="z-10">
                   <svg
                     class=""
                     width="22px"
@@ -1314,19 +1531,24 @@
                 <span
                   class="bg-[#007ebb] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
                 ></span>
+                  <span class="social-icon-tooltip" onclick="event.preventDefault()">AmirRezazadeh</span>
+
               </a>
               <a
-                href="https://github.com/amirRezazade" target="-blank"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=amirrezazadeh.job@gmail.com"
+                target="-blank"
                 class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white"
               >
-                <span class=" z-10">
-                  <svg class="fill-white group-hover:fill-black transition-colors "
-                    fill=""
-                    width="22px"
-                    height="22px"
-                    viewBox="0 0 1920 1920"
+                <span class="z-10">
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    stroke=""
+                    aria-label="Gmail"
+                    role="img"
+                    viewBox="0 0 512 512"
+                    width="27px"
+                    height="27px"
+                    fill="#000000"
+                    stroke="#000000"
                   >
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g
@@ -1335,9 +1557,31 @@
                       stroke-linejoin="round"
                     ></g>
                     <g id="SVGRepo_iconCarrier">
+                      <rect
+                        width="512"
+                        height="512"
+                        rx="15%"
+                        fill="#ffffff00"
+                      ></rect>
                       <path
-                        d="M1821.63 637.76c0-130.027-43.627-236.373-116.054-319.68 11.627-30.187 50.347-151.36-11.2-315.307 0 0-94.72-32-310.4 122.134-90.133-26.454-186.773-39.68-282.773-40.107-96 .427-192.64 13.653-282.667 40.107C602.749-29.227 507.923 2.773 507.923 2.773c-61.547 163.947-22.72 285.12-11.094 315.307-72.32 83.307-116.266 189.653-116.266 319.68 0 456.533 263.68 558.72 514.453 588.8 0 0-180.267 111.68-180.267 299.413-64.32 30.507-336.533 123.947-437.333-58.133 0 0-59.627-114.347-173.013-122.773 0 0-110.294-1.494-7.787 72.426 0 0 74.027 36.694 125.44 174.294 0 0 57.173 289.92 489.067 159.68 4.373 2.24 1.6 140.266 1.6 168.533h777.173s1.28-277.013 1.28-365.12c0-216.64-144.64-292.48-185.28-329.28 251.627-29.44 515.733-130.133 515.733-587.84"
-                        fill-rule="evenodd"
+                        d="M158 391v-142l-82-63V361q0 30 30 30"
+                        fill="#4285f4"
+                      ></path>
+                      <path
+                        d="M 154 248l102 77l102-77v-98l-102 77l-102-77"
+                        fill="#ea4335"
+                      ></path>
+                      <path
+                        d="M354 391v-142l82-63V361q0 30-30 30"
+                        fill="#34a853"
+                      ></path>
+                      <path
+                        d="M76 188l82 63v-98l-30-23c-27-21-52 0-52 26"
+                        fill="#c5221f"
+                      ></path>
+                      <path
+                        d="M436 188l-82 63v-98l30-23c27-21 52 0 52 26"
+                        fill="#fbbc04"
                       ></path>
                     </g>
                   </svg>
@@ -1345,18 +1589,27 @@
                 <span
                   class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
                 ></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">amirrezazadeh.job@gmail.com</span>
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- finish contact me section  -->
+
+    <footer class="mt-5 py-3 border-t border-gray-700 md:mt-10 flex justify-center ">
+      <p class="text-xs">«طراحی و توسعه توسط امیر رضازاده — ۲۰۲۵»</p>
+
+    </footer>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script src="assets/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
     <script src="index.js"></script>
-  
   </body>
 </html>
 
