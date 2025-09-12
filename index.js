@@ -35,7 +35,6 @@ function activateNavLink() {
         }
     });
 
-    // حذف کلاس active از همه لینک‌ها
     navLinks.forEach(link => {
         link.classList.remove('nav-item-active');
         if (link.classList.contains(current)) {

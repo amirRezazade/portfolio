@@ -10,7 +10,7 @@
     <link href="assets/aos.css" rel="stylesheet" />
     <title>Amir Rezazade</title>
   </head>
-  <body class="font-[iran-sans] text-white">
+  <body class="font-[iran-sans] text-white overflow-hidden">
     <div id="scene" class="fixed top-0 left-0 -z-10">
       <div id="star1"></div>
       <div id="star2"></div>
@@ -81,16 +81,16 @@
     </nav>
     <header
       id="home"
-      class="nav-control sm:h-[50vh] md:h-[70vh] lg:h-[90vh] relative"
+      class="nav-control  sm:h-[50vh] md:h-[75vh] lg:h-[90vh] relative"
     >
-      <div class="h-full flex flex-col sm:flex-row pb-15">
+      <div class="h-full flex flex-col sm:flex-row md:pb-15">
         <div class="centered sm:w-1/2 h-full">
           <div class="w-full pt-14 sm:pt-7 px-7 md:pt-0 text-center">
             <h1
               data-aos="fade-up"
               data-aos-delay="700"
               data-aos-duration="900"
-              class="text-3xl sm:text-4xl md:text-5xl font-bold"
+              class="text-3xl sm:text-3xl md:text-4xl font-bold"
             >
               سلام من
               <span
@@ -109,7 +109,7 @@
               data-aos="fade-up"
               data-aos-delay="900"
               data-aos-duration="900"
-              class="flex justify-center gap-4 sm:gap-1 md:gap-6 my-8"
+              class="flex justify-center gap-4 sm:gap-1 md:gap-6 my-5"
             >
               <a href="#project" class="btn-style mt-6 inline-block">
                 <span>نمونه کار های من</span>
@@ -385,17 +385,17 @@
           data-aos="fade-right"
           data-aos-delay="800"
           data-aos-duration="900"
-          class="sm:w-1/2 h-auto centered px-10 lg:px-25"
+          class="sm:w-1/2 h-auto centered overflow-hidden "
         >
           <img
-            class="object-cover w-full aspect-square"
-            src="coding.gif"
+            class="object-cover lg:ml-22 xl:ml-35"
+            src="images/header.gif"
             alt=""
           />
         </div>
       </div>
 
-      <div class="flex justify-center w-full absolute bottom-2">
+      <div class="hidden md:flex justify-center w-full absolute bottom-2 pointer-events-none">
         <span class="flex flex-col items-center gap-2 animate-bounce text-sm">
           scroll
           <svg
@@ -424,7 +424,7 @@
     <!-- start about me section  -->
     <section
       id="about"
-      class="nav-control min-h-screen centered text-center mt-10 sm:mt-15"
+      class="nav-control min-h-screen centered text-center mt-5 sm:mt-15"
     >
       <div class="container mx-auto max-w-5xl">
         <h1
