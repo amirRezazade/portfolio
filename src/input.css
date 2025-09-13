@@ -39,7 +39,9 @@
   width: 100vw;
   margin: 0 auto;
   height: 100vh;
-  background-image: url("https://res.cloudinary.com/dylant25/image/upload/v1563056818/stars.jpg");
+  background-image: url("../images/Galaxy-Wallpaper-1920x1080-64596.jpg");
+  background-color: rgba(0, 0, 0, 0.405);
+  background-blend-mode:color-burn ;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -300,6 +302,19 @@ html::-webkit-scrollbar{
   display: none;
 }
 
+.test{
+    width: 100%;
+    /* -o-object-position: top center; */
+    object-position: top center;
+    transition: all 2.7s ease-in-out;
+    /* display: block; */
+    height: auto;
+    object-fit: cover;
+}
+.test:hover{
+  /* -o-object-position: bottom center; */
+    object-position: bottom center
+}
 
 
 /* https://abhishekganvir.vercel.app/ */
