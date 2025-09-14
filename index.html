@@ -5,24 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#4b4ef4b4" />
     <link rel="icon" type="image/svg+xml" href="images/logo.png" />
-    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="src/card-hover-styles.css" />
     <link rel="stylesheet" href="src/output.css" />
     <link href="assets/aos.css" rel="stylesheet" />
     <title>Amir Rezazade</title>
   </head>
   <body class="font-[iran-sans] text-white overflow-hidden">
-    <div id="scene" class="fixed top-0 left-0 -z-10">
-      <div id="star1"></div>
-      <div id="star2"></div>
-      <div id="star3"></div>
-      <div id="star4"></div>
-      <div id="star5"></div>
-      <div id="star6"></div>
-      <div id="star7"></div>
-      <div id="star8"></div>
-      <div id="star9"></div>
-      <div id="star10"></div>
-      <div id="star11"></div>
+
+    <div class="fixed w-screen h-screen top-0 left-0 -z-50">
+      <video autoplay muted loop playsinline class="object-cover w-full h-full" src="images/stars.mp4"></video>
     </div>
 
     <nav class="sticky z-99 top-0 bg-gradient-to-b from-black to-black/10 ">
@@ -385,11 +376,11 @@
           data-aos="fade-right"
           data-aos-delay="800"
           data-aos-duration="900"
-          class="sm:w-1/2 h-auto centered overflow-hidden "
+          class="sm:w-1/2 h-auto centered overflow-hidden px-15 sm:px-0 md:px-5 lg:px-12 xl:pl-35 "
         >
           <img
-            class="object-cover lg:ml-22 xl:ml-35"
-            src="images/header.gif"
+            class="object-cover w-full "
+            src="images/astronaut.gif"
             alt=""
           />
         </div>
@@ -1007,7 +998,7 @@
                 <div class="relative p-5 z-10">
                   <div class="relative rounded-lg aspect-5/4 overflow-hidden">
                     <img
-                      src="images/playhost-poster.jpg"
+                      src="images/playhost-poster.png"
                       alt="digi-media"
                       class=" w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-5000"
                     />
