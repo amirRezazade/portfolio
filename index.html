@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" class="scroll-smooth">
+<html lang="fa" dir="rtl" class="scroll-smooth overflow-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,9 +10,9 @@
     <link href="assets/aos.css" rel="stylesheet" />
     <title>Amir Rezazade</title>
   </head>
-  <body class="font-[iran-sans] text-white overflow-hidden ">
+  <body class="font-[iran-sans] text-white overflow-hidden max-w-screen bg-slate-800 ">
   <!--start background video -->
-  <div class="fixed w-screen h-screen top-0 left-0 -z-50 bg-slate-800" >
+  <div class="fixed w-screen h-screen top-0 right-0 -z-50 bg-slate-800" >
     <video autoplay muted loop playsinline  poster="images/background-photo.jpg" class="object-cover w-full h-full" >
       <source src="images/stars.mp4" type="video/mp4">
     </video>
@@ -72,7 +72,7 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> 
     <header
       id="home"
       class="nav-control  sm:h-[50vh] md:h-[75vh] lg:h-[90vh] relative"
@@ -1219,6 +1219,7 @@
                 ><input
                   type="text"
                   name="name"
+                  minlength="3"
                   placeholder="Your Name"
                   class="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 disabled:opacity-50"
                   required=""
@@ -1279,7 +1280,8 @@
                   name="message"
                   placeholder="Your Message"
                   class="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 h-[9.9rem] disabled:opacity-50"
-                  required=""
+                  required
+                  minlength="5"
                 ></textarea>
               </div>
               <button
@@ -1546,7 +1548,7 @@
     </section>
     <!-- finish contact me section  -->
 
-    <footer class="mt-5 py-3 border-t border-gray-700 md:mt-10 flex justify-center ">
+    <footer class="mt-15 py-3 border-t border-gray-700 md:mt-10 flex justify-center ">
       <p class="text-xs">«طراحی و توسعه توسط امیر رضازاده — ۲۰۲۵»</p>
 
     </footer>
@@ -1558,7 +1560,6 @@
     <script>
       AOS.init();
     </script>
-
     <script src="index.js"></script>
   </body>
 </html>

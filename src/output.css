@@ -5,10 +5,8 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-800: oklch(44.4% 0.177 26.899);
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
@@ -23,7 +21,6 @@
     --color-purple-500: oklch(62.7% 0.265 303.9);
     --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-slate-300: oklch(86.9% 0.022 252.894);
-    --color-slate-700: oklch(37.2% 0.044 257.287);
     --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-gray-100: oklch(96.7% 0.003 264.542);
@@ -248,6 +245,9 @@
   .top-4 {
     top: calc(var(--spacing) * 4);
   }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
   .bottom-2 {
     bottom: calc(var(--spacing) * 2);
   }
@@ -320,8 +320,14 @@
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
+  }
+  .mt-15 {
+    margin-top: calc(var(--spacing) * 15);
   }
   .mb-7 {
     margin-bottom: calc(var(--spacing) * 7);
@@ -368,9 +374,6 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
-  .h-6 {
-    height: calc(var(--spacing) * 6);
-  }
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
@@ -398,9 +401,6 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
-  .w-6 {
-    width: calc(var(--spacing) * 6);
-  }
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
@@ -427,6 +427,9 @@
   }
   .max-w-100 {
     max-width: calc(var(--spacing) * 100);
+  }
+  .max-w-screen {
+    max-width: 100vw;
   }
   .flex-grow {
     flex-grow: 1;
@@ -530,9 +533,6 @@
   .scroll-smooth {
     scroll-behavior: smooth;
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -599,29 +599,11 @@
   .bg-\[\#e54b57\] {
     background-color: #e54b57;
   }
-  .bg-purple-500 {
-    background-color: var(--color-purple-500);
-  }
-  .bg-red-800 {
-    background-color: var(--color-red-800);
-  }
-  .bg-slate-700 {
-    background-color: var(--color-slate-700);
-  }
   .bg-slate-800 {
     background-color: var(--color-slate-800);
   }
-  .bg-slate-800\/50 {
-    background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-800) 50%, transparent);
-    }
-  }
   .bg-slate-900 {
     background-color: var(--color-slate-900);
-  }
-  .bg-violet-600 {
-    background-color: var(--color-violet-600);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -753,9 +735,6 @@
   .fill-\[\#e54b57\] {
     fill: #e54b57;
   }
-  .fill-amber-300 {
-    fill: var(--color-amber-300);
-  }
   .fill-white {
     fill: var(--color-white);
   }
@@ -843,26 +822,11 @@
   .text-end {
     text-align: end;
   }
-  .text-justify {
-    text-align: justify;
-  }
-  .text-left {
-    text-align: left;
-  }
   .text-start {
     text-align: start;
   }
   .font-\[iran-sans\] {
     font-family: iran-sans;
-  }
-  .font-mono {
-    font-family: var(--font-mono);
-  }
-  .font-sans {
-    font-family: var(--font-sans);
-  }
-  .font-serif {
-    font-family: var(--font-serif);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -1543,11 +1507,6 @@
       margin-block: calc(var(--spacing) * 30);
     }
   }
-  .xl\:mt-15 {
-    @media (width >= 80rem) {
-      margin-top: calc(var(--spacing) * 15);
-    }
-  }
   .xl\:mt-20 {
     @media (width >= 80rem) {
       margin-top: calc(var(--spacing) * 20);
@@ -1564,7 +1523,6 @@
     }
   }
 }
-@import url(../test.css);
 @font-face {
   font-family: iran-sans;
   src: url(../font/woff/IRANSansX-Medium.woff) format(woff), url(../font/woff/IRANSansX-Medium.woff2) format(woff2);
@@ -1637,31 +1595,6 @@
     }
   }
   animation: rotate 3s linear infinite;
-}
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.btn-style {
-  background-image: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
-  position: relative;
-  overflow: hidden;
-}
-.btn-style span::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to right, transparent, #ffffff90, transparent);
-  left: -150%;
-  top: 0;
-  opacity: 0;
-  transition: all 0.5s linear;
-}
-.btn-style:hover.btn-style span::before {
-  left: 100%;
-  opacity: 100;
 }
 .nav-item-active {
   --tw-gradient-position: to right in oklab;
@@ -1765,18 +1698,33 @@
     content: var(--tw-content);
   }
 }
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 html::-webkit-scrollbar {
   display: none;
 }
-.test {
-  width: 100%;
-  object-position: top center;
-  transition: all 2.7s ease-in-out;
-  height: auto;
-  object-fit: cover;
+.btn-style {
+  background-image: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+  position: relative;
+  overflow: hidden;
 }
-.test:hover {
-  object-position: bottom center;
+.btn-style span::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, transparent, #ffffff90, transparent);
+  left: -150%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.btn-style:hover.btn-style span::before {
+  left: 100%;
+  opacity: 100;
 }
 @property --tw-translate-x {
   syntax: "*";
