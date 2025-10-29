@@ -10,126 +10,62 @@
     <link href="assets/aos.css" rel="stylesheet" />
     <title>Amir Rezazade</title>
   </head>
-  <body class="font-[iran-sans] text-white overflow-x-hidden max-w-screen h-auto bg-slate-800 ">
-  <!--start background video -->
-  <div class="fixed w-screen h-screen overflow-hidden top-0 right-0 -z-50 bg-slate-800 pointer-events-none" >
-    <video autoplay muted loop playsinline  poster="images/background-photo.jpg" class="object-cover pointer-events-none w-full h-full" >
-      <source src="images/stars.mp4" type="video/mp4">
-    </video>
-  </div>
-  <!--finish background video -->
+  <body class="font-[iran-sans] text-white overflow-x-hidden max-w-screen h-auto bg-slate-800">
+    <!--start background video -->
+    <div class="fixed w-screen h-screen overflow-hidden top-0 right-0 -z-50 bg-[url('../imagdigi-media-poster.jpg')] pointer-events-none flex justify-between bg-cover">
+      <video autoplay muted loop playsinline poster="images/bg-poster.png" class="object-cover pointer-events-none w-full h-full">
+        <source src="images/bg-video.mp4" type="video/mp4" />
+      </video>
+      <div class="flex justify-between absolute top-0 left-0 w-full h-full after:absolute after:w-full after:h-full after:bg-black/20 after:top-0 after:left-0"></div>
+    </div>
+    <!--finish background video -->
 
-    <nav class="fixed w-full z-99 top-0 bg-gradient-to-b from-black to-black/10 ">
-      <div
-        class="container flex justify-between items-center px-5 lg:px-10 mx-auto"
-      >
-        <a
-          href="https://github.com/amirRezazade"
-          target="-blank"
-          class="inline-block w-15 h-15"
-        >
+    <nav class="fixed w-full z-99 top-0 bg-gradient-to-b from-black to-black/10">
+      <div class="container flex justify-between items-center px-2 xs:px-5 lg:px-10 mx-auto">
+        <a href="https://github.com/amirRezazade" target="-blank" class="inline-block w-15 h-15">
           <img class="object-cover" src="images/github-logo.gif" alt="" />
         </a>
 
-        <ul
-          id="nav-menu"
-          class="w-full flex justify-between pr-5 xs:px-5 grow xs:justify-center py-5 xs:py-0 text-[10px] xs:text-xs sm:text-sm xs:gap-5 md:gap-8 xl:gap-10"
-        >
+        <ul id="nav-menu" class="w-full flex justify-between pr-2 xs:pr-5 xs:px-5 grow xs:justify-center py-5 xs:py-0 text-[10px] xs:text-xs sm:text-sm xs:gap-5 md:gap-8 xl:gap-10">
           <li class="">
-            <a
-              href="#home"
-              class="home text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-              >خانه</a
-            >
+            <a href="#home" class="home text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1">خانه</a>
           </li>
           <li>
-            <a
-              href="#about"
-              class="about text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-              >درباره من</a
-            >
+            <a href="#about" class="about text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1">درباره من</a>
           </li>
           <li>
-            <a
-              href="#skills"
-              class="skills text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-              >مهارت ها
-            </a>
+            <a href="#skills" class="skills text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1">مهارت ها </a>
           </li>
           <li>
-            <a
-              href="#project"
-              class="project text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-              >پروژه ها</a
-            >
+            <a href="#project" class="project text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1">پروژه ها</a>
           </li>
           <li>
-            <a
-              href="#contact"
-              class="contact text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1"
-              >تماس با من</a
-            >
+            <a href="#contact" class="contact text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1">تماس با من</a>
           </li>
         </ul>
       </div>
-    </nav> 
-    <header
-      id="home"
-      class="nav-control pt-12 sm:pt-18  sm:h-[60vh] md:h-[75vh] lg:h-[90vh] relative"
-    >
-      <div class="h-full flex flex-col sm:flex-row md:pb-15">
-        <div class="centered sm:w-1/2 h-full">
-          <div class="w-full pt-14 sm:pt-7 px-7 md:pt-0 text-center">
-            <h1
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-duration="800"
-              class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
-            >
+    </nav>
+    <header id="home" class="nav-control pt-12 sm:pt-18 h-[100dvh] sm:h-[80dvh] lg:h-[100dvh] relative">
+      <div class="h-full flex justify-center items-stretch">
+        <div class="grow sm:max-w-1/2 xl:max-w-[auto] flex items-start md:items-center justify-center h-full">
+          <div class="w-full pt-25 sm:pt-17 md:pr-20 md:pt-0 text-center">
+            <h1 data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
               سلام من
-              <span
-                class="font-extrabold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
-                >امیر </span
-              >هستم
+              <span class="font-extrabold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">امیر </span>هستم
             </h1>
-            <p
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-duration="800"
-              id="app"
-              class="mt-7 md:mt-11 leading-8 sm:text-lg md:text-xl lg:text-2xl"
-            ></p>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="900"
-              data-aos-duration="900"
-              class="flex justify-center gap-4 sm:gap-1 md:gap-6 my-5"
-            >
+            <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" id="app" class="mt-7 md:mt-11 leading-8 sm:text-lg md:text-xl lg:text-2xl"></p>
+            <div data-aos="fade-up" data-aos-delay="900" data-aos-duration="900" class="flex justify-center gap-4 sm:gap-1 md:gap-6 my-5">
               <a href="#project" class="btn-style mt-6 inline-block">
                 <span>نمونه کار های من</span>
               </a>
-              <a href="maxresdefault.jpg" download class="btn-style mt-6">
+              <a href="Amir-Rezazade-resume.pdf" download class="btn-style mt-6">
                 <span class="inline-flex items-center gap-2">
                   دانلود رزومه
-                  <svg
-                    width="17px"
-                    height="17px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke="#ffffff"
-                  >
+                  <svg width="17px" height="17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z"
-                        fill="#ffffff"
-                      ></path>
+                      <path d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z" fill="#ffffff"></path>
                       <path
                         d="M3.75 15C3.75 14.5858 3.41422 14.25 3 14.25C2.58579 14.25 2.25 14.5858 2.25 15V15.0549C2.24998 16.4225 2.24996 17.5248 2.36652 18.3918C2.48754 19.2919 2.74643 20.0497 3.34835 20.6516C3.95027 21.2536 4.70814 21.5125 5.60825 21.6335C6.47522 21.75 7.57754 21.75 8.94513 21.75H15.0549C16.4225 21.75 17.5248 21.75 18.3918 21.6335C19.2919 21.5125 20.0497 21.2536 20.6517 20.6516C21.2536 20.0497 21.5125 19.2919 21.6335 18.3918C21.75 17.5248 21.75 16.4225 21.75 15.0549V15C21.75 14.5858 21.4142 14.25 21 14.25C20.5858 14.25 20.25 14.5858 20.25 15C20.25 16.4354 20.2484 17.4365 20.1469 18.1919C20.0482 18.9257 19.8678 19.3142 19.591 19.591C19.3142 19.8678 18.9257 20.0482 18.1919 20.1469C17.4365 20.2484 16.4354 20.25 15 20.25H9C7.56459 20.25 6.56347 20.2484 5.80812 20.1469C5.07435 20.0482 4.68577 19.8678 4.40901 19.591C4.13225 19.3142 3.9518 18.9257 3.85315 18.1919C3.75159 17.4365 3.75 16.4354 3.75 15Z"
                         fill="#ffffff"
@@ -139,33 +75,12 @@
                 </span>
               </a>
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="1000"
-              data-aos-duration="900"
-              class="flex justify-center items-center gap-5 mt-7"
-            >
-              <a
-                href="https://github.com/amirRezazade"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white"
-              >
+            <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="900" class="flex justify-center items-center gap-5 mt-7">
+              <a href="https://github.com/amirRezazade" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white">
                 <span class="z-10">
-                  <svg
-                    class="fill-white group-hover:fill-black transition-colors"
-                    fill=""
-                    width="22px"
-                    height="22px"
-                    viewBox="0 0 1920 1920"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke=""
-                  >
+                  <svg class="fill-white group-hover:fill-black transition-colors" fill="" width="22px" height="22px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
                         d="M1821.63 637.76c0-130.027-43.627-236.373-116.054-319.68 11.627-30.187 50.347-151.36-11.2-315.307 0 0-94.72-32-310.4 122.134-90.133-26.454-186.773-39.68-282.773-40.107-96 .427-192.64 13.653-282.667 40.107C602.749-29.227 507.923 2.773 507.923 2.773c-61.547 163.947-22.72 285.12-11.094 315.307-72.32 83.307-116.266 189.653-116.266 319.68 0 456.533 263.68 558.72 514.453 588.8 0 0-180.267 111.68-180.267 299.413-64.32 30.507-336.533 123.947-437.333-58.133 0 0-59.627-114.347-173.013-122.773 0 0-110.294-1.494-7.787 72.426 0 0 74.027 36.694 125.44 174.294 0 0 57.173 289.92 489.067 159.68 4.373 2.24 1.6 140.266 1.6 168.533h777.173s1.28-277.013 1.28-365.12c0-216.64-144.64-292.48-185.28-329.28 251.627-29.44 515.733-130.133 515.733-587.84"
@@ -174,77 +89,30 @@
                     </g>
                   </svg>
                 </span>
-                <span
-                  class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
+                <span class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
                 <span class="social-icon-tooltip" onclick="event.preventDefault()">amirRezazade</span>
-
               </a>
-              <a
-                href="https://t.me/amir_rezade"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#40b3e0] hover:border-[#40b3e0]"
-              >
-                <span
-                  class="fill-[#40b3e0] group-hover:fill-white transition-colors z-10"
-                >
-                  <svg
-                    fill=""
-                    width="22px"
-                    height="22px"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+              <a href="https://t.me/amir_rezade" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#40b3e0] hover:border-[#40b3e0]">
+                <span class="fill-[#40b3e0] group-hover:fill-white transition-colors z-10">
+                  <svg fill="" width="22px" height="22px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"
-                      ></path>
+                      <path d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"></path>
                     </g>
                   </svg>
                 </span>
-                <span
-                  class="bg-[#40b3e0] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
-                  <span class="social-icon-tooltip" onclick="event.preventDefault()">amir_rezade</span>
-
+                <span class="bg-[#40b3e0] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">amir_rezade</span>
               </a>
-              <a
-                href="https://www.instagram.com/amir._.xpx"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#e54b57] hover:border-[#e54b57]"
-              >
+              <a href="https://www.instagram.com/amir._.xpx" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#e54b57] hover:border-[#e54b57]">
                 <span class="z-10">
-                  <svg
-                    class="fill-[#e54b57] group-hover:fill-white transition-colors"
-                    width="22px"
-                    height="22px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg class="fill-[#e54b57] group-hover:fill-white transition-colors" width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                        fill=""
-                      ></path>
-                      <path
-                        d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-                        fill=""
-                      ></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill=""></path>
+                      <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill=""></path>
                       <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -254,50 +122,20 @@
                     </g>
                   </svg>
                 </span>
-                <span
-                  class="bg-[#e54b57] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
+                <span class="bg-[#e54b57] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
                 <span class="social-icon-tooltip" onclick="event.preventDefault()">amir._.xpx</span>
-
               </a>
-              <a
-                href="https://www.linkedin.com/in/amir-rezazadeh-7086a6345/"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#007ebb] hover:border-[#007ebb]"
-              >
+              <a href="https://www.linkedin.com/in/amir-rezazadeh-7086a6345/" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#007ebb] hover:border-[#007ebb]">
                 <span class="z-10">
-                  <svg
-                    class=""
-                    width="22px"
-                    height="22px"
-                    viewBox="0 -2 44 44"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    fill=""
-                  >
+                  <svg class="" width="22px" height="22px" viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
                       <title>LinkedIn-color</title>
                       <desc>Created with Sketch.</desc>
                       <defs></defs>
-                      <g
-                        id="Icons"
-                        stroke="none"
-                        stroke-width="1"
-                        class="fill-[#007ebb] group-hover:fill-white transition-colors"
-                        fill-rule="evenodd"
-                      >
-                        <g
-                          id="Color-"
-                          transform="translate(-702.000000, -265.000000)"
-                          fill=""
-                        >
+                      <g id="Icons" stroke="none" stroke-width="1" class="fill-[#007ebb] group-hover:fill-white transition-colors" fill-rule="evenodd">
+                        <g id="Color-" transform="translate(-702.000000, -265.000000)" fill="">
                           <path
                             d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
                             id="LinkedIn"
@@ -308,107 +146,44 @@
                   </svg>
                   <!-- <svg  width="22px" height="22px" viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>LinkedIn-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-702.000000, -265.000000)" fill=""> <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn"> </path> </g> </g> </g></svg> -->
                 </span>
-                <span
-                  class="bg-[#007ebb] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
-                  <span class="social-icon-tooltip" onclick="event.preventDefault()">AmirRezazadeh</span>
-
+                <span class="bg-[#007ebb] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">AmirRezazadeh</span>
               </a>
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=amirrezazadeh.job@gmail.com"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white"
-              >
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=a.rezazade.dev@gmail.com" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white">
                 <span class="z-10">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-label="Gmail"
-                    role="img"
-                    viewBox="0 0 512 512"
-                    width="27px"
-                    height="27px"
-                    fill="#000000"
-                    stroke="#000000"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512" width="27px" height="27px" fill="#000000" stroke="#000000">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                      <rect
-                        width="512"
-                        height="512"
-                        rx="15%"
-                        fill="#ffffff00"
-                      ></rect>
-                      <path
-                        d="M158 391v-142l-82-63V361q0 30 30 30"
-                        fill="#4285f4"
-                      ></path>
-                      <path
-                        d="M 154 248l102 77l102-77v-98l-102 77l-102-77"
-                        fill="#ea4335"
-                      ></path>
-                      <path
-                        d="M354 391v-142l82-63V361q0 30-30 30"
-                        fill="#34a853"
-                      ></path>
-                      <path
-                        d="M76 188l82 63v-98l-30-23c-27-21-52 0-52 26"
-                        fill="#c5221f"
-                      ></path>
-                      <path
-                        d="M436 188l-82 63v-98l30-23c27-21 52 0 52 26"
-                        fill="#fbbc04"
-                      ></path>
+                      <rect width="512" height="512" rx="15%" fill="#ffffff00"></rect>
+                      <path d="M158 391v-142l-82-63V361q0 30 30 30" fill="#4285f4"></path>
+                      <path d="M 154 248l102 77l102-77v-98l-102 77l-102-77" fill="#ea4335"></path>
+                      <path d="M354 391v-142l82-63V361q0 30-30 30" fill="#34a853"></path>
+                      <path d="M76 188l82 63v-98l-30-23c-27-21-52 0-52 26" fill="#c5221f"></path>
+                      <path d="M436 188l-82 63v-98l30-23c27-21 52 0 52 26" fill="#fbbc04"></path>
                     </g>
                   </svg>
                 </span>
-                <span
-                  class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
-                <span class="social-icon-tooltip" onclick="event.preventDefault()">amirrezazadeh.job@gmail.com</span>
+                <span class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">a.rezazade.dev@gmail.com</span>
               </a>
             </div>
           </div>
         </div>
 
-        <div
-          data-aos="fade-right"
-          data-aos-delay="800"
-          data-aos-duration="900"
-          class="sm:w-1/2 h-auto centered overflow-hidden px-15 sm:px-0 md:px-5 lg:px-12 xl:pl-35 "
-        >
-          <img
-            class="object-cover w-full "
-            src="images/astronaut.gif"
-            alt=""
-          />
+        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" class="hidden grow max-w-[40%] sm:flex items-start md:items-center justify-start">
+          <dotlottie-player src="images/Astronaut.lottie" background="transparent" speed="0.7" class="size-80 md:size-90 lg:size-100 xl:size-[600px]" loop autoplay> </dotlottie-player>
         </div>
       </div>
 
-      <div class="hidden md:flex justify-center w-full absolute bottom-2 pointer-events-none">
+      <div class="flex justify-center w-full absolute bottom-2 pointer-events-none">
         <span class="flex flex-col items-center gap-2 animate-bounce text-sm">
           scroll
-          <svg
-            fill="#8e51ff"
-            width="22px"
-            height="22px"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg fill="#8e51ff" width="22px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
-              <path
-                d="M5.293,16.707a1,1,0,0,1,1.414-1.414L11,19.586V2a1,1,0,0,1,2,0V19.586l4.293-4.293a1,1,0,0,1,1.414,1.414l-6,6a1,1,0,0,1-1.414,0Z"
-              ></path>
+              <path d="M5.293,16.707a1,1,0,0,1,1.414-1.414L11,19.586V2a1,1,0,0,1,2,0V19.586l4.293-4.293a1,1,0,0,1,1.414,1.414l-6,6a1,1,0,0,1-1.414,0Z"></path>
             </g>
           </svg>
         </span>
@@ -416,119 +191,83 @@
     </header>
 
     <!-- start about me section  -->
-    <section
-      id="about"
-      class="nav-control min-h-screen centered text-center mt-5 sm:mt-15"
-    >
+    <section id="about" class="nav-control min-h-screen centered text-center mt-5 sm:mt-15">
       <div class="container mx-auto max-w-5xl">
-        <h1
-          data-aos="zoom-in-up"
-          data-aos-duration="800"
-          class="text-2xl sm:text-3xl md:text-4xl font-bold"
-        >
+        <h1 data-aos="zoom-in-up" data-aos-duration="800" class="text-2xl sm:text-3xl md:text-4xl font-bold">
           درباره
-          <span
-            class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
-            >من</span
-          >
+          <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">من</span>
         </h1>
-        <div
-          class="flex flex-col-reverse md:flex-row-reverse md:justify-center md:items-center gap-4 mt-5 sm:mt-10 md:mt-20"
-        >
-          <div
-            data-aos="fade-right"
-            data-aos-duration="1600"
-            class="px-8 md:px-4 md:w-1/2 flex flex-col gap-6"
-          >
-            <div class=" p-6 bg-gradient-to-br from-slate-900/90 border border-transparent transition-colors duration-300 rounded-xl to-slate-800/90 hover:border-purple-500/50 hover:shadow-purple-500/20">
+        <div class="flex flex-col-reverse md:flex-row-reverse md:justify-center md:items-center gap-4 mt-5 sm:mt-10 md:mt-20">
+          <div data-aos="fade-right" data-aos-duration="1600" class="px-8 md:px-4 md:w-1/2 flex flex-col gap-6">
+            <div class="p-6 bg-gradient-to-br from-slate-900/90 border border-transparent transition-colors duration-300 rounded-xl to-slate-800/90 hover:border-purple-500/50 hover:shadow-purple-500/20">
               <div class="flex items-start gap-4">
-                  <div class="p-3 rounded-full bg-slate-800 ">
-                    <svg fill="#7f6ce0" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M1.293,11.293l4-4A1,1,0,1,1,6.707,8.707L3.414,12l3.293,3.293a1,1,0,1,1-1.414,1.414l-4-4A1,1,0,0,1,1.293,11.293Zm17.414-4a1,1,0,1,0-1.414,1.414L20.586,12l-3.293,3.293a1,1,0,1,0,1.414,1.414l4-4a1,1,0,0,0,0-1.414ZM13.039,4.726l-4,14a1,1,0,0,0,.686,1.236A1.053,1.053,0,0,0,10,20a1,1,0,0,0,.961-.726l4-14a1,1,0,1,0-1.922-.548Z"></path></g></svg>                </div>
+                <div class="p-3 rounded-full bg-slate-800">
+                  <svg fill="#7f6ce0" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"><path d="M1.293,11.293l4-4A1,1,0,1,1,6.707,8.707L3.414,12l3.293,3.293a1,1,0,1,1-1.414,1.414l-4-4A1,1,0,0,1,1.293,11.293Zm17.414-4a1,1,0,1,0-1.414,1.414L20.586,12l-3.293,3.293a1,1,0,1,0,1.414,1.414l4-4a1,1,0,0,0,0-1.414ZM13.039,4.726l-4,14a1,1,0,0,0,.686,1.236A1.053,1.053,0,0,0,10,20a1,1,0,0,0,.961-.726l4-14a1,1,0,1,0-1.922-.548Z"></path></g>
+                  </svg>
+                </div>
                 <div class="w-full">
                   <h4 class="font-semibold text-lg text-end">Front-End Developer</h4>
-                  <p class="text-start ">
-                   طراحی و پیاده‌سازی وب‌سایت‌ها و وب‌اپلیکیشن‌های رسپانسیو و مدرن
-                  </p>
+                  <p class="text-start">طراحی و پیاده‌سازی وب‌سایت‌ها و وب‌اپلیکیشن‌های رسپانسیو و مدرن</p>
                 </div>
               </div>
             </div>
-            <div class=" p-6 bg-gradient-to-br from-slate-900/90 border border-transparent transition-colors duration-300 rounded-xl to-slate-800/90 hover:border-purple-500/50 hover:shadow-purple-500/20">
+            <div class="p-6 bg-gradient-to-br from-slate-900/90 border border-transparent transition-colors duration-300 rounded-xl to-slate-800/90 hover:border-purple-500/50 hover:shadow-purple-500/20">
               <div class="flex items-start gap-4">
-                 <div class="p-3 rounded-full bg-slate-800 ">
-<svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="User / User_01"> <path id="Vector" d="M19 21C19 17.134 15.866 14 12 14C8.13401 14 5 17.134 5 21M12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7C16 9.20914 14.2091 11 12 11Z" stroke="#7f6ce0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                <div class="p-3 rounded-full bg-slate-800">
+                  <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g id="User / User_01"><path id="Vector" d="M19 21C19 17.134 15.866 14 12 14C8.13401 14 5 17.134 5 21M12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7C16 9.20914 14.2091 11 12 11Z" stroke="#7f6ce0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                    </g>
+                  </svg>
                 </div>
                 <div class="w-full">
                   <h4 class="font-semibold text-lg text-end">UI/UX Implementation</h4>
-                  <p class="text-start ">
-پیاده‌سازی طراحی‌های کاربری و تبدیل ایده‌ها به صفحات وب کاربردی و زیبا              
-    </p>
+                  <p class="text-start">پیاده‌سازی طراحی‌های کاربری و تبدیل ایده‌ها به صفحات وب کاربردی و زیبا</p>
                 </div>
               </div>
             </div>
-            <div class=" p-6 bg-gradient-to-br from-slate-900/90 border border-transparent transition-colors duration-300 rounded-xl to-slate-800/90 hover:border-purple-500/50 hover:shadow-purple-500/20">
+            <div class="p-6 bg-gradient-to-br from-slate-900/90 border border-transparent transition-colors duration-300 rounded-xl to-slate-800/90 hover:border-purple-500/50 hover:shadow-purple-500/20">
               <div class="flex items-start gap-4">
-                <div class="p-3 rounded-full bg-slate-800 ">
-                 <svg fill="#7f6ce0" width="23px" height="23px" viewBox="0 0 32.00 32.00" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#7f6ce0" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>rocket-launch</title> <path d="M31.246 1.914c-0.045-0.633-0.555-1.134-1.189-1.163l-0.003-0c-6.221-0.261-11.757 2.378-16.697 7.999h-9.358c-0.583 0-1.072 0.399-1.211 0.939l-0.002 0.009-2 8c-0.024 0.091-0.037 0.195-0.037 0.303 0 0.69 0.56 1.25 1.25 1.25 0 0 0 0 0 0h4.488c-0.204 0.401-0.41 0.788-0.612 1.203-0.080 0.16-0.126 0.348-0.126 0.547 0 0.345 0.14 0.658 0.366 0.884l4 4c0.226 0.226 0.539 0.365 0.883 0.365 0.206 0 0.4-0.050 0.572-0.138l-0.007 0.003c0.398-0.202 0.791-0.409 1.186-0.614v4.655c0.001 0.69 0.56 1.249 1.25 1.25h0c0.001 0 0.002 0 0.004 0 0.106 0 0.209-0.014 0.308-0.039l-0.008 0.002 8-2c0.548-0.14 0.947-0.63 0.947-1.212 0-0 0-0 0-0v0-9.349c5.114-4.274 8.502-9.596 7.996-16.893zM3.601 16.75l1.375-5.5h6.362c-1.166 1.573-2.329 3.37-3.381 5.239l-0.135 0.261zM20.75 27.18l-5.5 1.375v-4.395c2.163-1.196 3.96-2.331 5.689-3.554l-0.189 0.127zM11.241 23.473l-2.725-2.723c5.793-11.584 12.442-17.329 20.28-17.514 0.061 9.119-6.953 14.768-17.556 20.236zM23 5.75c-1.795 0-3.25 1.455-3.25 3.25s1.455 3.25 3.25 3.25c1.795 0 3.25-1.455 3.25-3.25v0c-0.002-1.794-1.456-3.248-3.25-3.25h-0zM23 9.75c-0.414 0-0.75-0.336-0.75-0.75s0.336-0.75 0.75-0.75c0.414 0 0.75 0.336 0.75 0.75v0c-0 0.414-0.336 0.75-0.75 0.75h-0zM4.482 23.752l-0.482-0.002c-0 0-0 0-0.001 0-0.523 0-0.97 0.321-1.157 0.777l-0.003 0.008-2 5c-0.057 0.138-0.090 0.297-0.090 0.465 0 0.69 0.56 1.25 1.25 1.25v0c0 0 0.001 0 0.001 0 0.166 0 0.325-0.033 0.47-0.093l-0.008 0.003 5.004-1.996c0.446-0.181 0.76-0.6 0.785-1.095l0-0.003c0.021-0.398 0.048-0.744 0.070-1.041 0.062-0.232 0.098-0.498 0.098-0.772 0-0.665-0.209-1.281-0.565-1.786l0.007 0.010c-0.655-0.713-1.565-0.717-3.379-0.725zM5.83 26.832c-0.008 0.096-0.016 0.197-0.023 0.303l-1.564 0.625 0.603-1.506c0.388 0.004 0.757 0.008 1.024 0.023-0.009 0.17-0.024 0.367-0.039 0.555z"></path> </g></svg>
+                <div class="p-3 rounded-full bg-slate-800">
+                  <svg fill="#7f6ce0" width="23px" height="23px" viewBox="0 0 32.00 32.00" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#7f6ce0" stroke-width="0.00032">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <title>rocket-launch</title>
+                      <path
+                        d="M31.246 1.914c-0.045-0.633-0.555-1.134-1.189-1.163l-0.003-0c-6.221-0.261-11.757 2.378-16.697 7.999h-9.358c-0.583 0-1.072 0.399-1.211 0.939l-0.002 0.009-2 8c-0.024 0.091-0.037 0.195-0.037 0.303 0 0.69 0.56 1.25 1.25 1.25 0 0 0 0 0 0h4.488c-0.204 0.401-0.41 0.788-0.612 1.203-0.080 0.16-0.126 0.348-0.126 0.547 0 0.345 0.14 0.658 0.366 0.884l4 4c0.226 0.226 0.539 0.365 0.883 0.365 0.206 0 0.4-0.050 0.572-0.138l-0.007 0.003c0.398-0.202 0.791-0.409 1.186-0.614v4.655c0.001 0.69 0.56 1.249 1.25 1.25h0c0.001 0 0.002 0 0.004 0 0.106 0 0.209-0.014 0.308-0.039l-0.008 0.002 8-2c0.548-0.14 0.947-0.63 0.947-1.212 0-0 0-0 0-0v0-9.349c5.114-4.274 8.502-9.596 7.996-16.893zM3.601 16.75l1.375-5.5h6.362c-1.166 1.573-2.329 3.37-3.381 5.239l-0.135 0.261zM20.75 27.18l-5.5 1.375v-4.395c2.163-1.196 3.96-2.331 5.689-3.554l-0.189 0.127zM11.241 23.473l-2.725-2.723c5.793-11.584 12.442-17.329 20.28-17.514 0.061 9.119-6.953 14.768-17.556 20.236zM23 5.75c-1.795 0-3.25 1.455-3.25 3.25s1.455 3.25 3.25 3.25c1.795 0 3.25-1.455 3.25-3.25v0c-0.002-1.794-1.456-3.248-3.25-3.25h-0zM23 9.75c-0.414 0-0.75-0.336-0.75-0.75s0.336-0.75 0.75-0.75c0.414 0 0.75 0.336 0.75 0.75v0c-0 0.414-0.336 0.75-0.75 0.75h-0zM4.482 23.752l-0.482-0.002c-0 0-0 0-0.001 0-0.523 0-0.97 0.321-1.157 0.777l-0.003 0.008-2 5c-0.057 0.138-0.090 0.297-0.090 0.465 0 0.69 0.56 1.25 1.25 1.25v0c0 0 0.001 0 0.001 0 0.166 0 0.325-0.033 0.47-0.093l-0.008 0.003 5.004-1.996c0.446-0.181 0.76-0.6 0.785-1.095l0-0.003c0.021-0.398 0.048-0.744 0.070-1.041 0.062-0.232 0.098-0.498 0.098-0.772 0-0.665-0.209-1.281-0.565-1.786l0.007 0.010c-0.655-0.713-1.565-0.717-3.379-0.725zM5.83 26.832c-0.008 0.096-0.016 0.197-0.023 0.303l-1.564 0.625 0.603-1.506c0.388 0.004 0.757 0.008 1.024 0.023-0.009 0.17-0.024 0.367-0.039 0.555z"
+                      ></path>
+                    </g>
+                  </svg>
                 </div>
                 <div class="w-full">
                   <h4 class="font-semibold text-lg text-end">Performance Optimization</h4>
-                  <p class="text-start ">
-                     بهینه‌سازی سرعت و کارایی وب‌سایت‌ها برای تجربه‌ای روان‌تر
-                  </p>
+                  <p class="text-start">بهینه‌سازی سرعت و کارایی وب‌سایت‌ها برای تجربه‌ای روان‌تر</p>
                 </div>
               </div>
             </div>
-        
           </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1600"
-            class="px-8 md:px-4 text-center md:w-1/2"
-          >
-            <h1 class="text-xl sm:text-2xl">
-              توسعه دهنده‌ وب - برنامه نویس فرانت اند
-            </h1>
-            <p class="my-4 text-sm sm:text-base leading-6 md:leading-7">
-              سلام! من امیر رضازاده هستم، توسعه‌دهنده‌ی فرانت‌اند و علاقه‌مند به
-              دنیای طراحی و برنامه‌نویسی وب. از سال 1402 مسیر یادگیری HTML، CSS،
-              JavaScript و React رو شروع کردم و هر روز با انگیزه بیشتری در حال
-              تمرین و ساخت پروژه‌های مختلف هستم.
-            </p>
-            <p class="my-4 text-sm sm:text-base leading-6 md:leading-7">
-              من به تجربه کاربری، طراحی مینیمال و نوشتن کد تمیز علاقه‌مندم. در
-              کنار یادگیری تکنولوژی‌ها، به درک بهتر اصول طراحی و رفتار کاربر هم
-              توجه می‌کنم. هدفم اینه که به عنوان یک توسعه‌دهنده‌ی حرفه‌ای وارد
-              دنیای کار بشم، در تیم‌های خلاق همکاری کنم و پروژه‌هایی بسازم که هم
-              زیبا باشن و هم کاربردی.
-            </p>
-            <div
-              class="flex flex-col gap-3 px-5 my-6 text-sm sm:text-base sm:flex-row sm:justify-center"
-            >
+          <div data-aos="fade-left" data-aos-duration="1600" class="px-8 md:px-4 text-center md:w-1/2">
+            <h1 class="text-xl sm:text-2xl">توسعه دهنده‌ وب - برنامه نویس فرانت اند</h1>
+            <p class="my-4 text-sm sm:text-base leading-6 md:leading-7">سلام! من امیر رضازاده هستم، توسعه‌دهنده‌ی فرانت‌اند و علاقه‌مند به دنیای طراحی و برنامه‌نویسی وب. از سال 1402 مسیر یادگیری HTML، CSS، JavaScript و React رو شروع کردم و هر روز با انگیزه بیشتری در حال تمرین و ساخت پروژه‌های مختلف هستم.</p>
+            <p class="my-4 text-sm sm:text-base leading-6 md:leading-7">من به تجربه کاربری، طراحی مینیمال و نوشتن کد تمیز علاقه‌مندم. در کنار یادگیری تکنولوژی‌ها، به درک بهتر اصول طراحی و رفتار کاربر هم توجه می‌کنم. هدفم اینه که به عنوان یک توسعه‌دهنده‌ی حرفه‌ای وارد دنیای کار بشم، در تیم‌های خلاق همکاری کنم و پروژه‌هایی بسازم که هم زیبا باشن و هم کاربردی.</p>
+            <div class="flex flex-col gap-3 px-5 my-6 text-sm sm:text-base sm:flex-row sm:justify-center">
               <a href="#contact" class="btn-style inline-block">
                 <span>تماس با من</span>
               </a>
-              <a href="maxresdefault.jpg" download class="btn-style">
+              <a href="Amir-Rezazade-resume.pdf" download class="btn-style">
                 <span class="inline-flex items-center gap-2">
                   دانلود رزومه
-                  <svg
-                    width="17px"
-                    height="17px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke="#ffffff"
-                  >
+                  <svg width="17px" height="17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z"
-                        fill="#ffffff"
-                      ></path>
+                      <path d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z" fill="#ffffff"></path>
                       <path
                         d="M3.75 15C3.75 14.5858 3.41422 14.25 3 14.25C2.58579 14.25 2.25 14.5858 2.25 15V15.0549C2.24998 16.4225 2.24996 17.5248 2.36652 18.3918C2.48754 19.2919 2.74643 20.0497 3.34835 20.6516C3.95027 21.2536 4.70814 21.5125 5.60825 21.6335C6.47522 21.75 7.57754 21.75 8.94513 21.75H15.0549C16.4225 21.75 17.5248 21.75 18.3918 21.6335C19.2919 21.5125 20.0497 21.2536 20.6517 20.6516C21.2536 20.0497 21.5125 19.2919 21.6335 18.3918C21.75 17.5248 21.75 16.4225 21.75 15.0549V15C21.75 14.5858 21.4142 14.25 21 14.25C20.5858 14.25 20.25 14.5858 20.25 15C20.25 16.4354 20.2484 17.4365 20.1469 18.1919C20.0482 18.9257 19.8678 19.3142 19.591 19.591C19.3142 19.8678 18.9257 20.0482 18.1919 20.1469C17.4365 20.2484 16.4354 20.25 15 20.25H9C7.56459 20.25 6.56347 20.2484 5.80812 20.1469C5.07435 20.0482 4.68577 19.8678 4.40901 19.591C4.13225 19.3142 3.9518 18.9257 3.85315 18.1919C3.75159 17.4365 3.75 16.4354 3.75 15Z"
                         fill="#ffffff"
@@ -540,60 +279,27 @@
             </div>
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1200" class="mt-7 md:mt-10 xl:mt-20">
-          <img
-            class="w-full h-auto object-cover"
-            src="https://ghchart.rshah.org/amirRezazade"
-            alt="my GitHub Contributions"
-          />
+        <div data-aos="fade-up" data-aos-duration="1200" class="mt-7 md:mt-10 xl:mt-20 overflow-x-auto">
+          <img class="w-full h-auto object-cover min-w-[630px] px-3" src="https://ghchart.rshah.org/amirRezazade" alt="my GitHub Contributions" />
         </div>
       </div>
     </section>
     <!-- finish about me section  -->
     <!-- start my skills section  -->
     <section id="skills" class="nav-control mt-10 sm:mt-15 md:my-20">
-      <h1
-        data-aos="zoom-in-up"
-        data-aos-duration="800"
-        class="text-2xl sm:text-3xl md:text-4xl font-bold text-center"
-      >
+      <h1 data-aos="zoom-in-up" data-aos-duration="800" class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
         مهارت های
-        <span
-          class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
-          >من</span
-        >
+        <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">من</span>
       </h1>
-      <div
-        class="flex flex-wrap justify-center gap-6 container max-w-7xl mx-auto mt-5 sm:mt-10 md:mt-20"
-      >
-        <div
-          data-aos="fade-left"
-          data-aos-duration="1000"
-          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
-        >
+      <div class="flex flex-wrap justify-center gap-6 container max-w-7xl mx-auto mt-5 sm:mt-10 md:mt-20">
+        <div data-aos="fade-left" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 48 48"
-              >
-                <path
-                  fill="#E65100"
-                  d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"
-                ></path>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
                 <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
-                <path
-                  fill="#FFF"
-                  d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"
-                ></path>
-                <path
-                  fill="#EEE"
-                  d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"
-                ></path>
+                <path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path>
+                <path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
               </svg>
             </span>
             <span class="text-sm text-white"> HTML </span>
@@ -601,48 +307,18 @@
             <div class="skill-card-star">✨</div>
           </div>
         </div>
-        <div
-          data-aos="fade-left"
-          data-aos-duration="1000"
-          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
-        >
+        <div data-aos="fade-left" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 48 48"
-              >
-                <linearGradient
-                  id="TQDriqswrKwPOniLrPT12a_7gdY5qNXaKC0_gr1"
-                  x1="16.33"
-                  x2="32.293"
-                  y1="-2.748"
-                  y2="41.109"
-                  gradientUnits="userSpaceOnUse"
-                >
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                <linearGradient id="TQDriqswrKwPOniLrPT12a_7gdY5qNXaKC0_gr1" x1="16.33" x2="32.293" y1="-2.748" y2="41.109" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stop-color="#2aa4f4"></stop>
                   <stop offset="1" stop-color="#007ad9"></stop>
                 </linearGradient>
-                <path
-                  fill="url(#TQDriqswrKwPOniLrPT12a_7gdY5qNXaKC0_gr1)"
-                  d="M7.192,7.176l2.627,29.77c0.109,1.237,0.97,2.28,2.164,2.621l10.643,3.041	c0.898,0.257,1.849,0.257,2.747,0l10.643-3.041c1.194-0.341,2.055-1.383,2.164-2.621l2.627-29.77C40.911,6.006,39.99,5,38.816,5	H9.184C8.01,5,7.089,6.006,7.192,7.176z"
-                ></path>
-                <path
-                  fill="#35c1f1"
-                  d="M24,8v31.9l9.876-2.822c0.797-0.228,1.371-0.924,1.443-1.749l2.286-26.242	C37.656,8.502,37.196,8,36.609,8H24z"
-                ></path>
-                <path
-                  fill="#fff"
-                  d="M33.1,13H24v4h4.9l-0.3,4H24v4h4.4l-0.3,4.5L24,30.9v4.2l7.9-2.6L32.6,21l0,0L33.1,13z"
-                ></path>
-                <path
-                  fill="#d6e0e9"
-                  d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4	L19.8,27z"
-                ></path>
+                <path fill="url(#TQDriqswrKwPOniLrPT12a_7gdY5qNXaKC0_gr1)" d="M7.192,7.176l2.627,29.77c0.109,1.237,0.97,2.28,2.164,2.621l10.643,3.041	c0.898,0.257,1.849,0.257,2.747,0l10.643-3.041c1.194-0.341,2.055-1.383,2.164-2.621l2.627-29.77C40.911,6.006,39.99,5,38.816,5	H9.184C8.01,5,7.089,6.006,7.192,7.176z"></path>
+                <path fill="#35c1f1" d="M24,8v31.9l9.876-2.822c0.797-0.228,1.371-0.924,1.443-1.749l2.286-26.242	C37.656,8.502,37.196,8,36.609,8H24z"></path>
+                <path fill="#fff" d="M33.1,13H24v4h4.9l-0.3,4H24v4h4.4l-0.3,4.5L24,30.9v4.2l7.9-2.6L32.6,21l0,0L33.1,13z"></path>
+                <path fill="#d6e0e9" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4	L19.8,27z"></path>
                 <path
                   d="M33.1,13l-0.5,8l-0.7,11.5L24,35.1l-7.9-2.6L15.8,27h4l0.1,2.5l4.1,1.4l4.1-1.4l0.3-4.5H24h-4.4l-0.2-4H24h4.6l0.3-4H24 h-8.9l-0.3-4H24H33.1 M34.164,12H33.1H24h-9.2h-1.078l0.081,1.075l0.3,4L14.172,18H15.1H24h3.822l-0.15,2H24h-4.6h-1.051 l0.052,1.05l0.2,4L18.649,26H15.8h-1.056l0.058,1.054l0.3,5.5l0.037,0.682l0.649,0.214l7.9,2.6L24,36.153l0.313-0.103l7.9-2.6 l0.644-0.212l0.041-0.677l0.7-11.5l0.5-7.998L34.164,12L34.164,12z M20.761,26H24h3.331l-0.185,2.769L24,29.843l-3.128-1.068 l-0.073-1.815L20.761,26L20.761,26z"
                   opacity=".05"
@@ -658,21 +334,10 @@
             <div class="skill-card-star">✨</div>
           </div>
         </div>
-        <div
-          data-aos="fade-left"
-          data-aos-duration="1000"
-          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
-        >
+        <div data-aos="fade-left" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 48 48"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                 <path fill="#f7df1e" d="M6,42V6h36v36H6z"></path>
                 <path
                   fill="#000001"
@@ -685,21 +350,10 @@
             <div class="skill-card-star">✨</div>
           </div>
         </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
-        >
+        <div data-aos="fade-up" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 48 48"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                 <path
                   fill="#00acc1"
                   d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"
@@ -711,29 +365,11 @@
             <div class="skill-card-star">✨</div>
           </div>
         </div>
-        <div
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
-        >
+        <div data-aos="fade-right" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 48 48"
-              >
-                <linearGradient
-                  id="Q_pn21O5LDDqwJlze0Upoa_g9mmSxx3SwAI_gr1"
-                  x1="24"
-                  x2="24"
-                  y1="41"
-                  y2="7"
-                  gradientUnits="userSpaceOnUse"
-                >
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                <linearGradient id="Q_pn21O5LDDqwJlze0Upoa_g9mmSxx3SwAI_gr1" x1="24" x2="24" y1="41" y2="7" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stop-color="#643499"></stop>
                   <stop offset=".011" stop-color="#68369f"></stop>
                   <stop offset=".135" stop-color="#773db6"></stop>
@@ -760,21 +396,10 @@
             <div class="skill-card-star">✨</div>
           </div>
         </div>
-        <div
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
-        >
+        <div data-aos="fade-right" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 48 48"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                 <path
                   fill="#F4511E"
                   d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"
@@ -786,26 +411,12 @@
             <div class="skill-card-star">✨</div>
           </div>
         </div>
-        <div
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl"
-        >
+        <div data-aos="fade-right" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 48 48"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                 <path fill="#d50000" d="M0,15h48v17H24v3H13v-3H0V15z"></path>
-                <path
-                  fill="#fff"
-                  d="M3 29L8 29 8 21 11 21 11 29 13 29 13 18 3 18zM16 18v14h5v-3h5V18H16zM24 26h-3v-5h3V26zM29 18L29 29 34 29 34 21 37 21 37 29 40 29 40 21 43 21 43 29 45 29 45 18z"
-                ></path>
+                <path fill="#fff" d="M3 29L8 29 8 21 11 21 11 29 13 29 13 18 3 18zM16 18v14h5v-3h5V18H16zM24 26h-3v-5h3V26zM29 18L29 29 34 29 34 21 37 21 37 29 40 29 40 21 43 21 43 29 45 29 45 18z"></path>
               </svg>
             </span>
             <span class="text-sm text-white">NPM</span>
@@ -819,83 +430,32 @@
     <!-- start my project section  -->
     <section id="project" class="nav-control mt-10 sm:mt-15 md:my-20">
       <div class="container max-w-7xl mx-auto">
-        <h1
-          data-aos="zoom-in-up"
-          data-aos-duration="800"
-          class="text-2xl sm:text-3xl md:text-4xl font-bold text-center"
-        >
+        <h1 data-aos="zoom-in-up" data-aos-duration="800" class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
           پروژه های
-          <span
-            class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
-            >من</span
-          >
+          <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">من</span>
         </h1>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6"
-        >
-          
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6">
           <div data-aos="fade-left" data-aos-duration="1000" class="">
             <div class="group relative mx-auto max-w-100 sm:max-w-[470px] w-full">
-              <div
-                class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20"
-              >
-                <div
-                  class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"
-                ></div>
+              <div class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
                 <div class="relative p-5 z-10">
                   <div class="relative rounded-lg aspect-5/4 overflow-hidden">
-                    <img
-                      src="images/digi-media-poster.jpg"
-                      alt="digi-media"
-                      class=" w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-5000"
-                    />
+                    <img src="images/dashboard.png" alt="Ecme" class="w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-5000" />
                   </div>
                   <div class="mt-4 space-y-3">
-                    <h3
-                      class="text-xl font-semibold bg-gradient-to-r from-blue-200 from-50% to-violet-300 bg-clip-text text-transparent"
-                    >
-                      digi-media
-                    </h3>
-                    <p
-                      class="text-gray-100 text-sm leading-relaxed line-clamp-2"
-                    >
-                      سایت معرفی فیلم و سریال ایرانی و خارجی
-                    </p>
-                    <div
-                      class="flex items-center justify-end gap-2 pt-2 text-[10px]"
-                    >
-                      <span
-                        class="px-2.5 py-0.5 border rounded-full text-slate-300"
-                        >API</span
-                      >
-                      <span
-                        class="px-2.5 py-0.5 border rounded-full text-cyan-400"
-                        >Tailwind</span
-                      >
-                      <span
-                        class="px-2.5 py-0.5 border rounded-full text-amber-300"
-                        >JS</span
-                      >
+                    <h3 class="text-xl font-semibold bg-gradient-to-r from-blue-200 from-50% to-violet-300 bg-clip-text text-transparent">Ecme</h3>
+                    <p class="text-gray-100 text-sm leading-relaxed line-clamp-2">پنل ادمین وبسایت فروشگاهی</p>
+                    <div class="flex items-center justify-end gap-2 pt-2 text-[10px]">
+                      <span class="px-2.5 py-0.5 border rounded-full text-slate-300">API</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-cyan-400">Tailwind</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-amber-300">JS</span>
                     </div>
                     <div class="pt-2 flex items-center justify-between">
-                      <a
-                        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105"
-                        href="https://github.com/amirRezazade/digi-media"
-                        target="-blank"
-                      >
-                        <svg
-                          width="22px"
-                          height="22px"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                      <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105" href="https://github.com/amirRezazade/Dashboard" target="-blank">
+                        <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                          <g
-                            id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                           <g id="SVGRepo_iconCarrier">
                             <path
                               fill-rule="evenodd"
@@ -907,29 +467,11 @@
                         </svg>
                         <span class="text-sm font-medium">Details</span>
                       </a>
-                      <a
-                        href="https://amirrezazade.github.io/digi-media/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-start gap-1.5 justify-center text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-external-link w-4 h-4"
-                        >
+                      <a href="https://amirrezazade.github.io/Dashboard/" target="_blank" rel="noopener noreferrer" class="inline-flex items-start gap-1.5 justify-center text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4">
                           <path d="M15 3h6v6"></path>
                           <path d="M10 14 21 3"></path>
-                          <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                          ></path>
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                         </svg>
                         <span class="text-sm font-medium">Live Demo</span>
                       </a>
@@ -944,66 +486,25 @@
           </div>
           <div data-aos="fade-up" data-aos-duration="1000" class="">
             <div class="group relative mx-auto max-w-100 sm:max-w-[470px] w-full">
-              <div
-                class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20"
-              >
-                <div
-                  class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"
-                ></div>
+              <div class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
                 <div class="relative p-5 z-10">
                   <div class="relative rounded-lg aspect-5/4 overflow-hidden">
-                    <img
-                      src="images/playhost-poster.jpg"
-                      alt="playhost"
-                      class=" w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-5000"
-                    />
+                    <img src="images/digi-media-poster.jpg" alt="digi-media" class="w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-5000" />
                   </div>
                   <div class="mt-4 space-y-3">
-                    <h3
-                      class="text-xl font-semibold bg-gradient-to-r from-blue-200 from-50% to-violet-300 bg-clip-text text-transparent"
-                    >
-                      play-host
-                    </h3>
-                    <p
-                      class="text-gray-100 text-sm leading-relaxed line-clamp-2"
-                    >
-                      وبسایت زیبا و مدرن برای معرفی بازی در پلتفرم های مختلف
-                    </p>
-                    <div
-                      class="flex items-center justify-end gap-2 pt-2 text-[10px]"
-                    >
-                      <span
-                        class="px-2.5 py-0.5 border rounded-full text-slate-300"
-                        >API</span
-                      >
-                      <span
-                        class="px-2.5 py-0.5 border rounded-full text-cyan-400"
-                        >Tailwind</span
-                      >
-                      <span
-                        class="px-2.5 py-0.5 border rounded-full text-amber-300"
-                        >JS</span
-                      >
+                    <h3 class="text-xl font-semibold bg-gradient-to-r from-blue-200 from-50% to-violet-300 bg-clip-text text-transparent">digi-media</h3>
+                    <p class="text-gray-100 text-sm leading-relaxed line-clamp-2">سایت معرفی فیلم و سریال ایرانی و خارجی</p>
+                    <div class="flex items-center justify-end gap-2 pt-2 text-[10px]">
+                      <span class="px-2.5 py-0.5 border rounded-full text-slate-300">API</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-cyan-400">Tailwind</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-amber-300">JS</span>
                     </div>
                     <div class="pt-2 flex items-center justify-between">
-                      <a
-                        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105"
-                        href="https://github.com/amirRezazade/game-site"
-                        target="-blank"
-                      >
-                        <svg
-                          width="22px"
-                          height="22px"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                      <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105" href="https://github.com/amirRezazade/digi-media" target="-blank">
+                        <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                          <g
-                            id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                           <g id="SVGRepo_iconCarrier">
                             <path
                               fill-rule="evenodd"
@@ -1015,29 +516,11 @@
                         </svg>
                         <span class="text-sm font-medium">Details</span>
                       </a>
-                      <a
-                        href="https://amirrezazade.github.io/game-site/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-start gap-1.5 justify-center text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-external-link w-4 h-4"
-                        >
+                      <a href="https://amirrezazade.github.io/digi-media/" target="_blank" rel="noopener noreferrer" class="inline-flex items-start gap-1.5 justify-center text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4">
                           <path d="M15 3h6v6"></path>
                           <path d="M10 14 21 3"></path>
-                          <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                          ></path>
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                         </svg>
                         <span class="text-sm font-medium">Live Demo</span>
                       </a>
@@ -1052,67 +535,25 @@
           </div>
           <div data-aos="fade-right" data-aos-duration="1000" class="">
             <div class="group relative mx-auto max-w-100 sm:max-w-[470px] w-full">
-              <div
-                class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20"
-              >
-                <div
-                  class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"
-                ></div>
+              <div class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
                 <div class="relative p-5 z-10">
                   <div class="relative rounded-lg aspect-5/4 overflow-hidden">
-                    <img
-                      src="images/eduport-poster.jpg"
-                      alt="digi-media"
-                      class=" w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-5000"
-                    />
+                    <img src="images/playhost-poster.jpg" alt="playhost" class="w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-5000" />
                   </div>
                   <div class="mt-4 space-y-3">
-                    <h3
-                      class="text-xl font-semibold bg-gradient-to-r from-blue-200 from-50% to-violet-300 bg-clip-text text-transparent"
-                    >
-                      eduport
-                    </h3>
-                    <p
-                      class="text-gray-100 text-sm leading-relaxed line-clamp-2"
-                    >
-                    وبسایت آموزشی زیبا ( html , css , js )
-                  </p>
-                    <div
-                      class="flex items-center justify-end gap-2 pt-2 text-[10px]"
-                    >
-                     
-                      <span
-                        class="px-2.5 py-0.5 border rounded-full text-orange-500"
-                        >HTML</span
-                      >
-                      <span
-                        class="px-2.5 py-0.5 border rounded-full text-sky-600"
-                        >CSS</span
-                      >
-                      <span
-                        class="px-2.5 py-0.5 border rounded-full text-amber-300"
-                        >JS</span
-                      >
+                    <h3 class="text-xl font-semibold bg-gradient-to-r from-blue-200 from-50% to-violet-300 bg-clip-text text-transparent">play-host</h3>
+                    <p class="text-gray-100 text-sm leading-relaxed line-clamp-2">وبسایت زیبا و مدرن برای معرفی بازی در پلتفرم های مختلف</p>
+                    <div class="flex items-center justify-end gap-2 pt-2 text-[10px]">
+                      <span class="px-2.5 py-0.5 border rounded-full text-slate-300">API</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-cyan-400">Tailwind</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-amber-300">JS</span>
                     </div>
                     <div class="pt-2 flex items-center justify-between">
-                      <a
-                        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105"
-                        href="https://github.com/amirRezazade/eduport"
-                        target="-balnk"
-                      >
-                        <svg
-                          width="22px"
-                          height="22px"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                      <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105" href="https://github.com/amirRezazade/game-site" target="-blank">
+                        <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                          <g
-                            id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                           <g id="SVGRepo_iconCarrier">
                             <path
                               fill-rule="evenodd"
@@ -1124,29 +565,60 @@
                         </svg>
                         <span class="text-sm font-medium">Details</span>
                       </a>
-                      <a
-                        href="https://amirrezazade.github.io/eduport/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-start gap-1.5 justify-center text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-external-link w-4 h-4"
-                        >
+                      <a href="https://amirrezazade.github.io/game-site/" target="_blank" rel="noopener noreferrer" class="inline-flex items-start gap-1.5 justify-center text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4">
                           <path d="M15 3h6v6"></path>
                           <path d="M10 14 21 3"></path>
-                          <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                          ></path>
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Live Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- <div
+                    class="absolute inset-0 -z-50"
+                  ></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1000" class="">
+            <div class="group relative mx-auto max-w-100 sm:max-w-[470px] w-full">
+              <div class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                <div class="relative p-5 z-10">
+                  <div class="relative rounded-lg aspect-5/4 overflow-hidden">
+                    <img src="images/eduport-poster.jpg" alt="digi-media" class="w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-5000" />
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <h3 class="text-xl font-semibold bg-gradient-to-r from-blue-200 from-50% to-violet-300 bg-clip-text text-transparent">eduport</h3>
+                    <p class="text-gray-100 text-sm leading-relaxed line-clamp-2">وبسایت آموزشی زیبا ( html , css , js )</p>
+                    <div class="flex items-center justify-end gap-2 pt-2 text-[10px]">
+                      <span class="px-2.5 py-0.5 border rounded-full text-orange-500">HTML</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-sky-600">CSS</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-amber-300">JS</span>
+                    </div>
+                    <div class="pt-2 flex items-center justify-between">
+                      <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105" href="https://github.com/amirRezazade/eduport" target="-balnk">
+                        <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z"
+                              fill="#ffffff"
+                            ></path>
+                          </g>
+                        </svg>
+                        <span class="text-sm font-medium">Details</span>
+                      </a>
+                      <a href="https://amirrezazade.github.io/eduport/" target="_blank" rel="noopener noreferrer" class="inline-flex items-start gap-1.5 justify-center text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                         </svg>
                         <span class="text-sm font-medium">Live Demo</span>
                       </a>
@@ -1167,175 +639,46 @@
     <!-- start contact me section  -->
     <section id="contact" class="nav-control mt-10 sm:mt-15 md:my-20 xl:my-30">
       <div class="container mx-auto">
-        <h1
-          data-aos="zoom-in-up"
-          data-aos-duration="800"
-          class="text-2xl sm:text-3xl md:text-4xl font-bold text-center"
-        >
+        <h1 data-aos="zoom-in-up" data-aos-duration="800" class="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
           تماس با
-          <span
-            class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"
-            >من</span
-          >
+          <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">من</span>
         </h1>
 
-        <div
-          class="max-w-2xl mx-auto rounded-3xl p-3 py-3 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6"
-        >
-          <div
-            class="bg-slate-900 rounded-2xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 border border-transparent hover:border-purple-500/50 hover:shadow-[#6366f1]/10"
-          >
-            <p
-              data-aos="fade-up"
-              data-aos-delay="50"
-              class="text-gray-300 mb-7"
-            >
-              چیزی برای بحث دارید؟ به من پیام دهید تا صحبت کنیم.
-            </p>
-            <form
-              action="https://formspree.io/f/mblawear"
-              method="POST"
-              class="space-y-6"
-            >
-              <div
-                data-aos="fade-up"
-                data-aos-delay="100"
-                class="relative group"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-user absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors"
-                >
+        <div class="max-w-2xl mx-auto rounded-3xl p-3 py-3 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6">
+          <div class="bg-slate-900 rounded-2xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 border border-transparent hover:border-purple-500/50 hover:shadow-[#6366f1]/10">
+            <p data-aos="fade-up" data-aos-delay="50" class="text-gray-300 mb-7">چیزی برای بحث دارید؟ به من پیام دهید تا صحبت کنیم.</p>
+            <form action="https://formspree.io/f/xblpdyel" method="POST" class="space-y-6">
+              <div data-aos="fade-up" data-aos-delay="100" class="relative group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors">
                   <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle></svg
-                ><input
-                  type="text"
-                  name="name"
-                  minlength="3"
-                  placeholder="Your Name"
-                  class="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 disabled:opacity-50"
-                  required=""
-                  value=""
-                />
+                ><input type="text" name="name" minlength="3" placeholder="Your Name" class="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 disabled:opacity-50" required="" value="" />
               </div>
-              <div
-                data-aos="fade-up"
-                data-aos-delay="200"
-                class="relative group"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-mail absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors"
-                >
+              <div data-aos="fade-up" data-aos-delay="200" class="relative group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors">
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path
-                    d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
-                  ></path></svg
-                ><input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  class="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 disabled:opacity-50"
-                  required=""
-                  value=""
-                />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+                ><input type="email" name="email" placeholder="Your Email" class="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 disabled:opacity-50" required="" value="" />
               </div>
-              <div
-                data-aos="fade-up"
-                data-aos-delay="300"
-                class="relative group"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-message-square absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors"
-                >
-                  <path
-                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                  ></path></svg
-                ><textarea
-                  name="message"
-                  placeholder="Your Message"
-                  class="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 h-[9.9rem] disabled:opacity-50"
-                  required
-                  minlength="5"
-                ></textarea>
+              <div data-aos="fade-up" data-aos-delay="300" class="relative group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg
+                ><textarea name="message" placeholder="Your Message" class="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 h-[9.9rem] disabled:opacity-50" required minlength="5"></textarea>
               </div>
-              <button
-                data-aos="fade-up"
-                data-aos-delay="400"
-                type="submit"
-                class="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-send w-5 h-5"
-                >
-                  <path
-                    d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
-                  ></path>
+              <button data-aos="fade-up" data-aos-delay="400" type="submit" class="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send w-5 h-5">
+                  <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
                   <path d="m21.854 2.147-10.94 10.939"></path></svg
                 >ارسال پیام
               </button>
             </form>
 
-            <div
-              data-aos="fade-up"
-              data-aos-delay="500"
-              class="flex justify-center items-center gap-3 mt-7"
-            >
-                  <a
-                href="https://github.com/amirRezazade"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white"
-              >
+            <div data-aos="fade-up" data-aos-delay="500" class="flex justify-center items-center gap-3 mt-7">
+              <a href="https://github.com/amirRezazade" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white">
                 <span class="z-10">
-                  <svg
-                    class="fill-white group-hover:fill-black transition-colors"
-                    fill=""
-                    width="22px"
-                    height="22px"
-                    viewBox="0 0 1920 1920"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke=""
-                  >
+                  <svg class="fill-white group-hover:fill-black transition-colors" fill="" width="22px" height="22px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
                         d="M1821.63 637.76c0-130.027-43.627-236.373-116.054-319.68 11.627-30.187 50.347-151.36-11.2-315.307 0 0-94.72-32-310.4 122.134-90.133-26.454-186.773-39.68-282.773-40.107-96 .427-192.64 13.653-282.667 40.107C602.749-29.227 507.923 2.773 507.923 2.773c-61.547 163.947-22.72 285.12-11.094 315.307-72.32 83.307-116.266 189.653-116.266 319.68 0 456.533 263.68 558.72 514.453 588.8 0 0-180.267 111.68-180.267 299.413-64.32 30.507-336.533 123.947-437.333-58.133 0 0-59.627-114.347-173.013-122.773 0 0-110.294-1.494-7.787 72.426 0 0 74.027 36.694 125.44 174.294 0 0 57.173 289.92 489.067 159.68 4.373 2.24 1.6 140.266 1.6 168.533h777.173s1.28-277.013 1.28-365.12c0-216.64-144.64-292.48-185.28-329.28 251.627-29.44 515.733-130.133 515.733-587.84"
@@ -1344,77 +687,30 @@
                     </g>
                   </svg>
                 </span>
-                <span
-                  class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
+                <span class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
                 <span class="social-icon-tooltip" onclick="event.preventDefault()">amirRezazade</span>
-
               </a>
-              <a
-                href="https://t.me/amir_rezade"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#40b3e0] hover:border-[#40b3e0]"
-              >
-                <span
-                  class="fill-[#40b3e0] group-hover:fill-white transition-colors z-10"
-                >
-                  <svg
-                    fill=""
-                    width="22px"
-                    height="22px"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+              <a href="https://t.me/amir_rezade" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#40b3e0] hover:border-[#40b3e0]">
+                <span class="fill-[#40b3e0] group-hover:fill-white transition-colors z-10">
+                  <svg fill="" width="22px" height="22px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"
-                      ></path>
+                      <path d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"></path>
                     </g>
                   </svg>
                 </span>
-                <span
-                  class="bg-[#40b3e0] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
-                  <span class="social-icon-tooltip" onclick="event.preventDefault()">amir_rezade</span>
-
+                <span class="bg-[#40b3e0] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">amir_rezade</span>
               </a>
-              <a
-                href="https://www.instagram.com/amir._.xpx"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#e54b57] hover:border-[#e54b57]"
-              >
+              <a href="https://www.instagram.com/amir._.xpx" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#e54b57] hover:border-[#e54b57]">
                 <span class="z-10">
-                  <svg
-                    class="fill-[#e54b57] group-hover:fill-white transition-colors"
-                    width="22px"
-                    height="22px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg class="fill-[#e54b57] group-hover:fill-white transition-colors" width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                        fill=""
-                      ></path>
-                      <path
-                        d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-                        fill=""
-                      ></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill=""></path>
+                      <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill=""></path>
                       <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1424,50 +720,20 @@
                     </g>
                   </svg>
                 </span>
-                <span
-                  class="bg-[#e54b57] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
+                <span class="bg-[#e54b57] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
                 <span class="social-icon-tooltip" onclick="event.preventDefault()">amir._.xpx</span>
-
               </a>
-              <a
-                href="https://www.linkedin.com/in/amir-rezazadeh-7086a6345/"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#007ebb] hover:border-[#007ebb]"
-              >
+              <a href="https://www.linkedin.com/in/amir-rezazadeh-7086a6345/" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-[#007ebb] hover:border-[#007ebb]">
                 <span class="z-10">
-                  <svg
-                    class=""
-                    width="22px"
-                    height="22px"
-                    viewBox="0 -2 44 44"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    fill=""
-                  >
+                  <svg class="" width="22px" height="22px" viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
                       <title>LinkedIn-color</title>
                       <desc>Created with Sketch.</desc>
                       <defs></defs>
-                      <g
-                        id="Icons"
-                        stroke="none"
-                        stroke-width="1"
-                        class="fill-[#007ebb] group-hover:fill-white transition-colors"
-                        fill-rule="evenodd"
-                      >
-                        <g
-                          id="Color-"
-                          transform="translate(-702.000000, -265.000000)"
-                          fill=""
-                        >
+                      <g id="Icons" stroke="none" stroke-width="1" class="fill-[#007ebb] group-hover:fill-white transition-colors" fill-rule="evenodd">
+                        <g id="Color-" transform="translate(-702.000000, -265.000000)" fill="">
                           <path
                             d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
                             id="LinkedIn"
@@ -1478,68 +744,26 @@
                   </svg>
                   <!-- <svg  width="22px" height="22px" viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>LinkedIn-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-702.000000, -265.000000)" fill=""> <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn"> </path> </g> </g> </g></svg> -->
                 </span>
-                <span
-                  class="bg-[#007ebb] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
-                  <span class="social-icon-tooltip" onclick="event.preventDefault()">AmirRezazadeh</span>
-
+                <span class="bg-[#007ebb] absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">AmirRezazadeh</span>
               </a>
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=amirrezazadeh.job@gmail.com"
-                target="-blank"
-                class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white"
-              >
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=a.rezazade.dev@gmail.com" target="-blank" class="group relative w-10 md:w-12 aspect-square border-2 rounded-full transition-colors duration-400 inline-flex justify-center items-center border-white hover:border-white">
                 <span class="z-10">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-label="Gmail"
-                    role="img"
-                    viewBox="0 0 512 512"
-                    width="27px"
-                    height="27px"
-                    fill="#000000"
-                    stroke="#000000"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512" width="27px" height="27px" fill="#000000" stroke="#000000">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                      <rect
-                        width="512"
-                        height="512"
-                        rx="15%"
-                        fill="#ffffff00"
-                      ></rect>
-                      <path
-                        d="M158 391v-142l-82-63V361q0 30 30 30"
-                        fill="#4285f4"
-                      ></path>
-                      <path
-                        d="M 154 248l102 77l102-77v-98l-102 77l-102-77"
-                        fill="#ea4335"
-                      ></path>
-                      <path
-                        d="M354 391v-142l82-63V361q0 30-30 30"
-                        fill="#34a853"
-                      ></path>
-                      <path
-                        d="M76 188l82 63v-98l-30-23c-27-21-52 0-52 26"
-                        fill="#c5221f"
-                      ></path>
-                      <path
-                        d="M436 188l-82 63v-98l30-23c27-21 52 0 52 26"
-                        fill="#fbbc04"
-                      ></path>
+                      <rect width="512" height="512" rx="15%" fill="#ffffff00"></rect>
+                      <path d="M158 391v-142l-82-63V361q0 30 30 30" fill="#4285f4"></path>
+                      <path d="M 154 248l102 77l102-77v-98l-102 77l-102-77" fill="#ea4335"></path>
+                      <path d="M354 391v-142l82-63V361q0 30-30 30" fill="#34a853"></path>
+                      <path d="M76 188l82 63v-98l-30-23c-27-21-52 0-52 26" fill="#c5221f"></path>
+                      <path d="M436 188l-82 63v-98l30-23c27-21 52 0 52 26" fill="#fbbc04"></path>
                     </g>
                   </svg>
                 </span>
-                <span
-                  class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"
-                ></span>
-                <span class="social-icon-tooltip" onclick="event.preventDefault()">amirrezazadeh.job@gmail.com</span>
+                <span class="bg-white absolute top-1/2 left-1/2 -translate-1/2 w-0 h-0 rounded-full -z-0 group-hover:w-full group-hover:h-full duration-400 transition-all"></span>
+                <span class="social-icon-tooltip" onclick="event.preventDefault()">a.rezazade.dev@gmail.com</span>
               </a>
             </div>
           </div>
@@ -1548,12 +772,11 @@
     </section>
     <!-- finish contact me section  -->
 
-    <footer class="mt-15 py-3 border-t border-gray-700 md:mt-10 flex justify-center ">
+    <footer class="mt-15 py-3 border-t border-gray-700 md:mt-10 flex justify-center">
       <p class="text-xs">«طراحی و توسعه توسط امیر رضازاده — ۲۰۲۵»</p>
-
     </footer>
 
-
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
     <script src="assets/aos.js"></script>

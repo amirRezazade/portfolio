@@ -1,8 +1,7 @@
 @import "tailwindcss";
 @font-face {
   font-family: iran-sans;
-  src: url(../font/woff/IRANSansX-Medium.woff) format(woff),
-    url(../font/woff/IRANSansX-Medium.woff2) format(woff2);
+  src: url(../font/woff/IRANSansX-Medium.woff) format(woff), url(../font/woff/IRANSansX-Medium.woff2) format(woff2);
 }
 
 @theme {
@@ -11,7 +10,6 @@
 @theme {
   --font-iran-sans: "iran-sans";
 }
-
 
 /* start custom class */
 .centered {
@@ -29,19 +27,13 @@
   animation: rotate 3s linear infinite;
 }
 .nav-item-active {
-  @apply bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text font-extrabold text-transparent
+  @apply bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text font-extrabold text-transparent;
 }
 .social-icon-tooltip {
-  @apply absolute z-50 -bottom-10 left-1/2 -translate-x-1/2  px-1.5 py-1.5 bg-gray-900 border border-violet-600 text-xs cursor-auto select-all before:content-[''] before:absolute before:size-2.5 before:rotate-45 before:bg-gray-900 before:border-t before:border-l before:border-violet-600 before:top-0 before:left-1/2 before:-translate-1/2  before:-z-50 opacity-0 invisible transition-all duration-400 group-hover:opacity-100 group-hover:visible
+  @apply absolute z-50 -bottom-10 left-1/2 -translate-x-1/2  px-1.5 py-1.5 bg-gray-900 border border-violet-600 text-xs cursor-auto select-all before:content-[''] before:absolute before:size-2.5 before:rotate-45 before:bg-gray-900 before:border-t before:border-l before:border-violet-600 before:top-0 before:left-1/2 before:-translate-1/2  before:-z-50 opacity-0 invisible transition-all duration-400 group-hover:opacity-100 group-hover:visible;
 }
 
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   display: none;
 }
 
@@ -66,5 +58,10 @@ html::-webkit-scrollbar{
   opacity: 100;
 }
 /* finish custom class */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* https://abhishekganvir.vercel.app/ */
