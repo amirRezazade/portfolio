@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="src/card-hover-styles.css" />
     <link rel="stylesheet" href="src/output.css" />
     <link href="assets/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+
     <title>Amir Rezazade</title>
   </head>
-  <body class="font-[iran-sans] text-white overflow-x-hidden max-w-screen h-auto bg-slate-800">
+  <body class="font-[iran-sans] text-white overflow-x-hidden max-w-screen h-auto bg-slate-800 max-h-screen">
+    <div id="loader" class="centered fixed top-0 left-0 size-full bg-black z-199 transition-[opacity,visibilty]">
+      <dotlottie-player src="images/Astronaut.lottie" background="transparent" speed="0.7" class="size-80 md:size-90 lg:size-100 xl:size-[600px]" loop autoplay> </dotlottie-player>
+    </div>
     <!--start background video -->
     <div class="fixed w-screen h-screen overflow-hidden top-0 right-0 -z-50 bg-[url('../imagdigi-media-poster.jpg')] pointer-events-none flex justify-between bg-cover">
       <video autoplay muted loop playsinline poster="images/bg-poster.png" class="object-cover pointer-events-none w-full h-full">
@@ -776,7 +781,6 @@
       <p class="text-xs">«طراحی و توسعه توسط امیر رضازاده — ۲۰۲۵»</p>
     </footer>
 
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
     <script src="assets/aos.js"></script>
