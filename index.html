@@ -25,13 +25,14 @@
     </div>
     <!--finish background video -->
 
+   
     <nav class="fixed w-full z-99 top-0 bg-gradient-to-b from-black to-black/10">
       <div class="container flex justify-between items-center px-2 xs:px-5 lg:px-10 mx-auto">
-        <a href="https://github.com/amirRezazade" target="-blank" class="inline-block w-15 h-15">
+        <a href="https://github.com/amirRezazade" target="-blank" class="hidden xs:inline-block w-15 h-15">
           <img class="object-cover" src="images/github-logo.gif" alt="" />
         </a>
 
-        <ul id="nav-menu" class="w-full flex justify-between pr-2 xs:pr-5 xs:px-5 grow xs:justify-center py-5 xs:py-0 text-[10px] xs:text-xs sm:text-sm xs:gap-5 md:gap-8 xl:gap-10">
+        <ul id="nav-menu" class="w-full flex justify-between px-3 xs:pr-5 xs:px-5 grow xs:justify-center py-5 xs:py-0 text-xs sm:text-sm xs:gap-5 md:gap-8 xl:gap-10">
           <li class="">
             <a href="#home" class="home text-white duration-300 hover:bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:bg-clip-text hover:text-transparent transition-colors block px-1 py-1">خانه</a>
           </li>
@@ -50,10 +51,10 @@
         </ul>
       </div>
     </nav>
-    <header id="home" class="nav-control pt-12 sm:pt-18 h-[100dvh] sm:h-[80dvh] lg:h-[100dvh] relative">
-      <div class="h-full flex justify-center items-stretch">
+    <header id="home" class="nav-control pt-12 sm:pt-18 min-h-[100dvh] sm:h-[80dvh] lg:h-[100dvh] relative">
+      <div class="sm:h-full flex flex-wrap sm:flex-nowrap justify-center items-stretch">
         <div class="grow sm:max-w-1/2 xl:max-w-[auto] flex items-start md:items-center justify-center h-full">
-          <div class="w-full pt-25 sm:pt-17 md:pr-20 md:pt-0 text-center">
+          <div class="w-full  pt-10 sm:pt-17 md:pr-20 md:pt-0 text-center">
             <h1 data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
               سلام من
               <span class="font-extrabold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">امیر </span>هستم
@@ -176,8 +177,8 @@
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" class="hidden grow max-w-[40%] sm:flex items-start md:items-center justify-start">
-          <dotlottie-player src="images/Astronaut.lottie" background="transparent" speed="0.7" class="size-80 md:size-90 lg:size-100 xl:size-[600px]" loop autoplay> </dotlottie-player>
+        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" class="w-full h-75 sm:h-full xs:h-90 grow sm:max-w-[40%] flex items-start md:items-center justify-center sm:justify-start">
+          <dotlottie-player src="images/Astronaut.lottie" background="transparent" speed="0.7" class=" sm:size-80 md:size-90 lg:size-100 xl:size-[600px]" loop autoplay> </dotlottie-player>
         </div>
       </div>
 
@@ -194,6 +195,7 @@
         </span>
       </div>
     </header>
+
 
     <!-- start about me section  -->
     <section id="about" class="nav-control min-h-screen centered text-center mt-5 sm:mt-15">

@@ -11,7 +11,7 @@ typewriter.typeString("دانشجوی رشته مهندسی کامپیوتر").p
 
 window.addEventListener("scroll", activateNavLink);
 window.addEventListener("load", () => {
-  document.querySelector("#loader").classList.add("opacity-0", "invisible");
+  document.querySelector("#loader").remove()
   document.body.classList.remove("max-h-screen");
   setTimeout(() => {
     document.querySelector("#loader").remove();
