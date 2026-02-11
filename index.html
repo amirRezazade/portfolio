@@ -7,6 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="images/logo.png" />
     <link rel="stylesheet" href="src/card-hover-styles.css" />
     <link rel="stylesheet" href="src/output.css" />
+    <link rel="stylesheet" href="src/bg.css" />
     <link href="assets/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 
@@ -14,15 +15,40 @@
   </head>
   <body class="font-[iran-sans] text-white overflow-x-hidden max-w-screen h-auto bg-slate-800 max-h-screen">
     <div id="loader" class="centered fixed top-0 left-0 size-full bg-black z-199 transition-[opacity,visibilty]">
-      <dotlottie-player src="images/Astronaut.lottie" background="transparent" speed="0.7" class="size-80 md:size-90 lg:size-100 xl:size-[600px]" loop autoplay> </dotlottie-player>
+      <div class="ai-matrix-loader">
+        <div class="digit">0</div>
+        <div class="digit">1</div>
+        <div class="digit">0</div>
+        <div class="digit">1</div>
+        <div class="digit">1</div>
+        <div class="digit">0</div>
+        <div class="digit">0</div>
+        <div class="digit">1</div>
+        <div class="glow"></div>
+      </div>
     </div>
-    <!--start background video -->
-    <div class="fixed w-screen h-screen overflow-hidden top-0 right-0 -z-50 bg-[url('../imagdigi-media-poster.jpg')] pointer-events-none flex justify-between bg-cover">
-      <video autoplay muted loop playsinline poster="images/bg-poster.png" class="object-cover pointer-events-none w-full h-full">
-        <source src="images/bg-video.mp4" type="video/mp4" />
-      </video>
-      <div class="flex justify-between absolute top-0 left-0 w-full h-full after:absolute after:w-full after:h-full after:bg-black/20 after:top-0 after:left-0"></div>
+
+    <div class="fixed top-0 left-0 w-screen h-screen -z-1 bg-[url(https://www.allucent.com/wp-content/uploads/2024/10/Pharmacovigilance-in-a-Global-Market-Key-Compliance-Strategies-scaled.webp)] bg-no-repeat bg-cover">
+      <div class="bg-gradient-to-l from-black/70 to-transparent absolute w-full h-full top-0 right-0">
+        <div class="star"></div>
+        <div class="meteor meteor-1"></div>
+        <div class="meteor meteor-2"></div>
+        <div class="meteor meteor-3"></div>
+        <div class="meteor meteor-4"></div>
+        <div class="meteor meteor-5"></div>
+        <div class="meteor meteor-6"></div>
+        <div class="meteor meteor-7"></div>
+        <div class="meteor meteor-8"></div>
+        <div class="meteor meteor-9"></div>
+        <div class="meteor meteor-10"></div>
+        <div class="meteor meteor-11"></div>
+        <div class="meteor meteor-12"></div>
+        <div class="meteor meteor-13"></div>
+        <div class="meteor meteor-14"></div>
+        <div class="meteor meteor-15"></div>
+      </div>
     </div>
+
     <!--finish background video -->
 
     <nav class="fixed w-full z-99 top-0 bg-gradient-to-b from-black to-black/10">
@@ -259,8 +285,8 @@
           </div>
           <div data-aos="fade-left" data-aos-duration="1600" class="px-8 md:px-4 text-center md:w-1/2">
             <h1 class="text-xl sm:text-2xl">توسعه دهنده‌ وب - برنامه نویس فرانت اند</h1>
-            <p class="my-4 text-sm sm:text-base leading-6 md:leading-7">سلام! من امیر رضازاده هستم، توسعه‌دهنده‌ی فرانت‌اند و علاقه‌مند به دنیای طراحی و برنامه‌نویسی وب. از سال 1402 مسیر یادگیری HTML، CSS، JavaScript و React رو شروع کردم و هر روز با انگیزه بیشتری در حال تمرین و ساخت پروژه‌های مختلف هستم.</p>
-            <p class="my-4 text-sm sm:text-base leading-6 md:leading-7">من به تجربه کاربری، طراحی مینیمال و نوشتن کد تمیز علاقه‌مندم. در کنار یادگیری تکنولوژی‌ها، به درک بهتر اصول طراحی و رفتار کاربر هم توجه می‌کنم. هدفم اینه که به عنوان یک توسعه‌دهنده‌ی حرفه‌ای وارد دنیای کار بشم، در تیم‌های خلاق همکاری کنم و پروژه‌هایی بسازم که هم زیبا باشن و هم کاربردی.</p>
+            <p class="my-4 text-sm sm:text-base lg:text-[17px] leading-6 md:leading-8">سلام! من امیر رضازاده هستم، توسعه‌دهنده‌ی فرانت‌اند و علاقه‌مند به دنیای طراحی و برنامه‌نویسی وب. از سال 1402 مسیر یادگیری HTML، CSS، JavaScript و React رو شروع کردم و هر روز با انگیزه بیشتری در حال تمرین و ساخت پروژه‌های مختلف هستم.</p>
+            <p class="my-4 text-sm sm:text-base lg:text-[17px] leading-6 md:leading-8">من به تجربه کاربری، طراحی مینیمال و نوشتن کد تمیز علاقه‌مندم. در کنار یادگیری تکنولوژی‌ها، به درک بهتر اصول طراحی و رفتار کاربر هم توجه می‌کنم. هدفم اینه که به عنوان یک توسعه‌دهنده‌ی حرفه‌ای وارد دنیای کار بشم، در تیم‌های خلاق همکاری کنم و پروژه‌هایی بسازم که هم زیبا باشن و هم کاربردی.</p>
             <div class="flex flex-col gap-3 px-5 my-6 text-sm sm:text-base sm:flex-row sm:justify-center">
               <a href="#contact" class="btn-style inline-block">
                 <span>تماس با من</span>
@@ -379,6 +405,17 @@
         <div data-aos="fade-right" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
+            <svg fill="#fff" width="50" height="50" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M23.749 30.005c-0.119 0.063-0.109 0.083 0.005 0.025 0.037-0.015 0.068-0.036 0.095-0.061 0-0.021 0-0.021-0.1 0.036zM23.989 29.875c-0.057 0.047-0.057 0.047 0.011 0.016 0.036-0.021 0.068-0.041 0.068-0.047 0-0.027-0.016-0.021-0.079 0.031zM24.145 29.781c-0.057 0.047-0.057 0.047 0.011 0.016 0.037-0.021 0.068-0.043 0.068-0.048 0-0.025-0.016-0.020-0.079 0.032zM24.303 29.688c-0.057 0.047-0.057 0.047 0.009 0.015 0.037-0.020 0.068-0.041 0.068-0.047 0-0.025-0.016-0.020-0.077 0.032zM24.516 29.547c-0.109 0.073-0.147 0.12-0.047 0.068 0.067-0.041 0.181-0.131 0.161-0.131-0.043 0.016-0.079 0.043-0.115 0.063zM14.953 0.011c-0.073 0.005-0.292 0.025-0.484 0.041-4.548 0.412-8.803 2.86-11.5 6.631-1.491 2.067-2.459 4.468-2.824 6.989-0.129 0.88-0.145 1.14-0.145 2.333 0 1.192 0.016 1.448 0.145 2.328 0.871 6.011 5.147 11.057 10.943 12.927 1.043 0.333 2.136 0.563 3.381 0.704 0.484 0.052 2.577 0.052 3.061 0 2.152-0.24 3.969-0.771 5.767-1.688 0.276-0.14 0.328-0.177 0.291-0.208-0.88-1.161-1.744-2.323-2.609-3.495l-2.557-3.453-3.203-4.745c-1.068-1.588-2.14-3.172-3.229-4.744-0.011 0-0.025 2.109-0.031 4.681-0.011 4.505-0.011 4.688-0.068 4.792-0.057 0.125-0.151 0.229-0.276 0.287-0.099 0.047-0.188 0.057-0.661 0.057h-0.541l-0.141-0.088c-0.088-0.057-0.161-0.136-0.208-0.229l-0.068-0.141 0.005-6.271 0.011-6.271 0.099-0.125c0.063-0.077 0.141-0.14 0.229-0.187 0.131-0.063 0.183-0.073 0.724-0.073 0.635 0 0.74 0.025 0.907 0.208 1.296 1.932 2.588 3.869 3.859 5.812 2.079 3.152 4.917 7.453 6.312 9.563l2.537 3.839 0.125-0.083c1.219-0.813 2.328-1.781 3.285-2.885 2.016-2.308 3.324-5.147 3.767-8.177 0.129-0.88 0.145-1.141 0.145-2.333 0-1.193-0.016-1.448-0.145-2.328-0.871-6.011-5.147-11.057-10.943-12.928-1.084-0.343-2.199-0.577-3.328-0.697-0.303-0.031-2.371-0.068-2.631-0.041zM21.5 9.688c0.151 0.072 0.265 0.208 0.317 0.364 0.027 0.084 0.032 1.823 0.027 5.74l-0.011 5.624-0.989-1.52-0.995-1.521v-4.083c0-2.647 0.011-4.131 0.025-4.204 0.047-0.167 0.161-0.307 0.313-0.395 0.124-0.063 0.172-0.068 0.667-0.068 0.463 0 0.541 0.005 0.645 0.063z"></path> </g></svg>
+              </svg>
+            </span>
+            <span class="text-sm text-white">Next </span>
+
+            <div class="skill-card-star">✨</div>
+          </div>
+        </div>
+        <div data-aos="fade-right" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
+          <div class="card">
+            <span class="">
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                 <path
                   fill="#00acc1"
@@ -422,7 +459,7 @@
             <div class="skill-card-star">✨</div>
           </div>
         </div>
-        <div data-aos="fade-right" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
+        <div data-aos="fade-left" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
@@ -437,7 +474,7 @@
             <div class="skill-card-star">✨</div>
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
+        <div data-aos="fade-right" data-aos-duration="1000" class="glow-card w-30 md:w-40 aspect-square group relative cursor-pointer rounded-2xl">
           <div class="card">
             <span class="">
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
@@ -462,6 +499,56 @@
         </h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 mt-5 sm:mt-10 md:mt-18 px-8 sm:px-20 md:px-6">
           <div data-aos="fade-left" data-aos-duration="1000" class="">
+            <div class="group relative mx-auto max-w-100 sm:max-w-[470px] w-full">
+              <div class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                <div class="relative p-5 z-10">
+                  <div class="relative rounded-lg aspect-5/4 overflow-hidden">
+                    <img src="images/digi-plus.jpg" alt="Ecme" class="w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-5000" />
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <h3 class="text-xl font-semibold bg-gradient-to-r from-blue-200 from-50% to-violet-300 bg-clip-text text-transparent">Digi-plus</h3>
+                    <p class="text-gray-100 text-sm leading-relaxed line-clamp-2">وبسایت فروشگاهی</p>
+                    <div class="flex items-center justify-end gap-2 pt-2 text-[10px]">
+                      <span class="px-2.5 py-0.5 border rounded-full text-slate-300">API</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-cyan-400">Tailwind</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-amber-300">JS</span>
+                      <span class="px-2.5 py-0.5 border rounded-full text-blue-400">React</span>
+                    </div>
+                    <div class="pt-2 flex items-center justify-between">
+                      <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105" href="https://github.com/amirRezazade/Digi-plus" target="-blank">
+                        <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z"
+                              fill="#ffffff"
+                            ></path>
+                          </g>
+                        </svg>
+                        <span class="text-sm font-medium">Details</span>
+                      </a>
+                      <a href="https://digi-plus.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-start gap-1.5 justify-center text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Live Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- <div
+                    class="absolute inset-0 -z-50"
+                  ></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1000" class="">
             <div class="group relative mx-auto max-w-100 sm:max-w-[470px] w-full">
               <div class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20">
                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
@@ -510,7 +597,7 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-duration="1000" class="">
+          <div data-aos="fade-right" data-aos-duration="1000" class="">
             <div class="group relative mx-auto max-w-100 sm:max-w-[470px] w-full">
               <div class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20">
                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
@@ -559,7 +646,7 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-right" data-aos-duration="1000" class="">
+          <div data-aos="fade-left" data-aos-duration="1000" class="">
             <div class="group relative mx-auto max-w-100 sm:max-w-[470px] w-full">
               <div class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20">
                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
@@ -608,7 +695,7 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000" class="">
+          <div data-aos="fade-up" data-aos-duration="1000" class="">
             <div class="group relative mx-auto max-w-100 sm:max-w-[470px] w-full">
               <div class="relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl group-hover:border-purple-500/50 rounded-xl transition-all duration-300 hover:shadow-purple-500/20">
                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
@@ -691,7 +778,7 @@
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg
                 ><textarea name="message" placeholder="Your Message" class="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 h-[9.9rem] disabled:opacity-50" required minlength="5"></textarea>
               </div>
-              <button data-aos="fade-up" data-aos-delay="400" type="submit" class="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
+              <button data-aos="fade-up" data-aos-delay="400" type="submit" class="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white cursor-pointer py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send w-5 h-5">
                   <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
                   <path d="m21.854 2.147-10.94 10.939"></path></svg
