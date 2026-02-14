@@ -1,4 +1,4 @@
-![Preview](./images/demo.png)
+![Preview](./images/demo.jpg)
 
 **وبسایت پروتفولیو**
 
