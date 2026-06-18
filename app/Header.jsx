@@ -1,15 +1,15 @@
 import HeaderAnimation from "@/components/HeaderAnimation";
 import Socials from "@/components/Socials";
 import TypeAnimation from "@/components/TypeAnimation";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Link from "next/link";
 
 export default function Header(params) {
   return (
-    <header id="home" className="nav-control pt-12 sm:pt-18 min-h-dvh sm:h-[80dvh] lg:h-dvh relative">
-      <div className="sm:h-full flex flex-wrap sm:flex-nowrap justify-center items-stretch">
-        <div className="grow sm:max-w-1/2 xl:max-w-[auto] flex items-start md:items-center justify-center h-full">
-          <div className="w-full pt-10 sm:pt-17 md:pr-20 md:pt-0 text-center">
-            <h1 suppressHydrationWarning data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+    <header id="home" className="nav-control pt-12 sm:pt-18 pb-28 sm:pb-0 min-h-[80dvh] md:h-dvh  relative">
+      <div className="sm:h-full flex flex-col sm:flex-row justify-center items-center gap-y-13 xl:max-w-[80%] mx-auto">
+        <div className="bg w-full sm:w-auto lg:max-w-fit flex items-start md:items-center justify-center">
+          <div className="w-full pt-10 sm:pt-17  md:pt-0 sm:ps-4 lg:ps-12 lg:pe-5 2xl:pe-0 text-center">
+            <h1 suppressHydrationWarning data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-nowrap">
               <span> سلام من</span>
               <b className="font-extrabold bg-linear-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent"> امیر </b>
               <span> هستم</span>
@@ -20,7 +20,7 @@ export default function Header(params) {
               <a href="#project" className="btn-style mt-6 inline-block">
                 <span>نمونه کار های من</span>
               </a>
-              <a href="AmirRezazade.pdf" download className="btn-style mt-6">
+              <Link href="/AmirRezazade.pdf" download className="btn-style mt-6">
                 <span className="inline-flex items-center gap-2">
                   دانلود رزومه
                   <svg width="17px" height="17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
@@ -35,7 +35,7 @@ export default function Header(params) {
                     </g>
                   </svg>
                 </span>
-              </a>
+              </Link>
             </div>
             <div suppressHydrationWarning data-aos="fade-up" data-aos-delay="1000" data-aos-duration="900" className="flex justify-center items-center gap-3 xs:gap-5 mt-7">
               <Socials />
@@ -43,12 +43,12 @@ export default function Header(params) {
           </div>
         </div>
 
-        <div suppressHydrationWarning data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" className="w-full h-75 sm:h-full xs:h-90 grow sm:max-w-[40%] flex items-start md:items-center justify-center sm:justify-start">
+        <div className="w-full  lg:grow" suppressHydrationWarning data-aos="fade-right" data-aos-delay="500" data-aos-duration="800">
           <HeaderAnimation />
         </div>
       </div>
 
-      <div className="flex justify-center w-full absolute bottom-2 pointer-events-none">
+      <div className="flex justify-center w-full absolute bottom-2  pointer-events-none">
         <span className="flex flex-col items-center gap-2 animate-bounce text-sm">
           scroll
           <svg fill="#8e51ff" width="22px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

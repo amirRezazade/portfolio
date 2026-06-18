@@ -41,7 +41,7 @@ export default function ContactMe(params) {
                 ارسال پیام
               </button>
             </form>
-            <div suppressHydrationWarning data-aos="fade-up" data-aos-delay="1000" data-aos-duration="900" className="flex justify-evenly xs:justify-center items-center  xs:gap-5 mt-7">
+            <div suppressHydrationWarning data-aos="fade-up" data-aos-delay="700" data-aos-duration="900" className="flex justify-evenly xs:justify-center items-center  xs:gap-5 mt-7">
               <Socials />
             </div>
           </div>

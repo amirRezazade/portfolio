@@ -1,4 +1,5 @@
 import Title from "@/components/Title";
+import Link from "next/link";
 
 export default function AboutMe(params) {
   return (
@@ -70,7 +71,7 @@ export default function AboutMe(params) {
               <a href="#contact" className="btn-style inline-block">
                 <span>تماس با من</span>
               </a>
-              <a href="AmirRezazade.pdf" download className="btn-style">
+              <Link href="/AmirRezazade.pdf" download className="btn-style">
                 <span className="inline-flex items-center gap-2">
                   دانلود رزومه
                   <svg width="17px" height="17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
@@ -85,7 +86,7 @@ export default function AboutMe(params) {
                     </g>
                   </svg>
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import SmoothScroll from "@/components/SmoothScroll";
 import AOSInit from "@/components/AOSInit";
+import Loader from "./Loader";
 
 const iranSans = localFont({
   src: [
@@ -22,7 +23,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning lang="fa" dir="rtl" className="scroll-smooth">
-      <body suppressHydrationWarning className={`${iranSans.className} text-white bg-slate-800 `}>
+      <head>
+        <link rel="preload" href="/images/background.webp" as="image" />
+        <link rel="preload" href="/images/astronaut.lottie" as="fetch" crossOrigin="anonymous" />
+      </head>
+      <body suppressHydrationWarning className={`${iranSans.className} text-white bg-slate-800 relative overflow-x-hidden`}>
+        <Loader />
         <AOSInit />
         <SmoothScroll />
         {children}
