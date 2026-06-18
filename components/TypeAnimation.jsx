@@ -11,7 +11,7 @@ export default function TypeAnimation(params) {
             loop: true,
           }}
           getBeforeInit={(instance) => {
-            instance.type("دانشجوی رشته مهندسی کامپیوتر").pause(2000).delete().type("توسعه‌ دهنده‌ی فرانت‌ اند").pause(2000).delete().type('<strong className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text font-extrabold text-transparent">عاشق دنیای  برنامه نویسی</strong>').pause(2500);
+            instance.type("دانشجوی رشته مهندسی کامپیوتر").pause(2000).delete().type("توسعه‌ دهنده‌ی فرانت‌ اند").pause(2000).delete().type('<span class=" font-bold text-nowrap bg-linear-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">عاشق کدهای تمیز و کاربردی</span>').pause(2500);
             return instance;
           }}
         />

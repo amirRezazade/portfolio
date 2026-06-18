@@ -65,8 +65,8 @@ export default function AboutMe(params) {
           </div>
           <div suppressHydrationWarning data-aos="fade-left" data-aos-duration="1600" className="px-8 md:px-4 text-center md:w-1/2">
             <h1 className="text-xl sm:text-2xl">توسعه دهنده‌ وب - برنامه نویس فرانت اند</h1>
-            <p className="my-4 text-sm sm:text-base lg:text-[17px] leading-6 md:leading-8">سلام! من امیر رضازاده هستم، توسعه‌دهنده‌ی فرانت‌اند و علاقه‌مند به دنیای طراحی و برنامه‌نویسی وب. از سال 1402 مسیر یادگیری HTML، CSS، JavaScript و React رو شروع کردم و هر روز با انگیزه بیشتری در حال تمرین و ساخت پروژه‌های مختلف هستم.</p>
-            <p className="my-4 text-sm sm:text-base lg:text-[17px] leading-6 md:leading-8">من به تجربه کاربری، طراحی مینیمال و نوشتن کد تمیز علاقه‌مندم. در کنار یادگیری تکنولوژی‌ها، به درک بهتر اصول طراحی و رفتار کاربر هم توجه می‌کنم. هدفم اینه که به عنوان یک توسعه‌دهنده‌ی حرفه‌ای وارد دنیای کار بشم، در تیم‌های خلاق همکاری کنم و پروژه‌هایی بسازم که هم زیبا باشن و هم کاربردی.</p>
+            <p className="my-4 text-sm sm:text-base lg:text-[17px] leading-6 md:leading-8">سلام، من امیر رضازاده هستم؛ توسعه‌دهنده فرانت‌اند با تمرکز بر طراحی و توسعه رابط‌های کاربری مدرن و کاربرپسند. از سال ۱۴۰۲ یادگیری و فعالیت خود را در حوزه توسعه وب آغاز کرده‌ام و در این مسیر با فناوری‌هایی مانند React ، JavaScript و NextJs به ساخت و پیاده‌سازی پروژه‌های مختلف پرداخته‌ام.</p>
+            <p className="my-4 text-sm sm:text-base lg:text-[17px] leading-6 md:leading-8">علاقه‌مند به طراحی مینیمال، تجربه کاربری و نوشتن کدهای تمیز و قابل نگهداری هستم. همواره تلاش می‌کنم علاوه بر توسعه مهارت‌های فنی، درک عمیق‌تری از نیازهای کاربران و اصول طراحی محصول داشته باشم. هدف من همکاری در تیم‌های حرفه‌ای، مشارکت در پروژه‌های ارزشمند و خلق تجربه‌های دیجیتال مؤثر و باکیفیت است.</p>
             <div className="flex flex-col gap-3 px-5 my-6 text-sm sm:text-base sm:flex-row sm:justify-center">
               <a href="#contact" className="btn-style inline-block">
                 <span>تماس با من</span>
