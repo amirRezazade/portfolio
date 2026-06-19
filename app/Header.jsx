@@ -16,8 +16,8 @@ export default function Header(params) {
             </h1>
 
             <TypeAnimation />
-            <div suppressHydrationWarning data-aos="fade-up" data-aos-delay="900" data-aos-duration="900" className="flex justify-center gap-4 sm:gap-1 md:gap-6 my-5">
-              <a href="#project" className="btn-style mt-6 inline-block">
+            <div suppressHydrationWarning data-aos="fade-up" data-aos-delay="900" data-aos-duration="900" className="flex justify-center gap-4 sm:gap-1 md:gap-6 mb-5  mt-11">
+              <a href="#project" className="btn-style  inline-block">
                 <span>نمونه کار های من</span>
               </a>
               <ResumeDownload />
