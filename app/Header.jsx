@@ -5,7 +5,7 @@ import TypeAnimation from "@/components/TypeAnimation";
 
 export default function Header(params) {
   return (
-    <header id="home" className="nav-control pt-12 sm:pt-18 pb-28 sm:pb-0 min-h-[80dvh] md:h-dvh  relative">
+    <header id="home" className="nav-control pt-12 sm:pt-22 pb-28 sm:pb-0 min-h-[80dvh] sm:min-h-[90dvh] md:h-dvh  relative">
       <div className="sm:h-full flex flex-col sm:flex-row justify-center items-center gap-y-13 xl:max-w-[80%] mx-auto">
         <div className="bg w-full sm:w-auto lg:max-w-fit flex items-start md:items-center justify-center">
           <div className="w-full pt-10 sm:pt-17  md:pt-0 sm:ps-4 lg:ps-12 lg:pe-5 2xl:pe-0 text-center">
@@ -28,7 +28,7 @@ export default function Header(params) {
           </div>
         </div>
 
-        <div className="w-full  lg:grow" suppressHydrationWarning data-aos="fade-right" data-aos-delay="500" data-aos-duration="800">
+        <div className="w-full max-h-max lg:grow" suppressHydrationWarning data-aos="fade-right" data-aos-delay="500" data-aos-duration="800">
           <HeaderAnimation />
         </div>
       </div>

@@ -22,7 +22,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html suppressHydrationWarning lang="fa" dir="rtl" className="scroll-smooth">
+    <html suppressHydrationWarning lang="fa" dir="rtl" className="scroll-smooth overflow-hidden">
       <head>
         <link rel="preload" href="/images/background.webp" as="image" />
         <link rel="preload" href="/images/astronaut.lottie" as="fetch" crossOrigin="anonymous" />

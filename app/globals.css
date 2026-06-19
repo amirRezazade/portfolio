@@ -51,6 +51,7 @@ html::-webkit-scrollbar {
   opacity: 100;
 }
 /* finish custom class */
+
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
