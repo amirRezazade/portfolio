@@ -36,3 +36,6 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+// https://www.vengenceui.com/components/solar-system
+// https://www.vengenceui.com/components/spotlight-navbar

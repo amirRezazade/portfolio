@@ -1,0 +1,30 @@
+/* خط زیر */
+.shaddow {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transition: opacity 0.25s;
+  filter: blur(15px);
+  background: radial-gradient(180px circle at var(--x) var(--y), rgba(220, 243, 251, 0.321), transparent 70%);
+}
+
+nav:hover .shaddow {
+  opacity: 1;
+}
+.glow-nav {
+  position: absolute;
+  bottom: 0;
+
+  height: 2px;
+
+  transition:
+    left 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+
+  background: radial-gradient(60px circle at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.85) 25%, rgba(255, 255, 255, 0.35) 55%, transparent 100%);
+}

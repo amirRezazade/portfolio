@@ -84,7 +84,7 @@ let projects = [
 
 export default function Projects(params) {
   return (
-    <section id="project" className="nav-control mt-10 sm:mt-15 md:my-20">
+    <section id="projects" className="nav-control mt-10 sm:mt-15 md:my-20">
       <div className="container max-w-7xl mx-auto">
         <Title text={"پروژه های"} />
 
