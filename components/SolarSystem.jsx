@@ -1,6 +1,5 @@
 "use client";
-
-import React, { useState } from "react";
+import React from "react";
 // import { Orbit as OrbitIcon } from "lucide-react";
 
 /**
@@ -9,6 +8,15 @@ import React, { useState } from "react";
  * ============================================================================
  */
 const DefaultIcons = {
+  javaScript: (
+    <svg xmlns="http://www.w3.org/2000/svg" width={17} height={17} viewBox="0 0 128 128">
+      <path fill="#f0db4f" d="M1.408 1.408h125.184v125.185H1.408z"></path>
+      <path
+        fill="#323330"
+        d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981c-3.832-1.761-8.104-3.022-9.377-5.926c-.452-1.69-.512-2.642-.226-3.665c.821-3.32 4.784-4.355 7.925-3.403c2.023.678 3.938 2.237 5.093 4.724c5.402-3.498 5.391-3.475 9.163-5.879c-1.381-2.141-2.118-3.129-3.022-4.045c-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235c-5.926 6.724-4.236 18.492 2.975 23.335c7.104 5.332 17.54 6.545 18.873 11.531c1.297 6.104-4.486 8.08-10.234 7.378c-4.236-.881-6.592-3.034-9.139-6.949c-4.688 2.713-4.688 2.713-9.508 5.485c1.143 2.499 2.344 3.63 4.26 5.795c9.068 9.198 31.76 8.746 35.83-5.176c.165-.478 1.261-3.666.38-8.581M69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149c-1.713 3.558-6.152 3.117-8.175 2.427c-2.059-1.012-3.106-2.451-4.319-4.485c-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901c4.462 2.678 10.459 3.499 16.731 2.059c4.082-1.189 7.604-3.652 9.448-7.401c2.666-4.915 2.094-10.864 2.07-17.444c.06-10.735.001-21.468.001-32.237"
+      ></path>
+    </svg>
+  ),
   react: (
     <svg viewBox="-11.5 -10.23174 23 20.46348" className="w-5 h-5" fill="none">
       <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
@@ -25,44 +33,35 @@ const DefaultIcons = {
       <path d="M149.508 157.52L69.142 54H54v72h14.4V69.412l67.24 87.054a89.4 89.4 0 0013.868-1.046zM111.6 54h14.4v72h-14.4z" fill="#fff" />
     </svg>
   ),
-  flutter: (
-    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
-      <path d="M14.314 0L2.3 12l6 6 6-6-6-6 2.985-2.985L14.314 0zm0 6l-6 6 6 6 5.7-5.7-2.985-3L20.014 6H14.314z" fill="#54C5F8" />
-      <path d="M14.314 12L8.3 18l6 6h5.7l-6-6 6-6h-5.7z" fill="#01579B" />
-    </svg>
-  ),
-  vue: (
-    <svg viewBox="0 0 256 221" className="w-5 h-5" fill="none">
-      <path d="M204.8 0H256L128 220.8 0 0h51.2L128 132.48 204.8 0z" fill="#41B883" />
-      <path d="M0 0l128 220.8L256 0h-51.2L128 132.48 51.2 0H0z" fill="#35495E" />
+  figma: (
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
+      <path fill="#e64a19" d="M26,17h-8c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h8V17z"></path>
+      <path fill="#7c4dff" d="M25,31h-7c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7V31z"></path>
+      <path fill="#66bb6a" d="M18,45L18,45c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7v7C25,41.866,21.866,45,18,45z"></path>
+      <path fill="#ff7043" d="M32,17h-7V3h7c3.866,0,7,3.134,7,7v0C39,13.866,35.866,17,32,17z"></path>
+      <circle cx="32" cy="24" r="7" fill="#29b6f6"></circle>
     </svg>
   ),
   typescript: (
-    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
-      <rect width="24" height="24" rx="2" fill="#3178C6" />
-      <path d="M5.5 12v-1.5h4.5V21h-2V12H5.5zm5.5-1.5h4.5v1.5h-3v2h3v1.5h-3v2h3V21h-4.5v-1.5h3v-2h-3v-1.5h3v-2h-3V10.5z" fill="#fff" />
-    </svg>
-  ),
-  python: (
-    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
-      <path d="M12.043 1.017c-2.157 0-2.078.918-2.078.918l.003 2.126h2.32v.639H7.768S5.449 4.487 5.449 6.72c0 2.233 0 2.767 0 2.767h1.568V8.282c0-.725.68-1.324 1.582-1.324h3.722c1.383 0 2.234-.84 2.234-2.234V3.11c0-1.156-.99-2.093-2.234-2.093h-2.32V1.017zm-1.09.934a.6.6 0 1 1 .002 1.2.6.6 0 0 1-.002-1.2z" fill="#387EB8" />
-      <path d="M12.043 22.983c2.157 0 2.078-.918 2.078-.918l-.003-2.126h-2.32v-.639h4.518s2.32.217 2.32-2.017c0-2.233 0-2.767 0-2.767h-1.568v1.201c0 .725-.68 1.324-1.582 1.324h-3.722c-1.383 0-2.234.84-2.234 2.234v1.867c0 1.156.99 2.093 2.234 2.093h2.32v-.252h-.041z" fill="#FFD43B" />
-    </svg>
-  ),
-  rust: (
-    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
-      <circle cx="12" cy="12" r="10" stroke="#ff6f30" strokeWidth="2" strokeDasharray="4 3" />
-      <path d="M12 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" fill="#ff6f30" />
-      <circle cx="12" cy="12" r="1.5" fill="#fff" />
-    </svg>
-  ),
-  golang: (
-    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
-      <path d="M3.8 8.15a.36.36 0 0 0-.36.41.36.36 0 0 0 .36.33h4.69a.36.36 0 0 0 .36-.33.36.36 0 0 0-.36-.41H3.8zm-2.56 1.8a.36.36 0 0 0-.36.45.36.36 0 0 0 .36.33h4.69a.36.36 0 0 0 .36-.33.36.36 0 0 0-.36-.45H1.24zm13.8 0a.36.36 0 0 0-.36.45.36.36 0 0 0 .36.33h4.69a.36.36 0 0 0 .36-.33.36.36 0 0 0-.36-.45h-4.69zm-2.56-1.8a.36.36 0 0 0-.36.41.36.36 0 0 0 .36.33h4.69a.36.36 0 0 0 .36-.33.36.36 0 0 0-.36-.41h-4.69z" fill="#00ADD8" />
+    <svg xmlns="http://www.w3.org/2000/svg" width={17} height={17} viewBox="0 0 128 128">
+      <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z"></path>
       <path
-        d="M22.83 11.1c-.43-1.27-1.53-2.03-2.96-2.03-1.28 0-2.27.49-3.22 1.33.4.35.77.79 1.08 1.3.48-.5 1.06-.96 1.9-.96.84 0 1.4.47 1.57 1.17.03.1.04.2.04.32v.27c-.54-.02-1.18-.05-1.83-.05-2.16 0-3.35.5-4.16 1.5-.78.96-.9 2.14-.9 3.08 0 1.34.5 2.55 1.8 2.55.84 0 1.43-.37 1.91-.86.35.55.72 1.01 1.3 1.31.62.32 1.28.38 2.13.38 1.99 0 3.2-.95 3.85-2.6.54-1.34.38-2.5.03-3.28h-2.73v.02zm-1.16 3.73c-.48.75-1.12 1.06-1.83 1.06-.36 0-.72-.1-1-.32-.3-.23-.5-.56-.5-1.1 0-.8.36-1.42 1.06-1.8.56-.3 1.3-.42 2.23-.42.17 0 .35 0 .54.01-.03.72-.23 1.63-.5 2.57zM8.3 9.02H4.76c-.88 0-1.6.72-1.6 1.6v2.85c0 .88.72 1.6 1.6 1.6H8.3c1.52 0 3.04-1.36 3.04-3.03 0-1.66-1.52-3.02-3.04-3.02zm0 3.95H5.43v-.7H8.3s.36.1.36.43c0 .34-.36.26-.36.26v.01z"
-        fill="#00ADD8"
-      />
+        fill="#007acc"
+        d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 0 1 7.82 4.5a20.6 20.6 0 0 1 3 4c0 .16-5.4 3.81-8.69 5.85c-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 0 0-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.6 4.6 0 0 0 .54 2.34c.83 1.73 2.38 2.76 7.24 4.86c8.95 3.85 12.78 6.39 15.16 10c2.66 4 3.25 10.46 1.45 15.24c-2 5.2-6.9 8.73-13.83 9.9a38.3 38.3 0 0 1-9.52-.1a23 23 0 0 1-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9 9 0 0 1 1.15-.73L82 101l3.59-2.08l.75 1.11a16.8 16.8 0 0 0 4.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 0 0 .69-6.92c-1-1.39-3-2.56-8.59-5c-6.45-2.78-9.23-4.5-11.77-7.24a16.5 16.5 0 0 1-3.43-6.25a25 25 0 0 1-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.7 31.7 0 0 1 9.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49 49 0 0 1 .12-5.17C29.08 59 39 59 51 59h21.83z"
+      ></path>
+    </svg>
+  ),
+  tailwind: (
+    <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 32 32">
+      <path fill="#44a8b3" d="M9 13.7q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1m-7 8.4q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1"></path>
+    </svg>
+  ),
+  redux: (
+    <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 128 128">
+      <path
+        fill="#764abc"
+        d="M88.69 88.11c-9 18.4-24.76 30.78-45.61 34.85a39.7 39.7 0 0 1-9.77 1.14c-12 0-23-5-28.34-13.19C-2.2 100-4.64 76.87 19 59.76c.48 2.61 1.46 6.19 2.11 8.31A38.24 38.24 0 0 0 10 81.1c-4.4 8.64-3.91 17.27 1.3 25.25c3.6 5.38 9.3 8.65 16.63 9.65a44 44 0 0 0 26.55-5c12.71-6.68 21.18-14.66 26.72-25.57a9.32 9.32 0 0 1-2.61-6A9.12 9.12 0 0 1 87.37 70h.34a9.15 9.15 0 0 1 1 18.25zm28.67-20.2c12.21 13.84 12.54 30.13 7.82 39.58c-4.4 8.63-16 17.27-31.6 17.27a50.5 50.5 0 0 1-21-5.05c2.29-1.63 5.54-4.24 7.33-5.87a41.5 41.5 0 0 0 16 3.42c10.1 0 17.75-4.72 22.31-13.35c2.93-5.7 3.1-12.38.33-19.22a43.6 43.6 0 0 0-17.27-20.85a62 62 0 0 0-34.74-10.59h-2.93a9.21 9.21 0 0 1-8 5.54h-.31a9.13 9.13 0 0 1-.3-18.25h.33a9 9 0 0 1 8 4.89h2.61c20.8 0 39.06 7.98 51.42 22.48m-82.75 23a7.3 7.3 0 0 1 1.14-4.73c-9.12-15.8-14-35.83-6.51-56.68C34.61 13.83 48.13 3.24 62.79 3.24c15.64 0 31.93 13.69 33.88 40.07c-2.44-.81-6-2-8.14-2.44c-.53-8.63-7.82-30.13-25.09-29.81c-6.19.17-15.31 3.1-20 9.12a43.7 43.7 0 0 0-9.64 25.25a59.6 59.6 0 0 0 8.47 36.16a2.75 2.75 0 0 1 1.14-.16h.32a9.121 9.121 0 0 1 .33 18.24h-.33a9.16 9.16 0 0 1-9.12-8.79z"
+      ></path>
     </svg>
   ),
 };
@@ -80,10 +79,8 @@ const DEFAULT_ORBITS = [
     radiusPx: 175,
     speed: 20,
     items: [
+      { id: "javaScript", label: "JavaScript", color: "#f7df1e", svg: DefaultIcons.javaScript },
       { id: "react", label: "React", color: "#61DAFB", svg: DefaultIcons.react },
-      { id: "nextjs", label: "Next.js", color: "#ffffff", svg: DefaultIcons.nextjs },
-      { id: "flutter", label: "Flutter", color: "#02569B", svg: DefaultIcons.flutter },
-      { id: "vue", label: "Vue.js", color: "#42B883", svg: DefaultIcons.vue },
     ],
   },
   {
@@ -93,8 +90,9 @@ const DEFAULT_ORBITS = [
     radiusPx: 285,
     speed: 32,
     items: [
+      { id: "nextjs", label: "Next.js", color: "#ffffff", svg: DefaultIcons.nextjs },
       { id: "typescript", label: "TypeScript", color: "#3178C6", svg: DefaultIcons.typescript },
-      { id: "python", label: "Python", color: "#FFD43B", svg: DefaultIcons.python },
+      { id: "tailwind", label: "Tailwind", color: "#44a8b3", svg: DefaultIcons.tailwind },
     ],
   },
   {
@@ -104,15 +102,13 @@ const DEFAULT_ORBITS = [
     radiusPx: 395,
     speed: 48,
     items: [
-      { id: "rust", label: "Rust", color: "#FF6F30", svg: DefaultIcons.rust },
-      { id: "golang", label: "Go", color: "#00ADD8", svg: DefaultIcons.golang },
+      { id: "redux", label: "Redux", color: "#764abc", svg: DefaultIcons.redux },
+      { id: "figma", label: "Figma", color: "#ff7043", svg: DefaultIcons.figma },
     ],
   },
 ];
 
 const SolarSystem = React.forwardRef(({ centerLogo, centerLogoAlt = "Core Engine", orbits = DEFAULT_ORBITS, isPaused = false, speedMultiplier = 1, className, ...props }, ref) => {
-  const [hoveredId, setHoveredId] = useState(null);
-
   const dustItems = [
     { delay: "-4s", radius: "165px", color: "#00f5d4" },
     { delay: "-11s", radius: "260px", color: "#a855f7" },
@@ -127,7 +123,7 @@ const SolarSystem = React.forwardRef(({ centerLogo, centerLogoAlt = "Core Engine
     <div
       ref={ref}
       // من تابع cn رو حذف کردم و از بک‌تیک استفاده کردم که وابسته به فایل‌های دیگه نباشی
-      className={`relative flex items-center justify-center w-full max-w-[940px] h-[320px] md:h-[450px] perspective-[1200px] select-none overflow-visible ${className || ""}`}
+      className={`relative flex items-center justify-center w-full max-w-235 h-80 md:h-[450px] perspective-[1200px] select-none overflow-visible ${className || ""}`}
       {...props}
     >
       <style
@@ -209,28 +205,54 @@ const SolarSystem = React.forwardRef(({ centerLogo, centerLogoAlt = "Core Engine
             cursor: pointer;
             pointer-events: auto;
             transition: border-color 0.3s, color 0.3s, background 0.3s, box-shadow 0.3s, scale 0.3s;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            
           }
+            .orbit-node {
+  pointer-events: auto;
+}
+
+.orbit-laser {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.orbit-icon {
+  transition: transform 0.3s ease;
+}
+
+.orbit-logo-card {
+  border-color: rgba(255, 255, 255, 0.08);
+  will-change: transform;
+}
+
+/* کل hover با CSS */
+.orbit-node:hover .orbit-laser {
+  opacity: 1;
+}
+
+.orbit-node:hover .orbit-logo-card {
+  border-color: var(--hover-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 15px var(--hover-color);
+  scale: 1.05;
+}
+
+.orbit-node:hover .orbit-icon {
+  transform: scale(1.1);
+}
         `,
         }}
       />
 
-      <div className="absolute w-[360px] h-[360px] md:w-[940px] md:h-[940px] flex items-center justify-center" style={{ transform: "rotateX(65deg) rotateY(-10deg)", transformStyle: "preserve-3d" }}>
-        <div className="absolute w-[100px] h-[100px] md:w-[130px] md:h-[130px] flex items-center justify-center z-20 pointer-events-none" style={{ transform: "rotateY(10deg) rotateX(-65deg)", transformStyle: "preserve-3d" }}>
-          <div className="absolute w-[90px] h-[90px] md:w-[120px] md:h-[120px] rounded-full filter blur-md animate-custom-sun-pulse z-10 bg-teal-500/20" />
+      <div className="absolute w-90 h-90 md:w-235 md:h-235 flex items-center justify-center" style={{ transform: "rotateX(65deg) rotateY(-10deg)", transformStyle: "preserve-3d" }}>
+        <div className="absolute w-25 h-25 md:w-32.5 md:h-32.5 flex items-center justify-center z-20 pointer-events-none" style={{ transform: "rotateY(10deg) rotateX(-65deg)", transformStyle: "preserve-3d" }}>
+          <div className="absolute w-22.5 h-22.5 md:w-30 md:h-30 rounded-full filter blur-md animate-custom-sun-pulse z-10 bg-teal-500/20" />
 
-          {centerLogo ? (
-            typeof centerLogo === "string" ? (
-              <img className="w-14 h-14 md:w-20 md:h-20 rounded-full border-2 border-teal-500/40 shadow-[0_0_30px_rgba(20,184,166,0.3)] z-20 bg-zinc-950 p-2 md:p-3 relative" src={centerLogo} alt={centerLogoAlt} width={80} height={80} />
-            ) : (
-              <div className="w-14 h-14 md:w-20 md:h-20 rounded-full border-2 border-teal-500/40 shadow-[0_0_30px_rgba(20,184,166,0.3)] z-20 bg-zinc-950 flex items-center justify-center p-2 relative">{centerLogo}</div>
-            )
-          ) : (
-            <div className="w-14 h-14 md:w-20 md:h-20 rounded-full border-2 border-teal-500/40 shadow-[0_0_30px_rgba(20,184,166,0.3)] z-20 bg-zinc-950 flex items-center justify-center p-2 relative">{/* <OrbitIcon className="w-8 h-8 text-teal-400 animate-spin" style={{ animationDuration: "10s" }} /> */}</div>
-          )}
+          <div className="w-12 h-12 md:w-18 md:h-18 flex justify-center items-center rounded-full border-2 border-purple-500/40 shadow-[0_0_30px_rgba(124, 20, 184, 0.3)] z-20 bg-zinc-950 p-2 md:p-3 relative">
+            <img src="./images/code.png" alt="code" width={25} height={25} />
+          </div>
 
-          <div className="absolute w-[110px] h-[110px] md:w-[140px] md:h-[140px] rounded-full border border-dashed border-teal-500/20 animate-custom-spin-cw pointer-events-none" />
-          <div className="absolute w-[150px] h-[150px] md:w-[185px] md:h-[185px] rounded-full border border-dashed border-teal-500/10 animate-custom-spin-ccw pointer-events-none" />
+          <div className="absolute w-27.5 h-27.5 md:w-35 md:h-35 rounded-full border border-dashed border-purple-500/20 animate-custom-spin-cw pointer-events-none" />
+          <div className="absolute w-37.5 h-37.5 md:w-46.25 md:h-46.25 rounded-full border border-dashed border-purple-500/10 animate-custom-spin-ccw pointer-events-none" />
         </div>
 
         {dustItems.map((dust, idx) => (
@@ -266,12 +288,11 @@ const SolarSystem = React.forwardRef(({ centerLogo, centerLogoAlt = "Core Engine
               {orbit.items.map((item, idx, arr) => {
                 const delayValue = -(orbit.speed / arr.length) * idx;
                 const durationValue = orbit.speed / speedMultiplier;
-                const isHovered = hoveredId === item.id;
 
                 return (
                   <div
                     key={item.id}
-                    className="absolute left-1/2 top-1/2 w-0 h-0 pointer-events-none animate-custom-orbit"
+                    className="orbit-node absolute left-1/2 top-1/2 w-0 h-0 pointer-events-none animate-custom-orbit "
                     style={{
                       animationDelay: `${delayValue}s`,
                       animationDuration: `${durationValue}s`,
@@ -280,45 +301,35 @@ const SolarSystem = React.forwardRef(({ centerLogo, centerLogoAlt = "Core Engine
                       "--orbit-duration": `${durationValue}s`,
                       "--orbit-play-state": isPaused ? "paused" : "running",
                       "--hover-color": item.color,
-                      zIndex: isHovered ? 30 : 10,
                       transformStyle: "preserve-3d",
                     }}
                   >
                     <div
-                      className="absolute right-0 top-1/2 h-[1.5px] origin-right -translate-y-1/2 pointer-events-none transition-opacity duration-300 z-0"
+                      className="orbit-laser absolute right-0 top-1/2 h-[1.5px] origin-right -translate-y-1/2 pointer-events-none transition-opacity duration-300 z-0"
                       style={{
                         width: orbit.radiusClass,
-                        opacity: isHovered ? 1 : 0,
                         background: `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.15) 20%, ${item.color} 80%, ${item.color} 100%)`,
                         boxShadow: `0 0 8px ${item.color}, 0 0 16px ${item.color}40`,
                       }}
                     />
 
                     <div
-                      onMouseEnter={() => setHoveredId(item.id)}
-                      onMouseLeave={() => setHoveredId(null)}
-                      className="orbit-logo-card animate-custom-billboard"
+                      className="orbit-logo-card animate-custom-billboard "
                       style={{
                         animationDelay: `${delayValue}s`,
                         animationDuration: `${durationValue}s`,
-                        animationPlayState: isPaused ? "paused" : "running",
-                        borderColor: isHovered ? item.color : undefined,
-                        boxShadow: isHovered ? `0 0 20px rgba(0, 0, 0, 0.6), 0 0 15px ${item.color}35` : undefined,
-                        scale: isHovered ? 1.05 : 1,
                         "--orbit-duration": `${durationValue}s`,
-                        "--orbit-play-state": isPaused ? "paused" : "running",
                       }}
                     >
-                      <div
-                        className="transition-transform duration-300"
+                      <span
+                        className="orbit-icon transition-transform duration-300 "
                         style={{
-                          transform: isHovered ? "scale(1.1)" : "scale(1)",
                           color: item.color,
                         }}
                       >
                         {item.svg}
-                      </div>
-                      <span className="text-[11px] md:text-[13px] tracking-tight">{item.label}</span>
+                      </span>
+                      <span className="text-[11px] md:text-[13px] tracking-tight hidden lg:inline-block">{item.label}</span>
                     </div>
                   </div>
                 );

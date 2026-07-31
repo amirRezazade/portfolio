@@ -25,9 +25,8 @@ export default function RootLayout({ children }) {
     <html suppressHydrationWarning lang="fa" dir="rtl" className="scroll-smooth overflow-x-hidden">
       <head>
         <link rel="preload" href="/images/background.webp" as="image" />
-        <link rel="preload" href="/images/astronaut.png" as="image" />
       </head>
-      <body suppressHydrationWarning className={`${iranSans.className} text-white bg-slate-800 relative overflow-x-hidden`}>
+      <body suppressHydrationWarning className={`${iranSans.className} text-white bg-black relative overflow-x-hidden`}>
         <Loader />
         <AOSInit />
         <SmoothScroll />
@@ -36,6 +35,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-// https://www.vengenceui.com/components/solar-system
-// https://www.vengenceui.com/components/spotlight-navbar

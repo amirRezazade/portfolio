@@ -1,4 +1,5 @@
-import ResumeDownload from "@/components/ResumeDownload";
+import GoToContactMeBtn from "@/components/buttons/GoToContactMeBtn";
+import ResumeDownload from "@/components/buttons/ResumeDownload";
 import Title from "@/components/Title";
 
 export default function AboutMe(params) {
@@ -68,9 +69,7 @@ export default function AboutMe(params) {
             <p className="my-4 text-sm sm:text-base lg:text-[17px] leading-6 md:leading-8">سلام، من امیر رضازاده هستم؛ توسعه‌دهنده فرانت‌اند با تمرکز بر طراحی و توسعه رابط‌های کاربری مدرن و کاربرپسند. از سال ۱۴۰۲ یادگیری و فعالیت خود را در حوزه توسعه وب آغاز کرده‌ام و در این مسیر با فناوری‌هایی مانند React ، JavaScript و NextJs به ساخت و پیاده‌سازی پروژه‌های مختلف پرداخته‌ام.</p>
             <p className="my-4 text-sm sm:text-base lg:text-[17px] leading-6 md:leading-8">علاقه‌مند به طراحی مینیمال، تجربه کاربری و نوشتن کدهای تمیز و قابل نگهداری هستم. همواره تلاش می‌کنم علاوه بر توسعه مهارت‌های فنی، درک عمیق‌تری از نیازهای کاربران و اصول طراحی محصول داشته باشم. هدف من همکاری در تیم‌های حرفه‌ای، مشارکت در پروژه‌های ارزشمند و خلق تجربه‌های دیجیتال مؤثر و باکیفیت است.</p>
             <div className="flex flex-col gap-3 px-5 my-6 text-sm sm:text-base sm:flex-row sm:justify-center">
-              <a href="#contact" className="btn-style inline-block">
-                <span>تماس با من</span>
-              </a>
+              <GoToContactMeBtn />
               <ResumeDownload />
             </div>
           </div>

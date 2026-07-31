@@ -1,6 +1,6 @@
 import Background from "@/components/background/Background";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import Header from "./Header";
 import AboutMe from "./AboutMe";
 import Skils from "./Skils";

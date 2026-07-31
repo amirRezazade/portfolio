@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import "./navbar.css";
-
+import { scrollToSection } from "../utils";
 import Image from "next/image";
 
 let links = [
@@ -75,12 +75,6 @@ export default function Navbar() {
     };
   }, []);
 
-  function scrollToSection(id) {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
   function handleMove(e) {
     const rect = cardRef.current.getBoundingClientRect();
 
