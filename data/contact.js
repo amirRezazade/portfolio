@@ -1,0 +1,96 @@
+export const contactContent = {
+  fa: {
+    badge: "Contact Channel",
+    eyebrow: "تماس با من",
+    title: "بیایید درباره پروژه بعدی صحبت کنیم",
+    description: "اگر ایده‌ای برای همکاری، پروژه فرانت‌اند یا موقعیت کاری دارید، پیام بدهید. تلاش می‌کنم سریع و شفاف پاسخ بدهم.",
+    form: {
+      name: "نام شما",
+      email: "ایمیل شما",
+      message: "پیام شما",
+      namePlaceholder: "مثلاً علی رضایی",
+      emailPlaceholder: "name@example.com",
+      messagePlaceholder: "کمی درباره پروژه یا موضوع همکاری بنویسید...",
+      submit: "ارسال پیام",
+      note: "فرم از طریق Formspree ارسال می‌شود. می‌توانید مستقیم ایمیل هم بزنید.",
+    },
+    cards: [
+      {
+        id: "email",
+        label: "ایمیل",
+        value: "a.rezazade.dev@gmail.com",
+        href: "mailto:a.rezazade.dev@gmail.com",
+      },
+      {
+        id: "telegram",
+        label: "تلگرام",
+        value: "@amir_rezade",
+        href: "https://t.me/amir_rezade",
+      },
+      {
+        id: "github",
+        label: "گیت‌هاب",
+        value: "amirRezazade",
+        href: "https://github.com/amirRezazade",
+      },
+      {
+        id: "linkedin",
+        label: "لینکدین",
+        value: "Amir Rezazade",
+        href: "https://www.linkedin.com/in/amir-rezazadeh-7086a6345/",
+      },
+    ],
+    status: {
+      label: "وضعیت همکاری",
+      value: "آماده بررسی پروژه‌های جدید",
+      response: "میانگین پاسخ‌گویی: کمتر از ۲۴ ساعت",
+    },
+  },
+  en: {
+    badge: "Contact Channel",
+    eyebrow: "Contact Me",
+    title: "Let’s talk about your next project",
+    description: "If you have an idea, a front-end project, or a work opportunity, send a message. I try to respond clearly and quickly.",
+    form: {
+      name: "Your Name",
+      email: "Your Email",
+      message: "Your Message",
+      namePlaceholder: "e.g. Alex Morgan",
+      emailPlaceholder: "name@example.com",
+      messagePlaceholder: "Tell me a bit about the project or collaboration...",
+      submit: "Send Message",
+      note: "The form is sent through Formspree. You can also email me directly.",
+    },
+    cards: [
+      {
+        id: "email",
+        label: "Email",
+        value: "a.rezazade.dev@gmail.com",
+        href: "mailto:a.rezazade.dev@gmail.com",
+      },
+      {
+        id: "telegram",
+        label: "Telegram",
+        value: "@amir_rezade",
+        href: "https://t.me/amir_rezade",
+      },
+      {
+        id: "github",
+        label: "GitHub",
+        value: "amirRezazade",
+        href: "https://github.com/amirRezazade",
+      },
+      {
+        id: "linkedin",
+        label: "LinkedIn",
+        value: "Amir Rezazade",
+        href: "https://www.linkedin.com/in/amir-rezazadeh-7086a6345/",
+      },
+    ],
+    status: {
+      label: "Collaboration Status",
+      value: "Open to new projects",
+      response: "Average response: under 24 hours",
+    },
+  },
+};

@@ -1,37 +1,14 @@
 import "./globals.css";
-import localFont from "next/font/local";
-import SmoothScroll from "@/components/SmoothScroll";
-import AOSInit from "@/components/AOSInit";
-import Loader from "./Loader";
 
-const iranSans = localFont({
-  src: [
-    {
-      path: "../public/font/woff/IRANSansX-Medium.woff",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-iranSans",
-  display: "swap",
-});
 export const metadata = {
-  title: "Amir Rezazade",
-  description: "amir rezazadeh portfolio",
+  title: "Amir Rezazade | Front-End Developer",
+  description: "Personal portfolio of Amir Rezazade, Front-End Developer focused on React, Next.js and responsive UI implementation.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html suppressHydrationWarning lang="fa" dir="rtl" className="scroll-smooth overflow-x-hidden">
-      <head>
-        <link rel="preload" href="/images/background.webp" as="image" />
-      </head>
-      <body suppressHydrationWarning className={`${iranSans.className} text-white bg-black relative overflow-x-hidden`}>
-        <Loader />
-        <AOSInit />
-        <SmoothScroll />
-        {children}
-      </body>
+    <html lang="fa" dir="rtl">
+      <body className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_18%_10%,rgb(var(--primary-rgb)/0.18),transparent_30%),radial-gradient(circle_at_82%_12%,rgb(var(--secondary-rgb)/0.12),transparent_28%),linear-gradient(180deg,var(--bg)_0%,var(--bg-mid)_55%,var(--bg)_100%)] text-[var(--text)] antialiased [font-family:Inter,VazirmatnLocal,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">{children}</body>
     </html>
   );
 }

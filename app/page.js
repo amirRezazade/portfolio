@@ -1,23 +1,5 @@
-import Background from "@/components/background/Background";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/navbar/Navbar";
-import Header from "./Header";
-import AboutMe from "./AboutMe";
-import Skils from "./Skils";
-import Projects from "./Projects";
-import ContactMe from "./ContactMe";
+import PortfolioApp from "../components/PortfolioApp";
 
-export default function Home() {
-  return (
-    <>
-      <Background />
-      <Navbar />
-      <Header />
-      <AboutMe />
-      <Skils />
-      <Projects />
-      <ContactMe />
-      <Footer />
-    </>
-  );
+export default function HomePage() {
+  return <PortfolioApp />;
 }
