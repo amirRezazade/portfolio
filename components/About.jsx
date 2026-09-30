@@ -12,10 +12,7 @@ export default function About({ lang }) {
 
   return (
     <section id="about" className="relative w-full scroll-mt-24 px-[clamp(18px,4vw,60px)] py-20 xs:px-2 xs:py-14">
-      <div className="relative w-full overflow-hidden rounded-[34px] border border-[rgb(var(--secondary-rgb)/0.15)] bg-[rgb(var(--surface-rgb)/0.34)] shadow-[0_24px_90px_rgb(var(--shadow-rgb)/0.26),inset_0_1px_0_rgb(var(--text-rgb)/0.04)] backdrop-blur-sm xs:rounded-3xl">
-        <div className="pointer-events-none absolute inset-0 opacity-20 [background-image:radial-gradient(circle,rgb(var(--text-rgb)/.55)_0_1px,transparent_1px),linear-gradient(rgb(var(--secondary-rgb)/.06)_1px,transparent_1px),linear-gradient(90deg,rgb(var(--secondary-rgb)/.06)_1px,transparent_1px)] [background-position:18px_22px,0_0,0_0] [background-size:120px_120px,58px_58px,58px_58px] [mask-image:linear-gradient(to_bottom,black,transparent_90%)]" aria-hidden="true" />
-        <div className={cn("pointer-events-none absolute top-[-22%] h-[420px] w-[420px] rounded-full bg-[rgb(var(--accent-rgb)/0.16)] blur-[100px]", isRtl ? "left-[-10%]" : "right-[-10%]")} aria-hidden="true" />
-
+      <div className="section-shell">
         <div className="relative grid w-full grid-cols-[minmax(0,1.08fr)_minmax(340px,0.92fr)] gap-10 p-[clamp(26px,5vw,64px)] max-lg:grid-cols-1 xs:p-4">
           <div className={cn("min-w-0", isRtl ? "text-right" : "text-left")}>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[rgb(var(--accent-rgb)/0.24)] bg-[rgb(var(--bg-rgb)/0.34)] px-3 py-2 text-[0.76rem] font-extrabold uppercase tracking-[0.14em] text-[var(--accent)] backdrop-blur-sm xs:text-[0.7rem]">
@@ -28,7 +25,7 @@ export default function About({ lang }) {
               <span className="h-px min-w-16 flex-1 bg-gradient-to-r from-[rgb(var(--accent-rgb)/0.5)] to-transparent" aria-hidden="true" />
             </div>
 
-            <h2 className="mt-4 max-w-[780px] text-[clamp(1.8rem,3.6vw,3.6rem)] font-black leading-[1.08] tracking-[-0.04em] text-[var(--text)] text-balance xs:text-[clamp(1.55rem,8vw,2.35rem)]">{t.title}</h2>
+            <h2 className="section-title mt-4 max-w-[780px]">{t.title}</h2>
 
             <div className="mt-7 grid gap-4 text-[clamp(0.98rem,1.35vw,1.1rem)] leading-[2] text-[rgb(var(--text-rgb)/0.85)]">
               {t.paragraphs.map((paragraph) => (
@@ -58,7 +55,7 @@ export default function About({ lang }) {
           </div>
 
           <aside className="relative min-w-0 self-stretch">
-            <div className="sticky top-28 rounded-[32px] border border-[rgb(var(--secondary-rgb)/0.2)] bg-[rgb(var(--bg-rgb)/0.38)] p-5 shadow-[0_22px_80px_rgb(var(--shadow-rgb)/0.32)] backdrop-blur-sm max-lg:static xs:rounded-3xl xs:p-4">
+            <div className="glass-card sticky top-28 max-lg:static">
               <div className="mb-6 flex items-center justify-between gap-4">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[rgb(var(--secondary-rgb)/0.2)] bg-[rgb(var(--surface-rgb)/0.46)] px-3 py-2 text-xs font-black uppercase tracking-[0.16em] text-[var(--secondary)]">
                   <RadioTower aria-hidden="true" size={15} />
@@ -85,14 +82,6 @@ export default function About({ lang }) {
                   <ProfileRow label={t.profile.focusLabel} value={t.profile.focus} />
                   <ProfileRow label={t.profile.interestsLabel} value={t.profile.interests} />
                 </dl>
-              </div>
-
-              <div className="mt-4 rounded-[26px] border border-[rgb(var(--secondary-rgb)/0.15)] bg-[rgb(var(--primary-rgb)/0.1)] p-5 xs:p-4">
-                <p className="text-xs font-black uppercase tracking-[0.16em] text-[var(--secondary)]">{t.profile.statusLabel}</p>
-                <p className="mt-2 text-2xl font-black text-[var(--text)] xs:text-xl">{t.profile.status}</p>
-                <div className="mt-5 h-2 overflow-hidden rounded-full bg-[rgb(var(--bg-rgb)/0.56)]">
-                  <span className="block h-full w-[78%] rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] shadow-[0_0_22px_rgb(var(--secondary-rgb)/0.45)]" />
-                </div>
               </div>
             </div>
           </aside>

@@ -1,15 +1,9 @@
 "use client";
 
-import { AtSign, BriefcaseBusiness, Code2, Mail, MessageSquare, Radio, Send, User } from "lucide-react";
+import { AtSign, Mail, MessageSquare, Radio, Send, User } from "lucide-react";
 import { contactContent } from "../data/contact";
+import { BrandIcon } from "./BrandIcon";
 import { cn } from "../lib/cn";
-
-const contactIcons = {
-  email: Mail,
-  telegram: Send,
-  github: Code2,
-  linkedin: BriefcaseBusiness,
-};
 
 export default function Contact({ lang }) {
   const t = contactContent[lang];
@@ -17,10 +11,7 @@ export default function Contact({ lang }) {
 
   return (
     <section id="contact" className="relative w-full scroll-mt-24 px-[clamp(18px,4vw,60px)] py-20 xs:px-2 xs:py-14">
-      <div className="relative w-full overflow-hidden rounded-[34px] border border-[rgb(var(--secondary-rgb)/0.15)] bg-[rgb(var(--surface-rgb)/0.34)] shadow-[0_24px_90px_rgb(var(--shadow-rgb)/0.26),inset_0_1px_0_rgb(var(--text-rgb)/0.04)] backdrop-blur-sm xs:rounded-3xl">
-        <div className="pointer-events-none absolute inset-0 opacity-20 [background-image:radial-gradient(circle,rgb(var(--text-rgb)/.5)_0_1px,transparent_1px),linear-gradient(rgb(var(--secondary-rgb)/.055)_1px,transparent_1px),linear-gradient(90deg,rgb(var(--secondary-rgb)/.055)_1px,transparent_1px)] [background-position:24px_30px,0_0,0_0] [background-size:124px_124px,62px_62px,62px_62px] [mask-image:linear-gradient(to_bottom,black,transparent_90%)]" aria-hidden="true" />
-        <div className={cn("pointer-events-none absolute bottom-[-28%] h-[520px] w-[520px] rounded-full bg-[rgb(var(--accent-rgb)/0.14)] blur-[100px]", isRtl ? "left-[-14%]" : "right-[-14%]")} aria-hidden="true" />
-
+      <div className="section-shell">
         <div className="relative grid grid-cols-[minmax(0,0.95fr)_minmax(340px,1.05fr)] gap-6 p-[clamp(26px,5vw,64px)] max-lg:grid-cols-1 xs:p-4">
           <div className={cn("grid content-between gap-8", isRtl ? "text-right" : "text-left")}>
             <div>
@@ -34,7 +25,7 @@ export default function Contact({ lang }) {
                 <span className="h-px min-w-16 flex-1 bg-gradient-to-r from-[rgb(var(--accent-rgb)/0.5)] to-transparent" aria-hidden="true" />
               </div>
 
-              <h2 className="mt-4 max-w-[760px] text-[clamp(1.8rem,3.6vw,3.6rem)] font-black leading-[1.08] tracking-[-0.04em] text-[var(--text)] text-balance xs:text-[clamp(1.55rem,8vw,2.35rem)]">{t.title}</h2>
+              <h2 className="section-title mt-4 max-w-[760px]">{t.title}</h2>
               <p className="mt-5 max-w-[720px] text-[clamp(0.94rem,1.2vw,1.04rem)] leading-[2] text-[rgb(var(--text-rgb)/0.78)]">{t.description}</p>
             </div>
 
@@ -49,30 +40,26 @@ export default function Contact({ lang }) {
               </div>
 
               <div className="grid grid-cols-2 gap-3 max-sm:grid-cols-1">
-                {t.cards.map((card) => {
-                  const Icon = contactIcons[card.id] ?? Mail;
-
-                  return (
-                    <a
-                      key={card.id}
-                      href={card.href}
-                      target={card.href.startsWith("http") ? "_blank" : undefined}
-                      rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="group rounded-[26px] border border-[rgb(var(--secondary-rgb)/0.14)] bg-[rgb(var(--bg-rgb)/0.42)] p-4 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[rgb(var(--secondary-rgb)/0.34)] hover:bg-[rgb(var(--surface-rgb)/0.48)] focus-visible:-translate-y-1 focus-visible:border-[rgb(var(--secondary-rgb)/0.34)] focus-visible:outline-none xs:rounded-3xl"
-                    >
-                      <span className="mb-4 grid size-10 place-items-center rounded-2xl border border-[rgb(var(--secondary-rgb)/0.2)] bg-[rgb(var(--primary-rgb)/0.1)] text-[var(--secondary)] transition group-hover:bg-[rgb(var(--primary-rgb)/0.18)]">
-                        <Icon aria-hidden="true" size={19} />
-                      </span>
-                      <span className="block text-sm font-black text-[rgb(var(--muted-rgb)/0.9)]">{card.label}</span>
-                      <strong className="mt-1 block break-words text-sm font-extrabold leading-6 text-[var(--text)]">{card.value}</strong>
-                    </a>
-                  );
-                })}
+                {t.cards.map((card) => (
+                  <a
+                    key={card.id}
+                    href={card.href}
+                    target={card.href.startsWith("http") ? "_blank" : undefined}
+                    rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="group rounded-[26px] border border-[rgb(var(--secondary-rgb)/0.14)] bg-[rgb(var(--bg-rgb)/0.42)] p-4 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[rgb(var(--accent-rgb)/0.34)] hover:bg-[rgb(var(--surface-rgb)/0.48)] focus-visible:-translate-y-1 focus-visible:border-[rgb(var(--accent-rgb)/0.34)] focus-visible:outline-none xs:rounded-3xl"
+                  >
+                    <span className="mb-4 grid size-10 place-items-center rounded-2xl border border-[rgb(var(--secondary-rgb)/0.16)] bg-[rgb(var(--surface-rgb)/0.34)] transition group-hover:bg-[rgb(var(--primary-rgb)/0.14)]">
+                      <BrandIcon name={card.id} className="size-[19px]" />
+                    </span>
+                    <span className="block text-sm font-black text-[rgb(var(--muted-rgb)/0.9)]">{card.label}</span>
+                    <strong className="mt-1 block break-words text-sm font-extrabold leading-6 text-[var(--text)]">{card.value}</strong>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
 
-          <form className="relative rounded-[32px] border border-[rgb(var(--secondary-rgb)/0.2)] bg-[rgb(var(--bg-rgb)/0.38)] p-5 shadow-[0_22px_80px_rgb(var(--shadow-rgb)/0.32)] backdrop-blur-sm xs:rounded-3xl xs:p-4" action="https://formspree.io/f/xblpdyel" method="POST">
+          <form className="glass-card" action="https://formspree.io/f/xblpdyel" method="POST">
             <input type="hidden" name="_subject" value="Portfolio contact message" />
             <div className="mb-6 flex items-center justify-between gap-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-[rgb(var(--secondary-rgb)/0.2)] bg-[rgb(var(--surface-rgb)/0.46)] px-3 py-2 text-xs font-black uppercase tracking-[0.16em] text-[var(--secondary)]">

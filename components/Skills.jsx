@@ -1,10 +1,11 @@
 "use client";
 
-import { Braces, Code2, Database, GitBranch, Layers3, Radar, Rocket, Sparkles } from "lucide-react";
+import { Radar, Rocket } from "lucide-react";
 import { skillsContent } from "../data/skills";
+import { BrandIcon } from "./BrandIcon";
 import { cn } from "../lib/cn";
 
-const groupIcons = [Braces, Layers3, Sparkles, Database, GitBranch];
+const groupIcons = ["HTML", "React", "Tailwind CSS", "Redux", "Git"];
 
 export default function Skills({ lang }) {
   const t = skillsContent[lang];
@@ -12,10 +13,7 @@ export default function Skills({ lang }) {
 
   return (
     <section id="skills" className="relative w-full scroll-mt-24 px-[clamp(18px,4vw,60px)] py-20 xs:px-2 xs:py-14">
-      <div className="relative w-full overflow-hidden rounded-[34px] border border-[rgb(var(--secondary-rgb)/0.15)] bg-[rgb(var(--surface-rgb)/0.34)] shadow-[0_24px_90px_rgb(var(--shadow-rgb)/0.26),inset_0_1px_0_rgb(var(--text-rgb)/0.04)] backdrop-blur-sm xs:rounded-3xl">
-        <div className="pointer-events-none absolute inset-0 opacity-20 [background-image:linear-gradient(rgb(var(--secondary-rgb)/.06)_1px,transparent_1px),linear-gradient(90deg,rgb(var(--secondary-rgb)/.06)_1px,transparent_1px),radial-gradient(circle,rgb(var(--text-rgb)/.45)_0_1px,transparent_1px)] [background-position:0_0,0_0,32px_42px] [background-size:64px_64px,64px_64px,130px_130px] [mask-image:linear-gradient(to_bottom,black,transparent_88%)]" aria-hidden="true" />
-        <div className={cn("pointer-events-none absolute top-[-20%] h-[460px] w-[460px] rounded-full bg-[rgb(var(--accent-rgb)/0.14)] blur-[100px]", isRtl ? "right-[-12%]" : "left-[-12%]")} aria-hidden="true" />
-
+      <div className="section-shell">
         <div className="relative grid gap-10 p-[clamp(26px,5vw,64px)] xs:p-4">
           <header className={cn("grid gap-5", isRtl ? "text-right" : "text-left")}>
             <p className="inline-flex w-fit items-center gap-2 rounded-full border border-[rgb(var(--accent-rgb)/0.24)] bg-[rgb(var(--bg-rgb)/0.34)] px-3 py-2 text-[0.76rem] font-extrabold uppercase tracking-[0.14em] text-[var(--accent)] backdrop-blur-sm xs:text-[0.7rem]">
@@ -29,13 +27,13 @@ export default function Skills({ lang }) {
             </div>
 
             <div className="grid max-w-[980px] gap-4">
-              <h2 className="text-[clamp(1.8rem,3.6vw,3.6rem)] font-black leading-[1.08] tracking-[-0.04em] text-[var(--text)] text-balance xs:text-[clamp(1.55rem,8vw,2.35rem)]">{t.title}</h2>
+              <h2 className="section-title">{t.title}</h2>
               <p className="max-w-[760px] text-[clamp(0.94rem,1.2vw,1.04rem)] leading-[2] text-[rgb(var(--text-rgb)/0.78)]">{t.description}</p>
             </div>
           </header>
 
           <div className="grid grid-cols-[minmax(280px,0.85fr)_minmax(0,1.15fr)] gap-4 max-xl:grid-cols-1">
-            <aside className="rounded-[32px] border border-[rgb(var(--secondary-rgb)/0.18)] bg-[rgb(var(--bg-rgb)/0.34)] p-5 shadow-[0_20px_80px_rgb(var(--shadow-rgb)/0.25)] backdrop-blur-sm xs:rounded-3xl xs:p-4">
+            <aside className="glass-card">
               <div className="flex items-center justify-between gap-4">
                 <span className="grid size-12 place-items-center rounded-2xl border border-[rgb(var(--secondary-rgb)/0.22)] bg-[rgb(var(--primary-rgb)/0.12)] text-[var(--secondary)]">
                   <Rocket aria-hidden="true" size={22} />
@@ -60,16 +58,16 @@ export default function Skills({ lang }) {
 
             <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
               {t.groups.map((group, index) => {
-                const Icon = groupIcons[index] ?? Code2;
+                const iconName = groupIcons[index] ?? group.items[0];
 
                 return (
-                  <article key={group.title} className="group relative overflow-hidden rounded-[28px] border border-[rgb(var(--secondary-rgb)/0.15)] bg-[rgb(var(--bg-rgb)/0.34)] p-5 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[rgb(var(--secondary-rgb)/0.35)] hover:bg-[rgb(var(--surface-rgb)/0.48)] xs:rounded-3xl xs:p-4">
+                  <article key={group.title} className="group skill-card">
                     <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[rgb(var(--secondary-rgb)/0.55)] to-transparent opacity-0 transition group-hover:opacity-100" aria-hidden="true" />
 
                     <div className="mb-5 flex items-start justify-between gap-4">
                       <div className="flex items-center gap-3">
-                        <span className="grid size-11 place-items-center rounded-2xl border border-[rgb(var(--secondary-rgb)/0.2)] bg-[rgb(var(--primary-rgb)/0.1)] text-[var(--secondary)] transition group-hover:bg-[rgb(var(--primary-rgb)/0.18)]">
-                          <Icon aria-hidden="true" size={20} />
+                        <span className="grid size-11 place-items-center rounded-2xl border border-[rgb(var(--secondary-rgb)/0.16)] bg-[rgb(var(--surface-rgb)/0.36)] transition group-hover:bg-[rgb(var(--primary-rgb)/0.14)]">
+                          <BrandIcon name={iconName} className="size-5" />
                         </span>
                         <div>
                           <h3 className="text-xl font-black text-[var(--text)]">{group.title}</h3>
@@ -81,7 +79,8 @@ export default function Skills({ lang }) {
 
                     <div className="flex flex-wrap gap-2">
                       {group.items.map((skill) => (
-                        <span key={skill} className="rounded-full border border-[rgb(var(--secondary-rgb)/0.16)] bg-[rgb(var(--surface-rgb)/0.34)] px-3 py-2 text-sm font-extrabold text-[rgb(var(--text-rgb)/0.9)] transition group-hover:border-[rgb(var(--secondary-rgb)/0.28)] group-hover:bg-[rgb(var(--primary-rgb)/0.1)]">
+                        <span key={skill} className="inline-flex items-center gap-2 rounded-full border border-[rgb(var(--secondary-rgb)/0.16)] bg-[rgb(var(--surface-rgb)/0.34)] px-3 py-2 text-xs font-bold text-[rgb(var(--text-rgb)/0.9)] transition group-hover:border-[rgb(var(--accent-rgb)/0.3)] group-hover:bg-[rgb(var(--primary-rgb)/0.1)]">
+                          <BrandIcon name={skill} className="size-4" />
                           {skill}
                         </span>
                       ))}

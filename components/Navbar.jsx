@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, FileDown, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import { navItems, dictionary } from "../data/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ResumeDownloadButton from "./ResumeDownloadButton";
 import { cn } from "../lib/cn";
 
 export default function Navbar({ lang, setLang, isReady = true }) {
@@ -27,25 +28,50 @@ export default function Navbar({ lang, setLang, isReady = true }) {
   }, []);
 
   useEffect(() => {
-    const sections = navItems.map((item) => document.getElementById(item.id)).filter(Boolean);
+    let ticking = false;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    const detectActiveSection = () => {
+      const probeLine = window.innerHeight * 0.34;
+      let current = navItems[0]?.id ?? "home";
 
-        if (visible?.target?.id) {
-          setActiveSection(visible.target.id);
+      for (const item of navItems) {
+        const section = document.getElementById(item.id);
+        if (!section) continue;
+
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= probeLine && rect.bottom > probeLine) {
+          current = item.id;
+          break;
         }
-      },
-      {
-        root: null,
-        threshold: [0.25, 0.45, 0.65],
-        rootMargin: "-18% 0px -55% 0px",
-      },
-    );
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+        if (rect.top <= probeLine) {
+          current = item.id;
+        }
+      }
+
+      const pageBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 8;
+      if (pageBottom) {
+        current = navItems.at(-1)?.id ?? current;
+      }
+
+      setActiveSection((previous) => (previous === current ? previous : current));
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(detectActiveSection);
+    };
+
+    detectActiveSection();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -61,10 +87,6 @@ export default function Navbar({ lang, setLang, isReady = true }) {
 
   return (
     <header className={cn("fixed inset-x-0 top-0 z-50 flex justify-center px-[clamp(14px,3vw,34px)] pt-4 transition-all duration-700 ease-out xs:px-2.5", isReady ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-6 opacity-0")}>
-      <a className="fixed start-4 top-2.5 z-[80] -translate-y-[160%] rounded-full bg-[var(--text)] px-4 py-2.5 font-extrabold text-[var(--bg)] transition-transform focus:translate-y-0" href="#main">
-        {lang === "fa" ? "رفتن به محتوای اصلی" : "Skip to main content"}
-      </a>
-
       <nav
         className={cn(
           "relative z-[60] flex min-h-[60px] w-full max-w-[1120px] items-center justify-between gap-4 overflow-hidden rounded-full border px-2.5 py-2 shadow-[0_18px_70px_rgb(var(--shadow-rgb)/0.36),inset_0_1px_0_rgb(var(--text-rgb)/0.08)] backdrop-blur-[18px] backdrop-saturate-150 transition-all duration-300 xs:gap-2 xs:px-2",
@@ -108,14 +130,7 @@ export default function Navbar({ lang, setLang, isReady = true }) {
         <div className="inline-flex items-center justify-end gap-2">
           <LanguageSwitcher lang={lang} setLang={setLang} label={t.switchLanguage} />
 
-          <a
-            className="hidden min-h-10 items-center gap-2 rounded-full border border-[rgb(var(--text-rgb)/0.1)] bg-gradient-to-br from-[rgb(var(--primary-rgb)/0.82)] to-[rgb(var(--accent-rgb)/0.46)] px-3.5 text-[0.84rem] font-extrabold text-[var(--text)] shadow-[inset_0_1px_0_rgb(var(--text-rgb)/0.06)] transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.42)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:-translate-y-0.5 focus-visible:border-[rgb(var(--accent-rgb)/0.42)] focus-visible:outline-none lg:inline-flex"
-            href="/AmirRezazade.pdf"
-            download
-          >
-            <FileDown aria-hidden="true" size={16} />
-            <span>{t.resume}</span>
-          </a>
+          <ResumeDownloadButton lang={lang} label={t.resume} variant="nav" />
 
           <button
             className="grid min-h-[39px] w-[39px] cursor-pointer place-items-center rounded-full border border-[rgb(var(--text-rgb)/0.1)] bg-[rgb(var(--text-rgb)/0.06)] text-[var(--text)] shadow-[inset_0_1px_0_rgb(var(--text-rgb)/0.06)] transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.42)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:-translate-y-0.5 focus-visible:border-[rgb(var(--accent-rgb)/0.42)] focus-visible:outline-none lg:hidden"
@@ -166,10 +181,7 @@ export default function Navbar({ lang, setLang, isReady = true }) {
             })}
           </div>
 
-          <a className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-[18px] border border-[rgb(var(--text-rgb)/0.1)] bg-gradient-to-br from-[rgb(var(--primary-rgb)/0.82)] to-[rgb(var(--accent-rgb)/0.46)] font-black text-[var(--text)]" href="/AmirRezazade.pdf" download onClick={closeMenu}>
-            <FileDown aria-hidden="true" size={17} />
-            <span>{t.resume}</span>
-          </a>
+          <ResumeDownloadButton lang={lang} label={t.resume} variant="mobile" onDownloadEnd={closeMenu} />
         </div>
       </div>
     </header>

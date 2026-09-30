@@ -11,9 +11,7 @@ export default function SpaceBackground({ lang }) {
         {/* <source src="/media/space-earth.mp4" type="video/mp4" /> */}
       </video>
 
-      <div className="absolute inset-0 bg-[#050816]/25" />
       <div className={cn("absolute inset-0", isRtl ? "bg-[linear-gradient(90deg,rgba(5,8,22,0.08)_0%,rgba(5,8,22,0.28)_42%,rgba(5,8,22,0.92)_100%)]" : "bg-[linear-gradient(90deg,rgba(5,8,22,0.92)_0%,rgba(5,8,22,0.28)_58%,rgba(5,8,22,0.08)_100%)]")} />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(59,130,246,0.16),transparent_34%),linear-gradient(180deg,rgba(5,8,22,0.15)_0%,rgba(5,8,22,0.64)_100%)]" />
     </div>
   );
 }
