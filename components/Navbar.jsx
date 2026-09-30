@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 import { navItems, dictionary } from "../data/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -11,6 +11,8 @@ export default function Navbar({ lang, setLang, isReady = true }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [indicatorStyle, setIndicatorStyle] = useState({ opacity: 0, transform: "translateX(0px)", width: "0px" });
+  const linksRef = useRef(null);
 
   const t = dictionary[lang];
   const dir = lang === "fa" ? "rtl" : "ltr";
@@ -75,6 +77,40 @@ export default function Navbar({ lang, setLang, isReady = true }) {
   }, []);
 
   useEffect(() => {
+    const root = linksRef.current;
+    const activeLink = root?.querySelector(`[data-nav-id="${activeSection}"]`);
+
+    if (!root || !activeLink) {
+      setIndicatorStyle((style) => ({ ...style, opacity: 0 }));
+      return undefined;
+    }
+
+    const updateIndicator = () => {
+      const rootRect = root.getBoundingClientRect();
+      const linkRect = activeLink.getBoundingClientRect();
+      const inset = 10;
+
+      setIndicatorStyle({
+        opacity: 1,
+        transform: `translateX(${linkRect.left - rootRect.left + inset}px)`,
+        width: `${Math.max(28, linkRect.width - inset * 2)}px`,
+      });
+    };
+
+    updateIndicator();
+    window.addEventListener("resize", updateIndicator);
+
+    const resizeObserver = typeof ResizeObserver !== "undefined" ? new ResizeObserver(updateIndicator) : null;
+    resizeObserver?.observe(root);
+    resizeObserver?.observe(activeLink);
+
+    return () => {
+      window.removeEventListener("resize", updateIndicator);
+      resizeObserver?.disconnect();
+    };
+  }, [activeSection, lang]);
+
+  useEffect(() => {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = isMenuOpen ? "hidden" : previousOverflow;
 
@@ -87,6 +123,10 @@ export default function Navbar({ lang, setLang, isReady = true }) {
 
   return (
     <header className={cn("fixed inset-x-0 top-0 z-50 flex justify-center px-[clamp(14px,3vw,34px)] pt-4 transition-all duration-700 ease-out xs:px-2.5", isReady ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-6 opacity-0")}>
+      <a className="fixed start-4 top-2.5 z-[80] -translate-y-[160%] rounded-full bg-[var(--text)] px-4 py-2.5 font-extrabold text-[var(--bg)] transition-transform focus:translate-y-0" href="#main">
+        {lang === "fa" ? "رفتن به محتوای اصلی" : "Skip to main content"}
+      </a>
+
       <nav
         className={cn(
           "relative z-[60] flex min-h-[60px] w-full max-w-[1120px] items-center justify-between gap-4 overflow-hidden rounded-full border px-2.5 py-2 shadow-[0_18px_70px_rgb(var(--shadow-rgb)/0.36),inset_0_1px_0_rgb(var(--text-rgb)/0.08)] backdrop-blur-[18px] backdrop-saturate-150 transition-all duration-300 xs:gap-2 xs:px-2",
@@ -106,21 +146,13 @@ export default function Navbar({ lang, setLang, isReady = true }) {
           </span>
         </a>
 
-        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-[rgb(var(--text-rgb)/0.06)] bg-[rgb(var(--shadow-rgb)/0.15)] p-1 lg:flex" role="list">
+        <div ref={linksRef} className="nav-links-shell" role="list">
+          <span className="nav-active-indicator" style={indicatorStyle} aria-hidden="true" />
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
 
             return (
-              <a
-                role="listitem"
-                key={item.id}
-                className={cn(
-                  "relative inline-flex min-h-[34px] items-center rounded-full px-3.5 text-[0.8rem] font-bold text-[rgb(var(--text-rgb)/0.75)] transition hover:bg-[rgb(var(--text-rgb)/0.06)] hover:text-[var(--text)] focus-visible:bg-[rgb(var(--text-rgb)/0.06)] focus-visible:text-[var(--text)] focus-visible:outline-none",
-                  isActive && "bg-gradient-to-br from-[rgb(var(--primary-rgb)/0.82)] to-[rgb(var(--accent-rgb)/0.46)] text-[var(--text)] drop-shadow-[0_0_14px_rgb(var(--accent-rgb)/0.42)] after:absolute after:bottom-1 after:start-4 after:end-4 after:h-0.5 after:rounded-full after:bg-gradient-to-r after:from-transparent after:via-[var(--accent)] after:to-transparent",
-                )}
-                href={item.href}
-                aria-current={isActive ? "page" : undefined}
-              >
+              <a role="listitem" key={item.id} data-nav-id={item.id} className={cn("nav-link", isActive && "nav-link--active")} href={item.href} aria-current={isActive ? "page" : undefined}>
                 <span>{item.label[lang]}</span>
               </a>
             );

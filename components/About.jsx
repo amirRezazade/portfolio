@@ -1,11 +1,75 @@
 "use client";
 
+import { useEffect, useMemo, useState } from "react";
 import { Code2, Gauge, Layers3, Orbit, RadioTower, Sparkles } from "lucide-react";
 import { aboutContent } from "../data/about";
+import { socialLinks } from "../data/hero";
+import { BrandIcon } from "./BrandIcon";
 import { cn } from "../lib/cn";
 
 const highlightIcons = [Orbit, Code2, Layers3, Gauge];
+const githubLink = socialLinks.find((link) => link.id === "github")?.href ?? "https://github.com/amirRezazade";
+const contributionDays = ["", "Mon", "", "Wed", "", "Fri", ""];
+const emptyContributionWeeks = Array.from({ length: 53 }, () => Array.from({ length: 7 }, () => ({ date: "", count: 0, level: 0, isPlaceholder: true })));
 
+function parseContributionDate(date) {
+  const [year, month, day] = String(date).split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
+
+function formatContributionDate(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function addDays(date, amount) {
+  const nextDate = new Date(date);
+  nextDate.setDate(nextDate.getDate() + amount);
+  return nextDate;
+}
+
+function buildContributionWeeks(contributions = []) {
+  if (!contributions.length) return emptyContributionWeeks;
+
+  const contributionMap = new Map(contributions.map((item) => [item.date, item]));
+  const firstDate = parseContributionDate(contributions[0].date);
+  const lastDate = parseContributionDate(contributions.at(-1).date);
+  const startDate = addDays(firstDate, -firstDate.getDay());
+  const endDate = addDays(lastDate, 6 - lastDate.getDay());
+  const weeks = [];
+  let cursor = startDate;
+
+  while (cursor <= endDate) {
+    const week = [];
+
+    for (let day = 0; day < 7; day += 1) {
+      const date = formatContributionDate(cursor);
+      const contribution = contributionMap.get(date);
+
+      week.push({
+        date,
+        count: contribution?.count ?? 0,
+        level: contribution?.level ?? 0,
+        isPlaceholder: !contribution,
+      });
+
+      cursor = addDays(cursor, 1);
+    }
+
+    weeks.push(week);
+  }
+
+  return weeks;
+}
+
+function buildMonthLabels(weeks) {
+  return weeks.map((week) => {
+    const firstOfMonth = week.find((item) => item.date && parseContributionDate(item.date).getDate() === 1);
+    return firstOfMonth ? parseContributionDate(firstOfMonth.date).toLocaleString("en", { month: "short" }) : "";
+  });
+}
 export default function About({ lang }) {
   const t = aboutContent[lang];
   const isRtl = lang === "fa";
@@ -55,7 +119,7 @@ export default function About({ lang }) {
           </div>
 
           <aside className="relative min-w-0 self-stretch">
-            <div className="glass-card sticky top-28 max-lg:static">
+            <div className="glass-card ">
               <div className="mb-6 flex items-center justify-between gap-4">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[rgb(var(--secondary-rgb)/0.2)] bg-[rgb(var(--surface-rgb)/0.46)] px-3 py-2 text-xs font-black uppercase tracking-[0.16em] text-[var(--secondary)]">
                   <RadioTower aria-hidden="true" size={15} />
@@ -85,9 +149,123 @@ export default function About({ lang }) {
               </div>
             </div>
           </aside>
+          <div className="min-w-0 lg:col-span-2">
+            <GitHubActivity lang={lang} isRtl={isRtl} />
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function GitHubActivity({ lang, isRtl }) {
+  const [activity, setActivity] = useState({ status: "loading", total: 0, contributions: [] });
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetch("/api/github-contributions")
+      .then((response) => {
+        if (!response.ok) throw new Error("Unable to load GitHub activity");
+        return response.json();
+      })
+      .then((data) => {
+        if (!isMounted) return;
+        setActivity({
+          status: "ready",
+          total: Number(data.total) || 0,
+          contributions: Array.isArray(data.contributions) ? data.contributions : [],
+        });
+      })
+      .catch(() => {
+        if (!isMounted) return;
+        setActivity({ status: "error", total: 0, contributions: [] });
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const weeks = useMemo(() => buildContributionWeeks(activity.contributions), [activity.contributions]);
+  const monthLabels = useMemo(() => buildMonthLabels(weeks), [weeks]);
+  const isLoading = activity.status === "loading";
+  const hasError = activity.status === "error";
+
+  const copy = {
+    fa: {
+      badge: "Live GitHub Activity",
+      title: "ردپای واقعی کدنویسی در گیت‌هاب",
+      description: "این نمودار از داده‌های عمومی گیت‌هاب شما خوانده می‌شود و فعالیت یک سال اخیر را با تم تیره نشان می‌دهد.",
+      loading: "در حال دریافت از گیت‌هاب...",
+      unavailable: "داده‌های گیت‌هاب فعلاً در دسترس نیست.",
+      total: `${activity.total.toLocaleString("fa-IR")} فعالیت واقعی`,
+      profile: "مشاهده پروفایل",
+      less: "کمتر",
+      more: "بیشتر",
+    },
+    en: {
+      badge: "Live GitHub Activity",
+      title: "Real coding footprint on GitHub",
+      description: "This chart is loaded from your public GitHub data and shows the last year of activity in dark mode.",
+      loading: "Loading from GitHub...",
+      unavailable: "GitHub data is currently unavailable.",
+      total: `${activity.total.toLocaleString("en-US")} real contributions`,
+      profile: "View profile",
+      less: "Less",
+      more: "More",
+    },
+  }[lang];
+
+  return (
+    <article className={cn("github-activity-card", isRtl ? "text-right" : "text-left")}>
+      <div className="relative flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <p className="inline-flex w-fit items-center gap-2 rounded-full border border-[rgb(var(--accent-rgb)/0.22)] bg-[rgb(var(--surface-rgb)/0.36)] px-3 py-2 text-xs font-black uppercase tracking-[0.14em] text-[var(--accent)]">
+            <BrandIcon name="github" className="size-4" />
+            {copy.badge}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="rounded-full border border-[rgb(var(--text-rgb)/0.08)] bg-[rgb(var(--text-rgb)/0.035)] px-3 py-2 text-sm xs:text-xs font-black text-[var(--text)]">{isLoading ? copy.loading : hasError ? copy.unavailable : copy.total}</span>
+          <a href={githubLink} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[rgb(var(--accent-rgb)/0.22)] bg-[rgb(var(--accent-rgb)/0.08)] px-3 xs:text-xs text-sm font-black text-[rgb(var(--text-rgb)/0.9)] transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.38)] focus-visible:-translate-y-0.5 focus-visible:outline-none">
+            <BrandIcon name="github" className="size-4" />
+            {copy.profile}
+          </a>
+        </div>
+      </div>
+
+      <div className={cn("github-chart-scroll", isLoading && "opacity-55")} aria-label={copy.title}>
+        <div className="github-months" aria-hidden="true">
+          {monthLabels.map((month, index) => (
+            <span key={`${month}-${index}`}>{month}</span>
+          ))}
+        </div>
+
+        <div className="github-graph-body">
+          <div className="github-days" aria-hidden="true">
+            {contributionDays.map((day, index) => (
+              <span key={`${day}-${index}`}>{day}</span>
+            ))}
+          </div>
+
+          <div className="github-grid">{weeks.flatMap((week, weekIndex) => week.map((cell, dayIndex) => <span key={`${cell.date || "placeholder"}-${weekIndex}-${dayIndex}`} className={cn("github-contrib-cell", cell.level > 0 && `github-contrib-cell--${cell.level}`)} title={cell.date ? `${cell.count} contributions on ${cell.date}` : undefined} aria-label={cell.date ? `${cell.count} contributions on ${cell.date}` : "No contribution data"} />))}</div>
+        </div>
+      </div>
+
+      <div className={cn("relative mt-4 flex items-center gap-3", isRtl ? "justify-start" : "justify-end")}>
+        <span className="github-legend">
+          {copy.less}
+          <span className="github-legend-cells" aria-hidden="true">
+            {[0, 1, 2, 3, 4].map((level) => (
+              <span key={level} className={cn("github-contrib-cell size-3", level > 0 && `github-contrib-cell--${level}`)} />
+            ))}
+          </span>
+          {copy.more}
+        </span>
+      </div>
+    </article>
   );
 }
 

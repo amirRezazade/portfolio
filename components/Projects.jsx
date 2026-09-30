@@ -1,18 +1,10 @@
 "use client";
 
-import { ArrowUpRight, Code2, ExternalLink, Film, Gamepad2, GraduationCap, LayoutDashboard, Rocket, ShoppingBag, Sparkles } from "lucide-react";
+import { ExternalLink, Sparkles } from "lucide-react";
 import { projectsContent } from "../data/projects";
 import { cn } from "../lib/cn";
 import Image from "next/image";
 import { BrandIcon } from "./BrandIcon";
-
-const projectIcons = {
-  film: Film,
-  shop: ShoppingBag,
-  dashboard: LayoutDashboard,
-  game: Gamepad2,
-  edu: GraduationCap,
-};
 
 export default function Projects({ lang }) {
   const t = projectsContent[lang];
@@ -79,19 +71,19 @@ function ProjectCopy({ project, index, actions, isRtl, className }) {
 
         <p className="mt-4 max-w-[620px] text-[clamp(1rem,1.55vw,1rem)] xs:text-base font-bold leading-[1.4] text-[rgb(var(--text-rgb)/0.86)]">{project.description}</p>
 
-        <div className="mt-8 xs:mt-4 flex overflow-auto gap-4 xs:gap-2.5">
+        <div className="sm:h-25 xs:mt-4 flex flex-wrap gap-x-4 xs:gap-x-2.5  xs:my-5">
           {project.tech.map((tech) => (
             <TechPill key={tech} tech={tech} />
           ))}
         </div>
 
-        <div className="mt-8 xs:mt-8 flex flex-wrap gap-3 xs:grid xs:grid-cols-1">
+        <div className=" flex flex-wrap gap-3 xs:grid xs:grid-cols-1">
           <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[rgb(var(--accent-rgb)/0.28)] bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] px-5 text-[0.94rem] font-black text-[var(--text)] shadow-[0_18px_42px_rgb(var(--primary-rgb)/0.2)] transition hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline-none">
             <ExternalLink aria-hidden="true" size={17} />
             {actions.demo}
           </a>
           <a href={project.links.code} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[rgb(var(--secondary-rgb)/0.18)] bg-[rgb(var(--surface-rgb)/0.34)] px-5 text-[0.94rem] font-black text-[rgb(var(--text-rgb)/0.88)] backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.36)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:-translate-y-0.5 focus-visible:outline-none">
-            <Code2 aria-hidden="true" size={17} />
+            <BrandIcon name={"github"} className="size-[17px]" />
             {actions.code}
           </a>
         </div>
