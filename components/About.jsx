@@ -96,26 +96,6 @@ export default function About({ lang }) {
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
-
-            <div className="mt-9 grid grid-cols-2 gap-3 max-md:grid-cols-1">
-              {t.highlights.map((item, index) => {
-                const Icon = highlightIcons[index] ?? Sparkles;
-
-                return (
-                  <article key={item.label} className="group rounded-3xl border border-[rgb(var(--secondary-rgb)/0.15)] bg-[rgb(var(--bg-rgb)/0.32)] p-4 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[rgb(var(--secondary-rgb)/0.35)] hover:bg-[rgb(var(--surface-rgb)/0.46)] xs:rounded-2xl xs:p-3">
-                    <div className="mb-4 flex items-center justify-between gap-3">
-                      <span className="grid size-10 place-items-center rounded-2xl border border-[rgb(var(--secondary-rgb)/0.2)] bg-[rgb(var(--primary-rgb)/0.1)] text-[var(--secondary)] transition group-hover:bg-[rgb(var(--primary-rgb)/0.2)]">
-                        <Icon aria-hidden="true" size={19} />
-                      </span>
-                      <span className="text-xs font-black text-[rgb(var(--muted-rgb)/0.65)]">0{index + 1}</span>
-                    </div>
-                    <strong className="block text-[1.02rem] font-black text-[var(--text)]">{item.value}</strong>
-                    <h3 className="mt-1 font-extrabold text-[var(--secondary)]">{item.label}</h3>
-                    <p className="mt-2 text-sm leading-7 text-[rgb(var(--muted-rgb)/1)]">{item.text}</p>
-                  </article>
-                );
-              })}
-            </div>
           </div>
 
           <aside className="relative min-w-0 self-stretch">
@@ -149,6 +129,25 @@ export default function About({ lang }) {
               </div>
             </div>
           </aside>
+          <div className=" grid grid-cols-2 gap-3 max-md:grid-cols-1 lg:grid-cols-4 lg:col-span-2">
+            {t.highlights.map((item, index) => {
+              const Icon = highlightIcons[index] ?? Sparkles;
+
+              return (
+                <article key={item.label} className="group rounded-3xl border border-[rgb(var(--secondary-rgb)/0.15)] bg-[rgb(var(--bg-rgb)/0.32)] p-4 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[rgb(var(--secondary-rgb)/0.35)] hover:bg-[rgb(var(--surface-rgb)/0.46)] xs:rounded-2xl xs:p-3">
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <span className="grid size-10 place-items-center rounded-2xl border border-[rgb(var(--secondary-rgb)/0.2)] bg-[rgb(var(--primary-rgb)/0.1)] text-[var(--secondary)] transition group-hover:bg-[rgb(var(--primary-rgb)/0.2)]">
+                      <Icon aria-hidden="true" size={19} />
+                    </span>
+                    <span className="text-xs font-black text-[rgb(var(--muted-rgb)/0.65)]">0{index + 1}</span>
+                  </div>
+                  <strong className="block text-[1.02rem] font-black text-[var(--text)]">{item.value}</strong>
+                  <h3 className="mt-1 font-extrabold text-[var(--secondary)]">{item.label}</h3>
+                  <p className="mt-2 text-sm leading-7 text-[rgb(var(--muted-rgb)/1)]">{item.text}</p>
+                </article>
+              );
+            })}
+          </div>
           <div className="min-w-0 lg:col-span-2">
             <GitHubActivity lang={lang} isRtl={isRtl} />
           </div>

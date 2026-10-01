@@ -30,15 +30,6 @@ export default function Contact({ lang }) {
             </div>
 
             <div className="grid gap-4">
-              <div className="rounded-[30px] border border-[rgb(var(--secondary-rgb)/0.16)] bg-[rgb(var(--bg-rgb)/0.32)] p-5 backdrop-blur-sm xs:rounded-3xl xs:p-4">
-                <p className="text-xs font-black uppercase tracking-[0.16em] text-[var(--secondary)]">{t.status.label}</p>
-                <p className="mt-2 text-2xl font-black text-[var(--text)] xs:text-xl">{t.status.value}</p>
-                <p className="mt-2 text-sm font-bold text-[rgb(var(--text-rgb)/0.65)]">{t.status.response}</p>
-                <div className="mt-5 h-2 overflow-hidden rounded-full bg-[rgb(var(--bg-rgb)/0.72)]">
-                  <span className="block h-full w-[84%] rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] shadow-[0_0_22px_rgb(var(--secondary-rgb)/0.42)]" />
-                </div>
-              </div>
-
               <div className="grid grid-cols-2 gap-3 max-sm:grid-cols-1">
                 {t.cards.map((card) => (
                   <a
@@ -77,11 +68,12 @@ export default function Contact({ lang }) {
                 <span className="text-sm font-black text-[rgb(var(--text-rgb)/0.82)]">{t.form.message}</span>
                 <span className="relative block">
                   <MessageSquare aria-hidden="true" size={18} className="pointer-events-none absolute start-4 top-4 text-[rgb(var(--secondary-rgb)/0.72)]" />
-                  <textarea id="contact-message" name="message" minLength={5} required rows={7} placeholder={t.form.messagePlaceholder} className="min-h-40 w-full resize-none rounded-3xl border border-[rgb(var(--secondary-rgb)/0.14)] bg-[rgb(var(--surface-rgb)/0.34)] px-4 py-4 ps-12 text-[var(--text)] outline-none transition placeholder:text-[rgb(var(--muted-rgb)/0.68)] focus:border-[rgb(var(--secondary-rgb)/0.42)] focus:bg-[rgb(var(--surface-rgb)/0.72)]" />
+                  <textarea id="contact-message" name="message" minLength={5} required rows={7} placeholder={t.form.messagePlaceholder} className="h-35 overflow-auto w-full resize-none rounded-3xl border border-[rgb(var(--secondary-rgb)/0.14)] bg-[rgb(var(--surface-rgb)/0.34)] px-4 py-4 ps-12 text-[var(--text)] outline-none transition placeholder:text-[rgb(var(--muted-rgb)/0.68)] focus:border-[rgb(var(--secondary-rgb)/0.42)] focus:bg-[rgb(var(--surface-rgb)/0.72)]" />
                 </span>
               </label>
 
-              <button type="submit" className="inline-flex min-h-13 items-center justify-center gap-2 rounded-3xl border border-[rgb(var(--secondary-rgb)/0.25)] bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] px-5 font-black text-[var(--text)] shadow-[0_18px_52px_rgb(var(--primary-rgb)/0.22),inset_0_1px_0_rgb(var(--text-rgb)/0.12)] transition hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-none">
+              <button type="submit" className="cosmic-button inline-flex min-h-13 items-center justify-center gap-2 rounded-3xl border px-5 font-black">
+                {" "}
                 <Send aria-hidden="true" size={18} />
                 {t.form.submit}
               </button>

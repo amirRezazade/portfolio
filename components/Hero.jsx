@@ -4,6 +4,7 @@ import { ArrowDown, FileDown } from "lucide-react";
 import { heroContent, socialLinks } from "../data/hero";
 import { BrandIcon } from "./BrandIcon";
 import { cn } from "../lib/cn";
+import ResumeDownloadButton from "./ResumeDownloadButton";
 
 export default function Hero({ lang, isReady }) {
   const t = heroContent[lang];
@@ -34,21 +35,11 @@ export default function Hero({ lang, isReady }) {
         <p className={cn("mt-4 max-w-[620px] text-[clamp(0.94rem,1.35vw,1.05rem)] leading-[2] text-[rgb(var(--text-rgb)/0.85)] max-sm:text-[0.92rem]", isRtl && "me-auto", reveal("delay-[380ms]"))}>{t.description}</p>
 
         <div className={cn("relative z-[5] mt-8 flex flex-wrap items-center gap-3 max-sm:items-stretch", isRtl && "justify-start", reveal("delay-[460ms]"))}>
-          <a
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[rgb(var(--text-rgb)/0.1)] bg-gradient-to-br from-[var(--primary)] to-[rgb(var(--accent-rgb)/0.42)] px-5 text-[0.92rem] font-extrabold text-[var(--text)] shadow-[0_18px_52px_rgb(var(--primary-rgb)/0.2),inset_0_1px_0_rgb(var(--text-rgb)/0.12)] transition hover:-translate-y-0.5 hover:border-[rgb(var(--secondary-rgb)/0.45)] hover:from-[var(--primary)] hover:to-[rgb(var(--accent-rgb)/0.5)] focus-visible:-translate-y-0.5 focus-visible:border-[rgb(var(--secondary-rgb)/0.45)] focus-visible:outline-none max-sm:flex-1 max-sm:basis-full"
-            href="#projects"
-          >
+          <a className="cosmic-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border px-5 text-[0.92rem] font-extrabold max-sm:flex-1 max-sm:basis-full" href="#projects">
             <span>{t.actions.projects}</span>
             <ArrowDown aria-hidden="true" size={17} />
           </a>
-          <a
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[rgb(var(--secondary-rgb)/0.15)] bg-[rgb(var(--surface-rgb)/0.34)] px-5 text-[0.92rem] font-extrabold text-[rgb(var(--text-rgb)/0.85)] backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.35)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:-translate-y-0.5 focus-visible:border-[rgb(var(--accent-rgb)/0.35)] focus-visible:outline-none max-sm:flex-1 max-sm:basis-full"
-            href="/AmirRezazade.pdf"
-            download
-          >
-            <FileDown aria-hidden="true" size={17} />
-            <span>{t.actions.resume}</span>
-          </a>
+          <ResumeDownloadButton lang={lang} label={t.actions.resume} variant="hero" />
         </div>
 
         <div className={cn("relative z-[5] mt-6 flex flex-wrap items-center gap-4 max-sm:mb-4 max-sm:justify-between", reveal("delay-[540ms]"))}>

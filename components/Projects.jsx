@@ -78,7 +78,8 @@ function ProjectCopy({ project, index, actions, isRtl, className }) {
         </div>
 
         <div className=" flex flex-wrap gap-3 xs:grid xs:grid-cols-1">
-          <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[rgb(var(--accent-rgb)/0.28)] bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] px-5 text-[0.94rem] font-black text-[var(--text)] shadow-[0_18px_42px_rgb(var(--primary-rgb)/0.2)] transition hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline-none">
+          <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="cosmic-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border px-5 text-[0.94rem] font-black">
+            {" "}
             <ExternalLink aria-hidden="true" size={17} />
             {actions.demo}
           </a>
