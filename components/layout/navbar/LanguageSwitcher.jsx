@@ -1,7 +1,7 @@
 "use client";
 
 import { Languages } from "lucide-react";
-import { cn } from "../lib/cn";
+import { cn } from "../../../lib/cn";
 
 export default function LanguageSwitcher({ lang, setLang, label }) {
   const nextLang = lang === "fa" ? "en" : "fa";

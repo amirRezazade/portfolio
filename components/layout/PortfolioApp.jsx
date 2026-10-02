@@ -1,16 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import About from "./About";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import SmoothScroll from "./SmoothScroll";
-import SpaceBackground from "./SpaceBackground";
-import { dictionary } from "../data/navigation";
-import { cn } from "../lib/cn";
+import Navbar from "./navbar/Navbar";
+import Hero from ".//hero/Hero";
+import About from "./about/About";
+import Skills from "./skills/Skills";
+import Projects from "./projects/Projects";
+import Contact from ".//contact/Contact";
+import SmoothScroll from "../ui/SmoothScroll";
+import SpaceBackground from "../ui/SpaceBackground";
+import { dictionary } from "../../data/navigation";
+import { cn } from "../../lib/cn";
 
 export default function PortfolioApp() {
   const [lang, setLang] = useState("fa");

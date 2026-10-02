@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
-import { navItems, dictionary } from "../data/navigation";
+import { navItems, dictionary } from "@/data/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
-import ResumeDownloadButton from "./ResumeDownloadButton";
-import { cn } from "../lib/cn";
+import ResumeDownloadButton from "../../ui/ResumeDownloadButton";
+import { cn } from "@/lib/cn";
 import NavbarLogo from "./NavbarLogo";
 
 export default function Navbar({ lang, setLang, isReady = true }) {

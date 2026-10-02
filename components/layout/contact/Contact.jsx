@@ -1,9 +1,9 @@
 "use client";
 
 import { AtSign, Mail, MessageSquare, Radio, Send, User } from "lucide-react";
-import { contactContent } from "../data/contact";
-import { BrandIcon } from "./BrandIcon";
-import { cn } from "../lib/cn";
+import { contactContent } from "@/data/contact";
+import { BrandIcon } from "../../ui/BrandIcon";
+import { cn } from "@/lib/cn";
 
 export default function Contact({ lang }) {
   const t = contactContent[lang];

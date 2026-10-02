@@ -2,10 +2,10 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Code2, Gauge, Layers3, Orbit, RadioTower, Sparkles } from "lucide-react";
-import { aboutContent } from "../data/about";
-import { socialLinks } from "../data/hero";
-import { BrandIcon } from "./BrandIcon";
-import { cn } from "../lib/cn";
+import { aboutContent } from "@/data/about";
+import { socialLinks } from "@/data/hero";
+import { BrandIcon } from "../../ui/BrandIcon";
+import { cn } from "@/lib/cn";
 
 const highlightIcons = [Orbit, Code2, Layers3, Gauge];
 const githubLink = socialLinks.find((link) => link.id === "github")?.href ?? "https://github.com/amirRezazade";

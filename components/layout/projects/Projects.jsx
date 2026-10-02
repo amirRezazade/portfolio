@@ -1,10 +1,10 @@
 "use client";
 
 import { ExternalLink, Sparkles } from "lucide-react";
-import { projectsContent } from "../data/projects";
-import { cn } from "../lib/cn";
+import { projectsContent } from "../../../data/projects";
+import { cn } from "../../../lib/cn";
 import Image from "next/image";
-import { BrandIcon } from "./BrandIcon";
+import { BrandIcon } from "../../ui/BrandIcon";
 
 export default function Projects({ lang }) {
   const t = projectsContent[lang];

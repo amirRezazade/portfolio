@@ -1,10 +1,10 @@
 "use client";
 
-import { ArrowDown, FileDown } from "lucide-react";
-import { heroContent, socialLinks } from "../data/hero";
-import { BrandIcon } from "./BrandIcon";
-import { cn } from "../lib/cn";
-import ResumeDownloadButton from "./ResumeDownloadButton";
+import { ArrowDown } from "lucide-react";
+import { heroContent, socialLinks } from "@/data/hero";
+import { BrandIcon } from "../../ui/BrandIcon";
+import { cn } from "@/lib/cn";
+import ResumeDownloadButton from "../../ui/ResumeDownloadButton";
 
 export default function Hero({ lang, isReady }) {
   const t = heroContent[lang];
