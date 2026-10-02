@@ -4,6 +4,7 @@ import { Radar, Rocket } from "lucide-react";
 import { skillsContent } from "@/data/skills";
 import { BrandIcon } from "../../ui/BrandIcon";
 import { cn } from "@/lib/cn";
+import "./slills.css";
 
 const groupIcons = ["HTML", "React", "Tailwind CSS", "Redux", "Git"];
 

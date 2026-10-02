@@ -1,0 +1,149 @@
+/* ........about  */
+.github-activity-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgb(var(--accent-rgb) / 0.18);
+  background: radial-gradient(circle at 85% 10%, rgb(var(--accent-rgb) / 0.1), transparent 30%), rgb(var(--bg-rgb) / 0.42);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  box-shadow:
+    inset 0 1px 0 rgb(var(--text-rgb) / 0.04),
+    0 20px 70px rgb(var(--shadow-rgb) / 0.22);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.github-activity-card::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image: linear-gradient(90deg, rgb(var(--accent-rgb) / 0.11) 1px, transparent 1px), linear-gradient(rgb(var(--secondary-rgb) / 0.08) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.github-chart-scroll {
+  position: relative;
+  margin-top: 1.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.35rem;
+  direction: ltr;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--accent-rgb) / 0.42) transparent;
+}
+
+.github-chart-scroll::-webkit-scrollbar {
+  height: 7px;
+}
+
+.github-chart-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.github-chart-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: rgb(var(--accent-rgb) / 0.34);
+}
+
+.github-months {
+  display: grid;
+  width: max-content;
+  margin-inline-start: 42px;
+  grid-auto-flow: column;
+  grid-auto-columns: 11px;
+  gap: 4px;
+  color: rgb(var(--muted-rgb) / 0.74);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.github-months span {
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.github-graph-body {
+  display: flex;
+  width: max-content;
+  gap: 10px;
+  margin-top: 0.55rem;
+}
+
+.github-days {
+  display: grid;
+  width: 32px;
+  grid-template-rows: repeat(7, 11px);
+  gap: 4px;
+  color: rgb(var(--muted-rgb) / 0.72);
+  font-size: 0.72rem;
+  line-height: 11px;
+}
+
+.github-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 11px;
+  grid-template-rows: repeat(7, 11px);
+  gap: 4px;
+}
+
+.github-contrib-cell {
+  border-radius: 2.5px;
+  background: var(--contrib-empty);
+  box-shadow: inset 0 0 0 1px rgb(var(--text-rgb) / 0.035);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.github-contrib-cell:hover {
+  transform: scale(1.22);
+  box-shadow:
+    0 0 0 1px rgb(var(--text-rgb) / 0.32),
+    0 0 16px rgb(var(--contrib-glow-rgb, var(--accent-rgb)) / 0.32);
+  filter: brightness(1.14);
+}
+
+.github-contrib-cell--1 {
+  background: var(--contrib-level-1);
+  --contrib-glow-rgb: 14 68 41;
+}
+
+.github-contrib-cell--2 {
+  background: var(--contrib-level-2);
+  --contrib-glow-rgb: 0 109 50;
+}
+
+.github-contrib-cell--3 {
+  background: var(--contrib-level-3);
+  --contrib-glow-rgb: 38 166 65;
+}
+
+.github-contrib-cell--4 {
+  background: var(--contrib-level-4);
+  --contrib-glow-rgb: 57 211 83;
+}
+
+.github-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgb(var(--muted-rgb) / 0.74);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.github-legend-cells {
+  display: inline-flex;
+  gap: 3px;
+}
+
+@media (max-width: 480px) {
+  .github-activity-card {
+    border-radius: 1.5rem;
+  }
+}

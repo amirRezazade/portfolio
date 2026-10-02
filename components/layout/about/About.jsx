@@ -6,6 +6,7 @@ import { aboutContent } from "@/data/about";
 import { socialLinks } from "@/data/hero";
 import { BrandIcon } from "../../ui/BrandIcon";
 import { cn } from "@/lib/cn";
+import "./about.css";
 
 const highlightIcons = [Orbit, Code2, Layers3, Gauge];
 const githubLink = socialLinks.find((link) => link.id === "github")?.href ?? "https://github.com/amirRezazade";

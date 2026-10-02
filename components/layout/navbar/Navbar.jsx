@@ -7,6 +7,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import ResumeDownloadButton from "../../ui/ResumeDownloadButton";
 import { cn } from "@/lib/cn";
 import NavbarLogo from "./NavbarLogo";
+import "./navbar.css";
 
 export default function Navbar({ lang, setLang, isReady = true }) {
   const [isScrolled, setIsScrolled] = useState(false);

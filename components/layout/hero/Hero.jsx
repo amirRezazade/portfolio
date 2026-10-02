@@ -24,7 +24,7 @@ export default function Hero({ lang, isReady }) {
 
         <p className={cn("mb-3 text-[clamp(0.86rem,1.4vw,0.98rem)] font-extrabold tracking-[0.08em] text-[var(--secondary)]", isRtl && "tracking-normal", reveal("delay-[150ms]"))}>{t.role}</p>
 
-        <h1 className={cn("max-w-[670px] text-[clamp(2.15rem,4.6vw,4rem)] font-black text-[var(--text)] text-balance max-sm:text-[clamp(1.95rem,9.2vw,3.05rem)] xs:text-[clamp(1.72rem,8.8vw,2.10rem)]", isRtl && "leading-[1.1] ", reveal("delay-[220ms]"))}>
+        <h1 className={cn("max-w-[670px] lg:max-w-full text-[clamp(2.15rem,4.6vw,3.5rem)] font-black text-[var(--text)] text-balance max-sm:text-[clamp(1.95rem,9.2vw,3.05rem)] xs:text-[clamp(1.72rem,8.8vw,2.10rem)]", isRtl && "leading-[1.1] ", reveal("delay-[220ms]"))}>
           <span>{t.titlePrefix} </span>
           <strong className="text-[var(--accent)] drop-shadow-[0_0_34px_rgb(var(--accent-rgb)/0.22)]">{t.name}</strong>
           <span>{isRtl ? ` ${t.titleSuffix}` : t.titleSuffix}</span>

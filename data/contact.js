@@ -37,7 +37,7 @@ export const contactContent = {
         id: "linkedin",
         label: "لینکدین",
         value: "Amir Rezazade",
-        href: "https://www.linkedin.com/in/amir-rezazadeh-7086a6345/",
+        href: "https://linkedin.com/in/amir-rezazade-dev",
       },
     ],
     status: {
@@ -84,7 +84,7 @@ export const contactContent = {
         id: "linkedin",
         label: "LinkedIn",
         value: "Amir Rezazade",
-        href: "https://www.linkedin.com/in/amir-rezazadeh-7086a6345/",
+        href: "https://linkedin.com/in/amir-rezazade-dev",
       },
     ],
     status: {

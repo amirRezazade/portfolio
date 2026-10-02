@@ -1,32 +1,87 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import Navbar from "./navbar/Navbar";
 import Hero from ".//hero/Hero";
 import About from "./about/About";
 import Skills from "./skills/Skills";
 import Projects from "./projects/Projects";
-import Contact from ".//contact/Contact";
+import Contact from "./contact/Contact";
 import SmoothScroll from "../ui/SmoothScroll";
 import SpaceBackground from "../ui/SpaceBackground";
-import { dictionary } from "../../data/navigation";
+import CodeMarkLogo from "../layout/navbar/CodeMarkLogo";
+import { getLanguageDirection, languageStorageKey, normalizeLanguage } from "@/lib/language";
+
 import { cn } from "../../lib/cn";
 
-export default function PortfolioApp() {
-  const [lang, setLang] = useState("fa");
+const useIsomorphicLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
+const languageCookieMaxAge = 60 * 60 * 24 * 365;
+
+function applyDocumentLanguage(language) {
+  document.documentElement.lang = language;
+  document.documentElement.dir = getLanguageDirection(language);
+}
+
+function persistLanguage(language) {
+  try {
+    window.localStorage.setItem(languageStorageKey, language);
+  } catch {
+    // Ignore storage failures so language switching still works in private modes.
+  }
+
+  document.cookie = `${languageStorageKey}=${language}; Path=/; Max-Age=${languageCookieMaxAge}; SameSite=Lax`;
+}
+
+export default function PortfolioApp({ initialLang }) {
+  const [lang, setLang] = useState(() => normalizeLanguage(initialLang));
+  const [hasMounted, setHasMounted] = useState(false);
   const [isReady, setIsReady] = useState(false);
-  const t = dictionary[lang];
+
+  useIsomorphicLayoutEffect(() => {
+    applyDocumentLanguage(lang);
+    setHasMounted(true);
+  }, []);
+
+  useIsomorphicLayoutEffect(() => {
+    applyDocumentLanguage(lang);
+
+    if (hasMounted) {
+      persistLanguage(lang);
+    }
+  }, [hasMounted, lang]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setIsReady(true), 1300);
     return () => window.clearTimeout(timer);
   }, []);
 
+  useIsomorphicLayoutEffect(() => {
+    if (isReady) {
+      return undefined;
+    }
+
+    const html = document.documentElement;
+    const body = document.body;
+    const previousHtmlOverflow = html.style.overflow;
+    const previousBodyOverflow = body.style.overflow;
+    const previousBodyTouchAction = body.style.touchAction;
+
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    body.style.touchAction = "none";
+
+    return () => {
+      html.style.overflow = previousHtmlOverflow;
+      body.style.overflow = previousBodyOverflow;
+      body.style.touchAction = previousBodyTouchAction;
+    };
+  }, [isReady]);
+
   return (
     <>
       <SmoothScroll />
       <SpaceBackground lang={lang} />
-      <CosmicLoader isReady={isReady} lang={lang} />
+      <CosmicLoader isReady={isReady} />
       <Navbar lang={lang} setLang={setLang} isReady={isReady} />
 
       <main id="main" className="relative z-10 overflow-x-hidden">
@@ -40,16 +95,24 @@ export default function PortfolioApp() {
   );
 }
 
-function CosmicLoader({ isReady, lang }) {
+function CosmicLoader({ isReady }) {
   return (
-    <div className={cn("fixed inset-0 z-[999] grid place-items-center content-center gap-6 bg-[radial-gradient(circle_at_50%_45%,rgb(var(--accent-rgb)/0.18),transparent_28%),radial-gradient(circle_at_50%_55%,rgb(var(--secondary-rgb)/0.1),transparent_36%),var(--bg)] transition-all duration-700 ease-out", isReady ? "pointer-events-none invisible scale-105 opacity-0" : "visible scale-100 opacity-100")} aria-hidden={isReady}>
-      <div className="relative size-[92px] rounded-full border border-[rgb(var(--text-rgb)/0.1)]">
-        <span className="absolute inset-0 animate-spin rounded-full border border-[rgb(var(--secondary-rgb)/0.35)] after:absolute after:left-1/2 after:top-2 after:-ml-[3.5px] after:size-[7px] after:rounded-full after:bg-[var(--text)] after:shadow-[0_0_16px_var(--text)]" />
-        <span className="absolute inset-0 rotate-[60deg] animate-spin rounded-full border border-[rgb(var(--primary-rgb)/0.45)] after:absolute after:left-1/2 after:top-2 after:-ml-[3.5px] after:size-[7px] after:rounded-full after:bg-[var(--text)] after:shadow-[0_0_16px_var(--text)] [animation-duration:2.1s]" />
-        <span className="absolute inset-0 -rotate-[60deg] animate-spin rounded-full border border-[rgb(var(--secondary-rgb)/0.25)] after:absolute after:left-1/2 after:top-2 after:-ml-[3.5px] after:size-[7px] after:rounded-full after:bg-[var(--text)] after:shadow-[0_0_16px_var(--text)] [animation-duration:2.7s]" />
-        <span className="absolute inset-[30px] rounded-full bg-gradient-to-br from-[var(--text)] via-[var(--accent)] to-[var(--primary)] shadow-[0_0_30px_rgb(var(--accent-rgb)/0.42)]" />
+    <div className={cn("split-loader", isReady && "is-ry")} aria-hidden={isReady}>
+      <div className="split-loader-panel split-loader-panel--left">
+        <div className="split-loader-scene split-loader-scene--left">
+          <div className="split-loader-logo">
+            <CodeMarkLogo variant="split" title="" />
+          </div>
+        </div>
       </div>
-      <p className="m-0 text-sm text-[rgb(var(--text-rgb)/0.75)]">{lang === "fa" ? "در حال آماده‌سازی مدار..." : "Preparing the orbit..."}</p>
+
+      <div className="split-loader-panel split-loader-panel--right">
+        <div className="split-loader-scene split-loader-scene--right">
+          <div className="split-loader-logo">
+            <CodeMarkLogo variant="split" title="" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -32,7 +32,7 @@ export default function Projects({ lang }) {
             </div>
           </header>
 
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(min(340px,100%),1fr))] lg:grid-cols-2 justify-center gap-5">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(min(340px,100%),1fr))] lg:grid-cols-2 2xl:grid-cols-3 justify-center gap-5">
             {t.projects.map((project, index) => (
               <ProjectShowcase key={project.id} project={project} index={index} actions={t.actions} isRtl={isRtl} />
             ))}

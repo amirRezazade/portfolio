@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Check, FileDown } from "lucide-react";
 import { cn } from "@/lib/cn";
+import "./resumeDownloadButton.css";
 
 const variantClasses = {
   hero: "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[rgb(var(--secondary-rgb)/0.15)] bg-[rgb(var(--surface-rgb)/0.34)] px-5 text-[0.92rem] font-extrabold text-[rgb(var(--text-rgb)/0.85)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.35)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:-translate-y-0.5 focus-visible:border-[rgb(var(--accent-rgb)/0.35)] focus-visible:outline-none max-sm:flex-1 max-sm:basis-full",
@@ -10,7 +11,7 @@ const variantClasses = {
   mobile: "cosmic-button inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-[18px] border px-4 font-black",
 };
 
-const resumeFile = "/AmirRezazade.pdf";
+const resumeFile = "/Amir-Rezazade-FrontEnd-Developer.pdf";
 const resumeFileName = "AmirRezazade.pdf";
 
 export default function ResumeDownloadButton({ lang, label, variant = "hero", className, onDownloadEnd }) {

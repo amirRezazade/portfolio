@@ -1,0 +1,21 @@
+/* ..........skils  */
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgb(var(--secondary-rgb) / 0.15);
+  background: rgb(var(--bg-rgb) / 0.34);
+  padding: 1.25rem;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    background 300ms ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-0.25rem);
+  border-color: rgb(var(--accent-rgb) / 0.35);
+  background: rgb(var(--surface-rgb) / 0.48);
+}
