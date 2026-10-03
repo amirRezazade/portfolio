@@ -1,12 +1,13 @@
 export const heroContent = {
   fa: {
-    badge: "آماده همکاری روی پروژه‌های فرانت‌اند",
+    kicker: "سلام، من امیرم",
+    badge: "در دسترس برای پروژه‌های فرانت‌اند",
     role: "Front-End Developer",
-    titlePrefix: "سلام، من",
-    name: "امیر رضازاده",
-    titleSuffix: "هستم.",
-    lead: "رابط‌های کاربری سریع، تمیز و ریسپانسیو می‌سازم.",
-    description: "با تمرکز روی React، Next.js و پیاده‌سازی دقیق UI، تلاش می‌کنم ایده‌ها و طراحی‌ها را به تجربه‌های دیجیتال حرفه‌ای، قابل نگهداری و کاربرپسند تبدیل کنم.",
+    headlineTop: "تبدیل ایده‌ها",
+    headlineAccent: "به رابط‌های کاربری",
+    headlineBottom: "",
+    lead: "از طراحی تا اجرا؛ با تمرکز روی جزئیات UI، ریسپانسیو بودن و تجربه‌ای که ساده و قابل اعتماد حس شود.",
+    description: "با React و Next.js طرح‌ها و ایده‌ها را به صفحات تمیز، قابل توسعه و نزدیک به نیاز واقعی کاربر تبدیل می‌کنم.",
     actions: {
       projects: "مشاهده پروژه‌ها",
       resume: "دانلود رزومه",
@@ -17,21 +18,16 @@ export const heroContent = {
       linkedin: "لینکدین",
       email: "ایمیل",
     },
-    visual: {
-      overline: "Current orbit",
-      title: "React / Next.js",
-      subtitle: "UI Implementation • Performance • Responsive",
-      footnote: "Frontend stack in motion",
-    },
   },
   en: {
+    kicker: "Hi, I’m Amir",
     badge: "Available for front-end projects",
     role: "Front-End Developer",
-    titlePrefix: "Hi, I’m",
-    name: "Amir Rezazade",
-    titleSuffix: ".",
-    lead: "I build fast, clean, and responsive web interfaces.",
-    description: "Focused on React, Next.js, and thoughtful UI implementation, I turn ideas and designs into polished, maintainable, and user-friendly digital experiences.",
+    headlineTop: "Turning Ideas",
+    headlineAccent: "Into Interfaces",
+    headlineBottom: "",
+    lead: "From design to implementation — focused on UI details, responsive layouts, and experiences that feel simple and reliable.",
+    description: "With React and Next.js, I turn designs and ideas into clean, scalable pages shaped around real user needs.",
     actions: {
       projects: "View Projects",
       resume: "Download Resume",
@@ -42,23 +38,8 @@ export const heroContent = {
       linkedin: "LinkedIn",
       email: "Email",
     },
-    visual: {
-      overline: "Current orbit",
-      title: "React / Next.js",
-      subtitle: "UI Implementation • Performance • Responsive",
-      footnote: "Frontend stack in motion",
-    },
   },
 };
-
-export const orbitSkills = [
-  { label: "React", x: "43%", y: "-43%", delay: "0ms" },
-  { label: "Next.js", x: "-48%", y: "-31%", delay: "120ms" },
-  { label: "JavaScript", x: "50%", y: "22%", delay: "240ms" },
-  { label: "UI", x: "-52%", y: "20%", delay: "360ms" },
-  { label: "Performance", x: "7%", y: "52%", delay: "480ms" },
-  { label: "Responsive", x: "-5%", y: "-58%", delay: "600ms" },
-];
 
 export const socialLinks = [
   {
@@ -67,7 +48,7 @@ export const socialLinks = [
   },
   {
     id: "linkedin",
-    href: "https://linkedin.com/in/amir-rezazade-dev",
+    href: "https://www.linkedin.com/in/amir-rezazadeh-7086a6345/",
   },
   {
     id: "email",

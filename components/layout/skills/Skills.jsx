@@ -33,7 +33,7 @@ export default function Skills({ lang }) {
             </div>
           </header>
 
-          <div className="grid grid-cols-[minmax(280px,0.85fr)_minmax(0,1.15fr)] gap-4 max-xl:grid-cols-1">
+          <div className="grid items-start grid-cols-[minmax(280px,0.85fr)_minmax(0,1.15fr)] gap-4 max-xl:grid-cols-1">
             <aside className="glass-card">
               <div className="flex items-center justify-between gap-4">
                 <span className="grid size-12 place-items-center rounded-2xl border border-[rgb(var(--secondary-rgb)/0.22)] bg-[rgb(var(--primary-rgb)/0.12)] text-[var(--secondary)]">

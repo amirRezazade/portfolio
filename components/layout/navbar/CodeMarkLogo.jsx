@@ -9,6 +9,7 @@ export default function CodeMarkLogo({ variant = "nav", className, title = "Amir
   const rightGradientId = `codeMarkRight-${reactId}`;
   const slashGradientId = `codeMarkSlash-${reactId}`;
   const orbitGradientId = `codeMarkOrbit-${reactId}`;
+  const infinityGradientId = `codeMarkInfinity-${reactId}`;
   const softGlowId = `codeMarkGlow-${reactId}`;
 
   return (
@@ -37,6 +38,12 @@ export default function CodeMarkLogo({ variant = "nav", className, title = "Amir
             <stop offset="80%" stopColor="var(--accent)" stopOpacity="0.95" />
             <stop offset="100%" stopColor="var(--accent)" stopOpacity="0.08" />
           </linearGradient>
+          <linearGradient id={infinityGradientId} x1="20" x2="108" y1="64" y2="64" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="var(--logo-cyan)" />
+            <stop offset="36%" stopColor="var(--text)" />
+            <stop offset="64%" stopColor="var(--primary)" />
+            <stop offset="100%" stopColor="var(--accent)" />
+          </linearGradient>
           <filter id={softGlowId} x="-45%" y="-45%" width="190%" height="190%">
             <feGaussianBlur stdDeviation="4" result="blur" />
             <feMerge>
@@ -51,6 +58,12 @@ export default function CodeMarkLogo({ variant = "nav", className, title = "Amir
           <ellipse className="code-mark__nebula code-mark__nebula--two" cx="68" cy="70" rx="44" ry="18" />
           <ellipse className="code-mark__orbit code-mark__orbit--back" cx="64" cy="70" rx="58" ry="19" stroke={`url(#${orbitGradientId})`} />
           <ellipse className="code-mark__orbit code-mark__orbit--front" cx="64" cy="70" rx="51" ry="16" stroke={`url(#${orbitGradientId})`} />
+        </g>
+
+        <g className="code-mark__infinity" aria-hidden="true">
+          <path className="code-mark__infinity-track" d="M22 64 C22 34 52 34 64 64 C76 94 106 94 106 64 C106 34 76 34 64 64 C52 94 22 94 22 64" />
+          <path className="code-mark__infinity-ribbon" d="M22 64 C22 34 52 34 64 64 C76 94 106 94 106 64 C106 34 76 34 64 64 C52 94 22 94 22 64" stroke={`url(#${infinityGradientId})`} />
+          <path className="code-mark__infinity-runner" d="M22 64 C22 34 52 34 64 64 C76 94 106 94 106 64 C106 34 76 34 64 64 C52 94 22 94 22 64" />
         </g>
 
         <g className="code-mark__symbol" filter={`url(#${softGlowId})`}>

@@ -16,6 +16,10 @@ import { cn } from "../../lib/cn";
 
 const useIsomorphicLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 const languageCookieMaxAge = 60 * 60 * 24 * 365;
+const infinityMinMs = 1200;
+const infinityToLogoMs = 1080;
+const loaderExitMs = 1050;
+const postLoaderDelayMs = 1000;
 
 function applyDocumentLanguage(language) {
   document.documentElement.lang = language;
@@ -35,7 +39,10 @@ function persistLanguage(language) {
 export default function PortfolioApp({ initialLang }) {
   const [lang, setLang] = useState(() => normalizeLanguage(initialLang));
   const [hasMounted, setHasMounted] = useState(false);
-  const [isReady, setIsReady] = useState(false);
+  const [isLogoReady, setIsLogoReady] = useState(false);
+  const [isLoaderExiting, setIsLoaderExiting] = useState(false);
+  const [isLoaderMounted, setIsLoaderMounted] = useState(true);
+  const [isPageReady, setIsPageReady] = useState(false);
 
   useIsomorphicLayoutEffect(() => {
     applyDocumentLanguage(lang);
@@ -51,21 +58,68 @@ export default function PortfolioApp({ initialLang }) {
   }, [hasMounted, lang]);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setIsReady(true), 1300);
-    return () => window.clearTimeout(timer);
+    let minimumInfinityTimeDone = false;
+    let contentReady = document.readyState === "complete";
+    let hasStartedLogoTransform = false;
+    let transformTimer;
+    let removeTimer;
+    let readyTimer;
+
+    const startLogoTransformWhenReady = () => {
+      if (!minimumInfinityTimeDone || !contentReady || hasStartedLogoTransform) return;
+
+      hasStartedLogoTransform = true;
+      setIsLogoReady(true);
+
+      transformTimer = window.setTimeout(() => {
+        setIsLoaderExiting(true);
+        removeTimer = window.setTimeout(() => setIsLoaderMounted(false), loaderExitMs);
+        readyTimer = window.setTimeout(() => setIsPageReady(true), loaderExitMs + postLoaderDelayMs);
+      }, infinityToLogoMs);
+    };
+
+    const introTimer = window.setTimeout(() => {
+      minimumInfinityTimeDone = true;
+      startLogoTransformWhenReady();
+    }, infinityMinMs);
+
+    const handleLoad = () => {
+      contentReady = true;
+      startLogoTransformWhenReady();
+    };
+
+    if (contentReady) {
+      startLogoTransformWhenReady();
+    } else {
+      window.addEventListener("load", handleLoad, { once: true });
+    }
+
+    return () => {
+      window.clearTimeout(introTimer);
+      window.clearTimeout(transformTimer);
+      window.clearTimeout(removeTimer);
+      window.clearTimeout(readyTimer);
+      window.removeEventListener("load", handleLoad);
+    };
   }, []);
 
   useIsomorphicLayoutEffect(() => {
-    if (isReady) {
+    const html = document.documentElement;
+    const body = document.body;
+    const lockClass = "site-loading";
+
+    if (isPageReady) {
+      html.classList.remove(lockClass);
+      body.classList.remove(lockClass);
       return undefined;
     }
 
-    const html = document.documentElement;
-    const body = document.body;
     const previousHtmlOverflow = html.style.overflow;
     const previousBodyOverflow = body.style.overflow;
     const previousBodyTouchAction = body.style.touchAction;
 
+    html.classList.add(lockClass);
+    body.classList.add(lockClass);
     html.style.overflow = "hidden";
     body.style.overflow = "hidden";
     body.style.touchAction = "none";
@@ -74,18 +128,20 @@ export default function PortfolioApp({ initialLang }) {
       html.style.overflow = previousHtmlOverflow;
       body.style.overflow = previousBodyOverflow;
       body.style.touchAction = previousBodyTouchAction;
+      html.classList.remove(lockClass);
+      body.classList.remove(lockClass);
     };
-  }, [isReady]);
+  }, [isPageReady]);
 
   return (
     <>
       <SmoothScroll />
       <SpaceBackground lang={lang} />
-      <CosmicLoader isReady={isReady} />
-      <Navbar lang={lang} setLang={setLang} isReady={isReady} />
+      {isLoaderMounted && <CosmicLoader isLogoReady={isLogoReady} isExiting={isLoaderExiting} lang={lang} />}
+      <Navbar lang={lang} setLang={setLang} isReady={isPageReady} />
 
       <main id="main" className="relative z-10 overflow-x-hidden">
-        <Hero lang={lang} isReady={isReady} />
+        <Hero lang={lang} isReady={isPageReady} />
         <About lang={lang} />
         <Skills lang={lang} />
         <Projects lang={lang} />
@@ -95,20 +151,22 @@ export default function PortfolioApp({ initialLang }) {
   );
 }
 
-function CosmicLoader({ isReady }) {
+function CosmicLoader({ isLogoReady, isExiting, lang }) {
+  const dir = getLanguageDirection(lang);
+
   return (
-    <div className={cn("split-loader", isReady && "is-ry")} aria-hidden={isReady}>
-      <div className="split-loader-panel split-loader-panel--left">
-        <div className="split-loader-scene split-loader-scene--left">
-          <div className="split-loader-logo">
+    <div className={cn("infinity-loader", isLogoReady && "is-logo-ready", isExiting && "is-exiting")} dir={dir} aria-hidden="true">
+      <div className="infinity-loader__panel infinity-loader__panel--left">
+        <div className="infinity-loader__scene infinity-loader__scene--left">
+          <div className="infinity-loader__logo">
             <CodeMarkLogo variant="split" title="" />
           </div>
         </div>
       </div>
 
-      <div className="split-loader-panel split-loader-panel--right">
-        <div className="split-loader-scene split-loader-scene--right">
-          <div className="split-loader-logo">
+      <div className="infinity-loader__panel infinity-loader__panel--right">
+        <div className="infinity-loader__scene infinity-loader__scene--right">
+          <div className="infinity-loader__logo">
             <CodeMarkLogo variant="split" title="" />
           </div>
         </div>

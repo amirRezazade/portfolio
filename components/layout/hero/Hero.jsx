@@ -16,25 +16,23 @@ export default function Hero({ lang, isReady }) {
     <section id="home" className={cn("relative isolate flex min-h-screen w-full items-center justify-start overflow-hidden px-[clamp(18px,5vw,88px)] pb-24 pt-[calc(76px+72px)] max-sm:px-4 max-sm:pb-16 max-sm:pt-[calc(76px+48px)] xs:px-3", isRtl ? "justify-end text-right" : "justify-start text-left")}>
       <div className={cn("pointer-events-none absolute inset-0 -z-10", isRtl ? "bg-[radial-gradient(circle_at_82%_44%,rgb(var(--primary-rgb)/0.18),transparent_34%)]" : "bg-[radial-gradient(circle_at_18%_44%,rgb(var(--primary-rgb)/0.18),transparent_34%)]")} aria-hidden="true" />
 
-      <div className={cn("w-full max-w-[700px]", isRtl ? "mr-0" : "ml-0")}>
-        <p className={cn("mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[rgb(var(--accent-rgb)/0.24)] bg-[rgb(var(--surface-rgb)/0.34)] px-3 py-2 text-[0.82rem] font-bold text-[rgb(var(--text-rgb)/0.85)] shadow-[inset_0_1px_0_rgb(var(--text-rgb)/0.04)] backdrop-blur-sm max-sm:text-[0.76rem] xs:text-[0.72rem]", reveal("delay-[80ms]"))}>
-          <span className="size-2 rounded-full bg-[var(--secondary)] shadow-[0_0_0_5px_rgb(var(--secondary-rgb)/0.12),0_0_18px_rgb(var(--secondary-rgb)/0.55)]" aria-hidden="true" />
-          {t.badge}
+      <div className={cn("w-full max-w-[760px]", isRtl ? "mr-0" : "ml-0")}>
+        <p className={cn("mb-5 inline-flex w-fit items-center gap-3 text-[0.9rem] font-extrabold text-[rgb(var(--text-rgb)/0.76)] max-sm:text-[0.74rem]", reveal("delay-[80ms]"))}>
+          <span className={cn("h-0.5 w-11 rounded-full  from-[var(--secondary)] to-[var(--accent)/0.5] ", isRtl ? "bg-gradient-to-r" : "bg-gradient-to-l")} aria-hidden="true" />
+          <span>{t.kicker}</span>
         </p>
 
-        <p className={cn("mb-3 text-[clamp(0.86rem,1.4vw,0.98rem)] font-extrabold tracking-[0.08em] text-[var(--secondary)]", isRtl && "tracking-normal", reveal("delay-[150ms]"))}>{t.role}</p>
-
-        <h1 className={cn("max-w-[670px] lg:max-w-full text-[clamp(2.15rem,4.6vw,3.5rem)] font-black text-[var(--text)] text-balance max-sm:text-[clamp(1.95rem,9.2vw,3.05rem)] xs:text-[clamp(1.72rem,8.8vw,2.10rem)]", isRtl && "leading-[1.1] ", reveal("delay-[220ms]"))}>
-          <span>{t.titlePrefix} </span>
-          <strong className="text-[var(--accent)] drop-shadow-[0_0_34px_rgb(var(--accent-rgb)/0.22)]">{t.name}</strong>
-          <span>{isRtl ? ` ${t.titleSuffix}` : t.titleSuffix}</span>
+        <h1 className={cn("grid max-w-[760px] gap-1 text-[clamp(3rem,6vw,5rem)] font-black leading-[0.95]  text-[var(--text)] text-balance max-sm:text-[clamp(2.5rem,13vw,4.35rem)] xs:text-[clamp(2.25rem,12.5vw,3.5rem)]", isRtl && "leading-[1.08] ", reveal("delay-[170ms]"))}>
+          {t.headlineTop}
+          <span className="bg-gradient-to-r from-[var(--secondary)] via-[var(--accent)] to-[var(--primary)] bg-clip-text text-transparent drop-shadow-[0_0_26px_rgb(var(--accent-rgb)/0.2)]">{" " + t.headlineAccent + " "}</span>
+          {t.headlineBottom ? <span>{t.headlineBottom}</span> : null}
         </h1>
 
-        <p className={cn("mt-6 max-w-[620px] text-[clamp(1.05rem,1.85vw,1.42rem)] font-extrabold leading-[1.7] text-[rgb(var(--text-rgb)/0.95)]", isRtl && "me-auto", reveal("delay-[300ms]"))}>{t.lead}</p>
+        <p className={cn("mt-6 max-w-[610px] text-[clamp(0.98rem,1.55vw,1.18rem)] font-bold leading-[1.9] text-[rgb(var(--text-rgb)/0.90)] max-sm:text-[0.94rem]", isRtl && "me-auto", reveal("delay-[280ms]"))}>{t.lead}</p>
 
-        <p className={cn("mt-4 max-w-[620px] text-[clamp(0.94rem,1.35vw,1.05rem)] leading-[2] text-[rgb(var(--text-rgb)/0.85)] max-sm:text-[0.92rem]", isRtl && "me-auto", reveal("delay-[380ms]"))}>{t.description}</p>
+        <p className={cn("mt-3 max-w-[590px] text-[clamp(0.9rem,1.2vw,1rem)] leading-[2] text-[rgb(var(--muted-rgb)/0.92)] max-sm:text-[0.88rem]", isRtl && "me-auto", reveal("delay-[360ms]"))}>{t.description}</p>
 
-        <div className={cn("relative z-[5] mt-8 flex flex-wrap items-center gap-3 max-sm:items-stretch", isRtl && "justify-start", reveal("delay-[460ms]"))}>
+        <div className={cn("relative z-[5] mt-8 flex flex-wrap items-center gap-3 max-sm:items-stretch", isRtl && "justify-start", reveal("delay-[450ms]"))}>
           <a className="cosmic-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border px-5 text-[0.92rem] font-extrabold max-sm:flex-1 max-sm:basis-full" href="#projects">
             <span>{t.actions.projects}</span>
             <ArrowDown aria-hidden="true" size={17} />

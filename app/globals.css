@@ -35,33 +35,72 @@
   font-style: normal;
   font-display: swap;
 }
+:root {
+  --bg: #070816;
+  --bg-mid: #10102b;
+  --surface: #111329;
 
+  --primary: #7c4dff;
+  --secondary: #3485ff;
+  --accent: #c04dff;
+
+  --text: #f4f3ff;
+  --muted: #9295b5;
+
+  --logo-cyan: #38bdf8;
+  --logo-rose: #c04dff;
+  --logo-amber: #ff6bae;
+
+  --logo-cyan-rgb: 56 189 248;
+  --logo-rose-rgb: 192 77 255;
+  --logo-amber-rgb: 255 107 174;
+
+  --bg-rgb: 7 8 22;
+  --bg-mid-rgb: 16 16 43;
+  --surface-rgb: 17 19 41;
+
+  --primary-rgb: 124 77 255;
+  --secondary-rgb: 52 133 255;
+  --accent-rgb: 192 77 255;
+
+  --text-rgb: 244 243 255;
+  --muted-rgb: 146 149 181;
+
+  --shadow-rgb: 0 0 0;
+}
 :root {
   color-scheme: dark;
 
   --bg: #050816;
-  --bg-mid: #110b2e;
-  --surface: #0f172a;
-  --primary: #8b5cf6;
-  --secondary: #60a5fa;
-  --accent: #c084fc;
-  --text: #e2e8f0;
+  --bg-mid: #0d1238;
+  --surface: #10172f;
+
+  --secondary: #3485ff;
+  --primary: #7c4dff;
+  --accent: #8b5cf6;
+
+  --text: #f4f3ff;
   --muted: #94a3b8;
-  --logo-cyan: #22d3ee;
-  --logo-rose: #e879f9;
-  --logo-amber: #f59e0b;
-  --logo-cyan-rgb: 34 211 238;
-  --logo-rose-rgb: 232 121 249;
-  --logo-amber-rgb: 245 158 11;
+
+  --logo-cyan: #38bdf8;
+  --logo-rose: #8b5cf6;
+  --logo-amber: #6366f1;
+
+  --logo-cyan-rgb: 56 189 248;
+  --logo-rose-rgb: 139 92 246;
+  --logo-amber-rgb: 99 102 241;
 
   --bg-rgb: 5 8 22;
-  --bg-mid-rgb: 17 11 46;
-  --surface-rgb: 15 23 42;
-  --primary-rgb: 139 92 246;
-  --secondary-rgb: 96 165 250;
-  --accent-rgb: 192 132 252;
-  --text-rgb: 226 232 240;
+  --bg-mid-rgb: 13 18 56;
+  --surface-rgb: 16 23 47;
+
+  --primary-rgb: 124 77 255;
+  --secondary-rgb: 52 133 255;
+  --accent-rgb: 139 92 246;
+
+  --text-rgb: 244 243 255;
   --muted-rgb: 148 163 184;
+
   --shadow-rgb: 0 0 0;
 
   --brand-html: #e34f26;
@@ -94,6 +133,42 @@
 html {
   background: var(--bg);
   scroll-behavior: smooth;
+}
+
+html.site-loading,
+html.site-loading body,
+body.site-loading {
+  overflow: hidden;
+  touch-action: none;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, rgb(var(--bg-rgb) / 0.98), rgb(var(--bg-mid-rgb) / 0.96)), rgb(var(--bg-rgb) / 0.98);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid rgb(var(--bg-rgb) / 0.96);
+  border-radius: 9999px;
+  background: linear-gradient(180deg, rgb(var(--accent-rgb) / 0.78), rgb(var(--secondary-rgb) / 0.62));
+  box-shadow:
+    0 0 14px rgb(var(--accent-rgb) / 0.25),
+    inset 0 1px 0 rgb(var(--text-rgb) / 0.18);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgb(var(--accent-rgb) / 0.92), rgb(var(--secondary-rgb) / 0.78));
+  box-shadow:
+    0 0 18px rgb(var(--accent-rgb) / 0.34),
+    inset 0 1px 0 rgb(var(--text-rgb) / 0.24);
+}
+
+::-webkit-scrollbar-corner {
+  background: rgb(var(--bg-rgb) / 0.98);
 }
 
 ::selection {
@@ -141,7 +216,7 @@ html.lenis body {
 }
 
 .section-title {
-  font-size: clamp(1.45rem, 3vw, 2.85rem);
+  font-size: clamp(1.45rem, 3vw, 2.5rem);
   font-weight: 900;
   line-height: 1.12;
   letter-spacing: -0.035em;
