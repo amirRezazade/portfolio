@@ -48,7 +48,7 @@ export const socialLinks = [
   },
   {
     id: "linkedin",
-    href: "https://www.linkedin.com/in/amir-rezazadeh-7086a6345/",
+    href: "https://linkedin.com/in/amir-rezazade-dev",
   },
   {
     id: "email",

@@ -91,12 +91,12 @@ export default function Navbar({ lang, setLang, isReady = true }) {
     const updateIndicator = () => {
       const rootRect = root.getBoundingClientRect();
       const linkRect = activeLink.getBoundingClientRect();
-      const inset = 10;
+      const inset = 2;
 
       setIndicatorStyle({
         opacity: 1,
-        transform: `translateX(${linkRect.left - rootRect.left + inset}px)`,
-        width: `${Math.max(28, linkRect.width - inset * 2)}px`,
+        transform: `translateX(${linkRect.left - rootRect.left + inset / 2}px)`,
+        width: `${Math.max(38, linkRect.width - inset)}px`,
       });
     };
 
@@ -158,7 +158,7 @@ export default function Navbar({ lang, setLang, isReady = true }) {
         >
           <a className="inline-flex min-w-max items-center gap-2.5 rounded-full px-2 py-1 transition hover:bg-[rgb(var(--text-rgb)/0.04)] focus-visible:bg-[rgb(var(--text-rgb)/0.04)] focus-visible:outline-none" href="#home" aria-label={`${t.brandName} home`} onClick={closeMenu}>
             <NavbarLogo />
-            <span className="grid gap-0.5 leading-none">
+            <span className="grid gap-1 leading-none">
               <strong className="text-[0.9rem] font-black tracking-wide text-[var(--text)] max-[560px]:text-[0.82rem] xs:text-[0.78rem]">{t.brandName}</strong>
               <small className="text-[0.62rem] text-[rgb(var(--muted-rgb)/1)] max-[560px]:hidden">{t.brandRole}</small>
             </span>
@@ -183,7 +183,7 @@ export default function Navbar({ lang, setLang, isReady = true }) {
             <ResumeDownloadButton lang={lang} label={t.resume} variant="nav" />
 
             <button
-              className="grid min-h-[39px] w-[39px] cursor-pointer place-items-center rounded-full border border-[rgb(var(--text-rgb)/0.1)] bg-[rgb(var(--text-rgb)/0.06)] text-[var(--text)] shadow-[inset_0_1px_0_rgb(var(--text-rgb)/0.06)] transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.42)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:-translate-y-0.5 focus-visible:border-[rgb(var(--accent-rgb)/0.42)] focus-visible:outline-none md:hidden"
+              className="grid min-h-[39px] w-[39px] cursor-pointer place-items-center rounded-full border border-[rgb(var(--text-rgb)/0.1)] bg-[rgb(var(--text-rgb)/0.06)] text-[var(--text)] shadow-[inset_0_1px_0_rgb(var(--text-rgb)/0.06)] transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.42)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:-translate-y-0.5 focus-visible:border-[rgb(var(--accent-rgb)/0.42)] focus-visible:outline-none lg:hidden"
               type="button"
               aria-label={isMenuOpen ? t.close : t.menu}
               aria-expanded={isMenuOpen}
@@ -196,7 +196,7 @@ export default function Navbar({ lang, setLang, isReady = true }) {
         </nav>
       </header>
 
-      <div id="mobile-menu" className={cn("mobile-menu-layer md:hidden", isMenuOpen && "is-open")} aria-hidden={!isMenuOpen} inert={!isMenuOpen}>
+      <div id="mobile-menu" className={cn("mobile-menu-layer", isMenuOpen && "is-open")} aria-hidden={!isMenuOpen} inert={!isMenuOpen}>
         <button type="button" className="mobile-menu-backdrop" aria-label={t.close} onClick={closeMenu} />
 
         <aside className={cn("mobile-drawer", isRtl ? "mobile-drawer--rtl text-right" : "mobile-drawer--ltr text-left")} dir={dir} role="dialog" aria-modal="true" aria-label={t.mobileMenuTitle}>

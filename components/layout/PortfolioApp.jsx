@@ -13,13 +13,14 @@ import CodeMarkLogo from "../layout/navbar/CodeMarkLogo";
 import { getLanguageDirection, languageStorageKey, normalizeLanguage } from "@/lib/language";
 
 import { cn } from "../../lib/cn";
+import Footer from "./footer/Footer";
 
 const useIsomorphicLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 const languageCookieMaxAge = 60 * 60 * 24 * 365;
 const infinityMinMs = 1200;
 const infinityToLogoMs = 1080;
 const loaderExitMs = 1050;
-const postLoaderDelayMs = 1000;
+const postLoaderDelayMs = 200;
 
 function applyDocumentLanguage(language) {
   document.documentElement.lang = language;
@@ -146,6 +147,7 @@ export default function PortfolioApp({ initialLang }) {
         <Skills lang={lang} />
         <Projects lang={lang} />
         <Contact lang={lang} />
+        <Footer lang={lang} />
       </main>
     </>
   );

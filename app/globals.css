@@ -142,33 +142,11 @@ body.site-loading {
   touch-action: none;
 }
 
-::-webkit-scrollbar {
-  width: 11px;
-  height: 11px;
-}
-
-::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, rgb(var(--bg-rgb) / 0.98), rgb(var(--bg-mid-rgb) / 0.96)), rgb(var(--bg-rgb) / 0.98);
-}
-
-::-webkit-scrollbar-thumb {
-  border: 3px solid rgb(var(--bg-rgb) / 0.96);
-  border-radius: 9999px;
-  background: linear-gradient(180deg, rgb(var(--accent-rgb) / 0.78), rgb(var(--secondary-rgb) / 0.62));
-  box-shadow:
-    0 0 14px rgb(var(--accent-rgb) / 0.25),
-    inset 0 1px 0 rgb(var(--text-rgb) / 0.18);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, rgb(var(--accent-rgb) / 0.92), rgb(var(--secondary-rgb) / 0.78));
-  box-shadow:
-    0 0 18px rgb(var(--accent-rgb) / 0.34),
-    inset 0 1px 0 rgb(var(--text-rgb) / 0.24);
-}
-
-::-webkit-scrollbar-corner {
-  background: rgb(var(--bg-rgb) / 0.98);
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 ::selection {
