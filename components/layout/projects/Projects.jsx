@@ -48,8 +48,8 @@ function ProjectShowcase({ project, index, actions, isRtl }) {
 
   return (
     <article className="group relative  min-h-[430px] overflow-hidden rounded-[34px] border border-[rgb(var(--secondary-rgb)/0.18)] bg-[rgb(var(--bg-rgb)/0.34)] shadow-[0_22px_78px_rgb(var(--shadow-rgb)/0.22),inset_0_1px_0_rgb(var(--text-rgb)/0.045)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[rgb(var(--accent-rgb)/0.42)] hover:bg-[rgb(var(--surface-rgb)/0.36)] xs:rounded-3xl">
-      <div className={cn("relative  h-full gap-6  max-lg:grid-cols-2 ", layoutClass)}>
-        <div className="relative z-10 min-h-[300px] aspect-6/4 w-full  overflow-hidden  xs:min-h-[230px] mb-3">
+      <div className={cn("relative  h-full max-lg:grid-cols-2 flex flex-col", layoutClass)}>
+        <div className="relative z-10 min-h-[300px] aspect-6/4 w-full  overflow-hidden  xs:min-h-[230px] ">
           <Image src={project.image} fill alt="test" className="" />
         </div>
         <ProjectCopy project={project} index={index} actions={actions} isRtl={isRtl} className={isRtl ? "lg:order-2" : "lg:order-1"} />
@@ -60,34 +60,34 @@ function ProjectShowcase({ project, index, actions, isRtl }) {
 
 function ProjectCopy({ project, index, actions, isRtl, className }) {
   return (
-    <div className={cn("relative z-10 flex  flex-col justify-between gap-8 p-[clamp(20px,4vw,25px)] xs:p-4 text-start", className)}>
-      <div>
-        <div className="flex items-center justify-between items-center">
-          <h3 className="text-[clamp(1.5rem,4.6vw,1rem)] font-black leading-[1.05] tracking-[-0.05em] text-[var(--text)] text-balance xs:text-[clamp(1.7rem,10vw,1.6rem)]">{project.title}</h3>
-          <p className=" xs:hidden inline-block text-[0.76rem] font-black uppercase tracking-[0.16em] text-[var(--accent)] xs:text-[0.68rem]">
-            {String(index + 1).padStart(2, "0")} / {project.type}
-          </p>
-        </div>
+    <div className={cn("relative z-10 grow flex  flex-col justify-between gap-1 p-[clamp(20px,4vw,25px)] xs:p-4 text-start", className)}>
+      <div className="flex items-center justify-between items-center">
+        <h3 dir="ltr" className={cn("latin-title text-[clamp(1.5rem,4.6vw,1rem)] font-black leading-[1.08] tracking-[-0.04em] text-[var(--text)] text-balance xs:text-[clamp(1.35rem,8vw,2.1rem)]", isRtl ? "text-right" : "text-left")}>
+          {project.title}
+        </h3>{" "}
+        <p className=" xs:hidden inline-block text-[0.76rem] font-black uppercase tracking-[0.16em] text-[var(--accent)] xs:text-[0.68rem]">
+          {String(index + 1).padStart(2, "0")} / {project.type}
+        </p>
+      </div>
 
-        <p className="mt-4 max-w-[620px] text-[clamp(1rem,1.55vw,1rem)] xs:text-base font-bold leading-[1.4] text-[rgb(var(--text-rgb)/0.86)]">{project.description}</p>
+      <p className=" max-w-[620px] text-[clamp(1rem,1.55vw,1rem)] xs:text-base mt-1 font-bold leading-[1.4] text-[rgb(var(--text-rgb)/0.86)]">{project.description}</p>
 
-        <div className="sm:h-25 xs:mt-4 flex flex-wrap gap-x-4 xs:gap-x-2.5  xs:my-5">
-          {project.tech.map((tech) => (
-            <TechPill key={tech} tech={tech} />
-          ))}
-        </div>
+      <div className="sm:h-25 xs:mt-4 flex flex-wrap gap-x-4 xs:gap-x-2.5  xs:my-5">
+        {project.tech.map((tech) => (
+          <TechPill key={tech} tech={tech} />
+        ))}
+      </div>
 
-        <div className=" flex flex-wrap gap-3 xs:grid xs:grid-cols-1">
-          <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="cosmic-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border px-5 text-[0.94rem] font-black">
-            {" "}
-            <ExternalLink aria-hidden="true" size={17} />
-            {actions.demo}
-          </a>
-          <a href={project.links.code} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[rgb(var(--secondary-rgb)/0.18)] bg-[rgb(var(--surface-rgb)/0.34)] px-5 text-[0.94rem] font-black text-[rgb(var(--text-rgb)/0.88)] backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.36)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:-translate-y-0.5 focus-visible:outline-none">
-            <BrandIcon name={"github"} className="size-[17px]" />
-            {actions.code}
-          </a>
-        </div>
+      <div className=" flex flex-wrap gap-3 xs:grid xs:grid-cols-1">
+        <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="cosmic-button inline-flex min-h-11 items-center justify-center gap-2 rounded-full border px-4 text-[0.8rem] font-black">
+          {" "}
+          <ExternalLink aria-hidden="true" size={17} />
+          {actions.demo}
+        </a>
+        <a href={project.links.code} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[rgb(var(--secondary-rgb)/0.18)] bg-[rgb(var(--surface-rgb)/0.34)] px-4 text-[0.8rem] font-black text-[rgb(var(--text-rgb)/0.88)] backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent-rgb)/0.36)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:-translate-y-0.5 focus-visible:outline-none">
+          <BrandIcon name={"github"} className="size-[17px]" />
+          {actions.code}
+        </a>
       </div>
     </div>
   );

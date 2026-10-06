@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import Navbar from "./navbar/Navbar";
 import Hero from ".//hero/Hero";
 import About from "./about/About";
@@ -14,11 +14,11 @@ import { getLanguageDirection, languageStorageKey, normalizeLanguage } from "@/l
 
 import { cn } from "../../lib/cn";
 import Footer from "./footer/Footer";
+import MorphingLoaderMark from "../ui/MorphingLoaderMark";
 
 const useIsomorphicLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 const languageCookieMaxAge = 60 * 60 * 24 * 365;
 const infinityMinMs = 1200;
-const infinityToLogoMs = 1080;
 const loaderExitMs = 1050;
 const postLoaderDelayMs = 200;
 
@@ -61,47 +61,51 @@ export default function PortfolioApp({ initialLang }) {
   useEffect(() => {
     let minimumInfinityTimeDone = false;
     let contentReady = document.readyState === "complete";
-    let hasStartedLogoTransform = false;
-    let transformTimer;
-    let removeTimer;
-    let readyTimer;
+    let hasRequestedCompletion = false;
 
-    const startLogoTransformWhenReady = () => {
-      if (!minimumInfinityTimeDone || !contentReady || hasStartedLogoTransform) return;
+    const completeLoaderWhenReady = () => {
+      if (!minimumInfinityTimeDone || !contentReady || hasRequestedCompletion) return;
 
-      hasStartedLogoTransform = true;
+      hasRequestedCompletion = true;
       setIsLogoReady(true);
-
-      transformTimer = window.setTimeout(() => {
-        setIsLoaderExiting(true);
-        removeTimer = window.setTimeout(() => setIsLoaderMounted(false), loaderExitMs);
-        readyTimer = window.setTimeout(() => setIsPageReady(true), loaderExitMs + postLoaderDelayMs);
-      }, infinityToLogoMs);
     };
 
     const introTimer = window.setTimeout(() => {
       minimumInfinityTimeDone = true;
-      startLogoTransformWhenReady();
+      completeLoaderWhenReady();
     }, infinityMinMs);
 
     const handleLoad = () => {
       contentReady = true;
-      startLogoTransformWhenReady();
+      completeLoaderWhenReady();
     };
 
     if (contentReady) {
-      startLogoTransformWhenReady();
+      completeLoaderWhenReady();
     } else {
       window.addEventListener("load", handleLoad, { once: true });
     }
 
     return () => {
       window.clearTimeout(introTimer);
-      window.clearTimeout(transformTimer);
-      window.clearTimeout(removeTimer);
-      window.clearTimeout(readyTimer);
       window.removeEventListener("load", handleLoad);
     };
+  }, []);
+
+  useEffect(() => {
+    if (!isLoaderExiting) return undefined;
+
+    const removeTimer = window.setTimeout(() => setIsLoaderMounted(false), loaderExitMs);
+    const readyTimer = window.setTimeout(() => setIsPageReady(true), loaderExitMs + postLoaderDelayMs);
+
+    return () => {
+      window.clearTimeout(removeTimer);
+      window.clearTimeout(readyTimer);
+    };
+  }, [isLoaderExiting]);
+
+  const handleLoaderMarkComplete = useCallback(() => {
+    setIsLoaderExiting((value) => value || true);
   }, []);
 
   useIsomorphicLayoutEffect(() => {
@@ -138,7 +142,7 @@ export default function PortfolioApp({ initialLang }) {
     <>
       <SmoothScroll />
       <SpaceBackground lang={lang} />
-      {isLoaderMounted && <CosmicLoader isLogoReady={isLogoReady} isExiting={isLoaderExiting} lang={lang} />}
+      {isLoaderMounted && <CosmicLoader shouldComplete={isLogoReady} isExiting={isLoaderExiting} lang={lang} onMarkComplete={handleLoaderMarkComplete} />}
       <Navbar lang={lang} setLang={setLang} isReady={isPageReady} />
 
       <main id="main" className="relative z-10 overflow-x-hidden">
@@ -153,25 +157,16 @@ export default function PortfolioApp({ initialLang }) {
   );
 }
 
-function CosmicLoader({ isLogoReady, isExiting, lang }) {
+function CosmicLoader({ shouldComplete, isExiting, lang, onMarkComplete }) {
   const dir = getLanguageDirection(lang);
 
   return (
-    <div className={cn("infinity-loader", isLogoReady && "is-logo-ready", isExiting && "is-exiting")} dir={dir} aria-hidden="true">
-      <div className="infinity-loader__panel infinity-loader__panel--left">
-        <div className="infinity-loader__scene infinity-loader__scene--left">
-          <div className="infinity-loader__logo">
-            <CodeMarkLogo variant="split" title="" />
-          </div>
-        </div>
-      </div>
+    <div className={cn("code-morph-loader", isExiting && "is-exiting")} dir={dir} role="status" aria-live="polite" aria-label={lang === "fa" ? "در حال آماده‌سازی سایت" : "Loading the site"} aria-hidden={isExiting}>
+      <div className="code-morph-loader__panel code-morph-loader__panel--left" />
+      <div className="code-morph-loader__panel code-morph-loader__panel--right" />
 
-      <div className="infinity-loader__panel infinity-loader__panel--right">
-        <div className="infinity-loader__scene infinity-loader__scene--right">
-          <div className="infinity-loader__logo">
-            <CodeMarkLogo variant="split" title="" />
-          </div>
-        </div>
+      <div className="code-morph-loader__stage">
+        <MorphingLoaderMark shouldComplete={shouldComplete} isExiting={isExiting} onComplete={onMarkComplete} />
       </div>
     </div>
   );
