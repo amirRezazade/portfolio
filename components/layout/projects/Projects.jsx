@@ -50,7 +50,7 @@ function ProjectShowcase({ project, index, actions, isRtl }) {
     <article className="group relative  min-h-[430px] overflow-hidden rounded-[34px] border border-[rgb(var(--secondary-rgb)/0.18)] bg-[rgb(var(--bg-rgb)/0.34)] shadow-[0_22px_78px_rgb(var(--shadow-rgb)/0.22),inset_0_1px_0_rgb(var(--text-rgb)/0.045)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[rgb(var(--accent-rgb)/0.42)] hover:bg-[rgb(var(--surface-rgb)/0.36)] xs:rounded-3xl">
       <div className={cn("relative  h-full max-lg:grid-cols-2 flex flex-col", layoutClass)}>
         <div className="relative z-10 min-h-[300px] aspect-6/4 w-full  overflow-hidden  xs:min-h-[230px] ">
-          <Image src={project.image} fill alt="test" className="" />
+          <Image src={project.image} fill sizes="(max-width: 768px) 100vw, 50vw" alt="test" className="" />
         </div>
         <ProjectCopy project={project} index={index} actions={actions} isRtl={isRtl} className={isRtl ? "lg:order-2" : "lg:order-1"} />
       </div>

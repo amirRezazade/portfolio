@@ -49,7 +49,7 @@ function waitForEvent(target, event) {
 
 function waitForBackgroundImage() {
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
-  const src = isMobile ? "/media/space-earth-poster-mobile.jpg" : "/media/space-earth-poster.jpg";
+  const src = isMobile ? "/media/mobile-bg.webp" : "/media/poster.webp";
   const image = new Image();
   image.src = src;
 

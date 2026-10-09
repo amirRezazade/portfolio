@@ -1,17 +1,25 @@
 import { cookies } from "next/headers";
 import "./globals.css";
 import "./logo-loader.css";
-import { getLanguageDirection, languageStorageKey, normalizeLanguage } from "@/lib/language";
+import { getLanguageDirection, languageStorageKey, normalizeLanguage } from "../lib/language";
 
 export const metadata = {
   title: "Amir Rezazade | Front-End Developer",
   description: "Personal portfolio of Amir Rezazade, Front-End Developer focused on React, Next.js and responsive UI implementation.",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "48x48" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export const viewport = {
   colorScheme: "dark",
   // Mobile browser UI (address bar / status bar) matches the site background.
-  themeColor: "#3485ff",
+  themeColor: "#050816",
 };
 
 export default async function RootLayout({ children }) {
