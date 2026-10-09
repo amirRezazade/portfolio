@@ -1,553 +1,93 @@
+/* ------------------------------------------------------------------
+   Brand mark: two rounded chevrons on the diagonal with 180deg
+   rotational symmetry, plus detached accents on the opposite diagonal.
+   The mark owns its palette on purpose — it does not follow the site
+   theme variables, so it stays recognisable anywhere.
+   ------------------------------------------------------------------ */
+
+:root {
+  --logo-ink-a: #60a5fa;
+  --logo-ink-b: #0096c7;
+  --logo-pale-a: #e2e8f0;
+  --logo-pale-b: #cbd5e1;
+  --logo-accent-mark: #60a5fa;
+  --logo-dot: #e2e8f0;
+}
+
 .code-mark {
   position: relative;
-  isolation: isolate;
   display: grid;
   flex-shrink: 0;
   place-items: center;
-  overflow: hidden;
-  border: 1px solid rgb(var(--accent-rgb) / 0.28);
-  background: radial-gradient(circle at 32% 22%, rgb(var(--logo-cyan-rgb) / 0.18), transparent 24%), radial-gradient(circle at 74% 78%, rgb(var(--logo-rose-rgb) / 0.16), transparent 30%), rgb(var(--bg-rgb) / 0.78);
-  box-shadow:
-    0 0 24px rgb(var(--accent-rgb) / 0.15),
-    inset 0 1px 0 rgb(var(--text-rgb) / 0.08);
-}
-
-.code-mark::before,
-.code-mark::after {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
-}
-
-.code-mark::before {
-  inset: -58%;
-  opacity: 0.2;
-  background: conic-gradient(transparent, rgb(var(--logo-cyan-rgb) / 0.22), rgb(var(--accent-rgb) / 0.28), transparent 42%);
-}
-
-.code-mark::after {
-  inset: 1px;
-  border-radius: inherit;
-  background: radial-gradient(circle at 52% 54%, rgb(var(--text-rgb) / 0.08), transparent 22%), radial-gradient(circle at 50% 64%, rgb(var(--accent-rgb) / 0.1), transparent 62%);
-}
-
-.code-mark--nav {
-  width: 38px;
-  height: 38px;
-  border-radius: 9999px;
-}
-
-.code-mark--loader,
-.code-mark--split {
-  width: 156px;
-  height: 156px;
-  border-radius: 38px;
-  border-color: rgb(var(--accent-rgb) / 0.22);
-  background: radial-gradient(circle at 44% 36%, rgb(var(--text-rgb) / 0.06), transparent 28%), radial-gradient(circle at 35% 58%, rgb(var(--logo-cyan-rgb) / 0.12), transparent 30%), radial-gradient(circle at 74% 70%, rgb(var(--logo-rose-rgb) / 0.14), transparent 32%), rgb(var(--shadow-rgb) / 0.72);
-  box-shadow:
-    0 32px 110px rgb(var(--shadow-rgb) / 0.46),
-    0 0 86px rgb(var(--accent-rgb) / 0.2),
-    inset 0 1px 0 rgb(var(--text-rgb) / 0.06);
-}
-
-.code-mark--split {
-  width: clamp(176px, 18vw, 248px);
-  height: clamp(176px, 18vw, 248px);
-  overflow: visible;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.code-mark--split::before,
-.code-mark--split::after {
-  display: none;
-}
-
-.code-mark--loader::before {
-  opacity: 1;
-  animation: code-mark-aura 3s linear infinite;
 }
 
 .code-mark__svg {
-  position: relative;
-  z-index: 1;
   width: 100%;
   height: 100%;
   overflow: visible;
 }
 
-.code-mark__space,
-.code-mark__symbol,
-.code-mark__particles {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-.code-mark__nebula {
-  fill: rgb(var(--text-rgb) / 0.18);
-  filter: blur(8px);
-  transform-origin: center;
-}
-
-.code-mark__nebula--one {
-  opacity: 0.32;
-}
-
-.code-mark__nebula--two {
-  opacity: 0.18;
-  fill: rgb(var(--accent-rgb) / 0.28);
-}
-
-.code-mark__orbit {
-  fill: none;
-  stroke-width: 1.35;
-  stroke-linecap: round;
-  filter: drop-shadow(0 0 5px rgb(var(--accent-rgb) / 0.42));
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-.code-mark__orbit--back {
-  transform: rotate(-8deg);
-  opacity: 0.62;
-}
-
-.code-mark__orbit--front {
-  transform: rotate(-8deg);
-  opacity: 0.48;
-  stroke-dasharray: 26 10;
-}
-
-.code-mark__beam,
-.code-mark__shadow,
-.code-mark__slash {
+.code-mark__glyph {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.code-mark__shadow {
-  stroke: rgb(var(--shadow-rgb) / 0.28);
-  stroke-width: 15;
-  filter: blur(3px);
-}
-
-.code-mark__beam {
-  stroke-width: 13.5;
-  filter: drop-shadow(0 0 7px rgb(var(--accent-rgb) / 0.3)) drop-shadow(0 0 13px rgb(var(--secondary-rgb) / 0.18));
-}
-
-.code-mark__slash {
-  stroke-width: 14.5;
-  filter: drop-shadow(0 0 7px rgb(var(--text-rgb) / 0.42)) drop-shadow(0 0 14px rgb(var(--primary-rgb) / 0.28));
-}
-
-.code-mark__spark {
-  fill: var(--accent);
-  opacity: 0.86;
-  filter: drop-shadow(0 0 8px rgb(var(--accent-rgb) / 0.82));
+.code-mark__chevron {
+  /* Animated wrapper only - never put a transform attribute here. */
+  transform-box: view-box;
   transform-origin: center;
+  transition: opacity 260ms ease;
 }
 
-.code-mark__spark--one {
-  fill: var(--logo-cyan);
+.code-mark__dash {
+  stroke-width: 7;
+  stroke-linecap: round;
 }
 
-.code-mark__spark--two,
-.code-mark__spark--five {
-  fill: var(--secondary);
+.code-mark__dash--top,
+.code-mark__dash--bottom {
+  stroke: var(--logo-accent-mark);
 }
 
-.code-mark__spark--three,
-.code-mark__spark--four {
-  fill: var(--accent);
+.code-mark__dash--bottom {
+  stroke: var(--logo-dot);
 }
 
-.code-mark--nav .code-mark__nebula {
-  opacity: 0;
+.code-mark__dot--top {
+  fill: var(--logo-accent-mark);
 }
 
-.code-mark--nav .code-mark__orbit {
-  stroke-width: 1.8;
+.code-mark__dot--bottom {
+  fill: var(--logo-dot);
 }
 
-.code-mark--nav .code-mark__beam {
-  stroke-width: 14.5;
+/* Navbar ----------------------------------------------------------- */
+
+.code-mark--nav {
+  width: 34px;
+  height: 34px;
 }
 
-.code-mark--nav .code-mark__slash {
-  stroke-width: 15.5;
+.code-mark--nav:hover .code-mark__svg {
+  transform: rotate(-6deg) scale(1.04);
 }
 
-.code-mark--nav .code-mark__spark {
-  animation: code-mark-spark 2.1s ease-in-out infinite;
-}
+/* ------------------------------------------------------------------
+   Loading screen.
 
-.code-mark--nav .code-mark__spark--three,
-.code-mark--nav .code-mark__spark--four,
-.code-mark--nav .code-mark__spark--five {
-  display: none;
-}
-
-.code-mark--nav:hover::before {
-  opacity: 1;
-  animation: code-mark-aura 1.7s linear infinite;
-}
-
-.code-mark--nav:hover .code-mark__space {
-  animation: code-mark-orbit-tilt 2.6s ease-in-out infinite;
-}
-
-.code-mark--loader .code-mark__space {
-  animation: code-mark-orbit-spin 3.6s linear infinite;
-}
-
-.code-mark--split .code-mark__space {
-  transform: none;
-}
-
-.code-mark--split .code-mark__orbit {
-  transform: none;
-  stroke-dasharray: 24 18;
-  stroke-dashoffset: 0;
-  animation: code-mark-orbit-flow 2.8s linear infinite;
-}
-
-.code-mark--split .code-mark__orbit--front {
-  animation-duration: 2.15s;
-  animation-direction: reverse;
-}
-
-.code-mark--split .code-mark__nebula,
-.code-mark--split .code-mark__spark {
-  display: none;
-}
-
-.code-mark--loader .code-mark__beam,
-.code-mark--loader .code-mark__slash,
-.code-mark--split .code-mark__beam,
-.code-mark--split .code-mark__slash {
-  stroke-dasharray: 105;
-  stroke-dashoffset: 105;
-  animation: code-mark-draw 1.55s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-.code-mark--loader .code-mark__beam--right,
-.code-mark--split .code-mark__beam--right {
-  animation-delay: 150ms;
-}
-
-.code-mark--loader .code-mark__slash,
-.code-mark--split .code-mark__slash {
-  animation-delay: 300ms;
-}
-
-.code-mark--loader .code-mark__nebula--one,
-.code-mark--split .code-mark__nebula--one {
-  animation: code-mark-nebula 2.4s ease-in-out infinite;
-}
-
-.code-mark--loader .code-mark__nebula--two,
-.code-mark--split .code-mark__nebula--two {
-  animation: code-mark-nebula 2.4s ease-in-out 280ms infinite reverse;
-}
-
-.code-mark--loader .code-mark__spark--one,
-.code-mark--split .code-mark__spark--one {
-  animation: code-mark-loader-spark-one 1.45s ease-in-out infinite;
-}
-
-.code-mark--loader .code-mark__spark--two,
-.code-mark--loader .code-mark__spark--three,
-.code-mark--loader .code-mark__spark--four,
-.code-mark--loader .code-mark__spark--five,
-.code-mark--split .code-mark__spark--two,
-.code-mark--split .code-mark__spark--three,
-.code-mark--split .code-mark__spark--four,
-.code-mark--split .code-mark__spark--five {
-  animation: code-mark-loader-spark-two 1.45s ease-in-out infinite;
-}
-
-.code-mark--loader .code-mark__spark--three,
-.code-mark--split .code-mark__spark--three {
-  animation-delay: 120ms;
-}
-
-.code-mark--loader .code-mark__spark--four,
-.code-mark--split .code-mark__spark--four {
-  animation-delay: 260ms;
-}
-
-.code-mark--loader .code-mark__spark--five,
-.code-mark--split .code-mark__spark--five {
-  animation-delay: 360ms;
-}
-
-.code-mark--split .code-mark__symbol {
-  filter: none;
-}
-
-.code-mark--split .code-mark__shadow {
-  stroke-width: 9;
-  stroke: rgb(var(--shadow-rgb) / 0.16);
-  filter: blur(1.2px);
-}
-
-.code-mark--split .code-mark__beam,
-.code-mark--split .code-mark__slash {
-  stroke-dasharray: none;
-  stroke-dashoffset: 0;
-  animation: code-mark-split-glow 2s ease-in-out infinite;
-}
-
-.code-mark--split .code-mark__beam--right {
-  animation-delay: 140ms;
-}
-
-.code-mark--split .code-mark__slash {
-  animation-delay: 280ms;
-}
-
-.split-loader {
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  overflow: hidden;
-  pointer-events: auto;
-  visibility: visible;
-  transition: visibility 0s linear 1050ms;
-}
-
-.split-loader.is-ready {
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.split-loader-panel {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  overflow: hidden;
-  background: rgb(var(--bg-rgb) / 0.985);
-  box-shadow: inset 0 1px 0 rgb(var(--text-rgb) / 0.025);
-  transition:
-    transform 1050ms cubic-bezier(0.76, 0, 0.24, 1),
-    filter 1050ms ease;
-  will-change: transform;
-}
-
-.split-loader-panel::before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-}
-
-.split-loader-panel::before {
-  inset: 0;
-  opacity: 0.16;
-  background-image: radial-gradient(circle, rgb(var(--text-rgb) / 0.34) 0 1px, transparent 1px), linear-gradient(90deg, rgb(var(--accent-rgb) / 0.05) 1px, transparent 1px);
-  background-position:
-    22px 28px,
-    0 0;
-  background-size:
-    112px 112px,
-    72px 72px;
-  mask-image: linear-gradient(to bottom, black, transparent 88%);
-}
-
-.split-loader-panel--right::before {
-  background-position:
-    calc(22px - 50vw) 28px,
-    calc(0px - 50vw) 0;
-}
-
-.split-loader-panel--left {
-  left: 0;
-}
-
-.split-loader-panel--right {
-  right: 0;
-}
-
-.split-loader.is-ready .split-loader-panel--left {
-  transform: translateX(-104%);
-  filter: brightness(1.08);
-}
-
-.split-loader.is-ready .split-loader-panel--right {
-  transform: translateX(104%);
-  filter: brightness(1.08);
-}
-
-.split-loader-scene {
-  position: absolute;
-  inset-block: 0;
-  z-index: 2;
-  width: 100vw;
-}
-
-.split-loader-scene--left {
-  left: 0;
-}
-
-.split-loader-scene--right {
-  right: 0;
-}
-
-.split-loader-logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@keyframes code-mark-aura {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes code-mark-spark {
-  0%,
-  100% {
-    opacity: 0.62;
-    transform: scale(0.88);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.18);
-  }
-}
-
-@keyframes code-mark-orbit-tilt {
-  0%,
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
-
-  50% {
-    transform: rotate(-6deg) scale(1.035);
-  }
-}
-
-@keyframes code-mark-orbit-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes code-mark-orbit-flow {
-  to {
-    stroke-dashoffset: -84;
-  }
-}
-
-@keyframes code-mark-nebula {
-  0%,
-  100% {
-    transform: scale(0.94);
-    opacity: 0.18;
-  }
-
-  50% {
-    transform: scale(1.08);
-    opacity: 0.34;
-  }
-}
-
-@keyframes code-mark-draw {
-  0% {
-    stroke-dashoffset: 105;
-    opacity: 0.32;
-  }
-
-  42%,
-  74% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-
-  100% {
-    stroke-dashoffset: -105;
-    opacity: 0.52;
-  }
-}
-
-@keyframes code-mark-split-glow {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 2px rgb(var(--accent-rgb) / 0.16)) drop-shadow(0 0 5px rgb(var(--secondary-rgb) / 0.08));
-  }
-
-  50% {
-    filter: drop-shadow(0 0 4px rgb(var(--accent-rgb) / 0.24)) drop-shadow(0 0 8px rgb(var(--secondary-rgb) / 0.12));
-  }
-}
-
-@keyframes code-mark-loader-spark-one {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(0.78);
-    opacity: 0.46;
-  }
-
-  50% {
-    transform: translate(4px, -4px) scale(1.18);
-    opacity: 1;
-  }
-}
-
-@keyframes code-mark-loader-spark-two {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(0.78);
-    opacity: 0.48;
-  }
-
-  50% {
-    transform: translate(-4px, 3px) scale(1.14);
-    opacity: 1;
-  }
-}
-
-@media (max-width: 560px) {
-  .code-mark--nav {
-    width: 35px;
-    height: 35px;
-  }
-
-  .code-mark--loader {
-    width: 132px;
-    height: 132px;
-    border-radius: 30px;
-  }
-
-  .code-mark--split {
-    width: 178px;
-    height: 178px;
-  }
-}
-
-/* Code-to-infinity morph loader, original layout with navbar logo colors */
-.code-mark__infinity,
-.code-mark__infinity-track,
-.code-mark__infinity-ribbon,
-.code-mark__infinity-runner {
-  display: none;
-}
+   One timeline, three steps, no overlapping rhythms:
+     0 - 360ms    mark fades and settles in
+     0 - 720ms    hairline bar fills to 72%
+     on ready     bar completes to 100% (220ms), then the panels part
+   ------------------------------------------------------------------ */
 
 .code-morph-loader {
   position: fixed;
   inset: 0;
   z-index: 999;
   overflow: hidden;
-  pointer-events: auto;
-  background: rgb(var(--bg-rgb) / 0.995);
+  background: var(--bg);
 }
 
 .code-morph-loader.is-exiting {
@@ -560,10 +100,9 @@
   top: 0;
   bottom: 0;
   z-index: 1;
-  width: 50%;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgb(var(--bg-rgb) / 0.995), rgb(var(--bg-mid-rgb) / 0.985) 56%, rgb(var(--bg-rgb) / 0.995));
-  transition: transform 1050ms cubic-bezier(0.76, 0, 0.24, 1);
+  width: 50.5%;
+  background: linear-gradient(180deg, var(--bg), var(--bg-mid) 58%, var(--bg));
+  transition: transform 700ms cubic-bezier(0.76, 0, 0.24, 1);
   will-change: transform;
 }
 
@@ -576,11 +115,11 @@
 }
 
 .code-morph-loader.is-exiting .code-morph-loader__panel--left {
-  transform: translateX(-103%);
+  transform: translateX(-101%);
 }
 
 .code-morph-loader.is-exiting .code-morph-loader__panel--right {
-  transform: translateX(103%);
+  transform: translateX(101%);
 }
 
 .code-morph-loader__stage {
@@ -589,122 +128,153 @@
   top: 50%;
   z-index: 2;
   display: grid;
-  place-items: center;
+  gap: 20px;
+  justify-items: center;
   transform: translate(-50%, -50%);
-  transition:
-    opacity 420ms ease,
-    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
-    filter 420ms ease;
-  will-change: opacity, transform, filter;
+  animation: code-loader-mark-in 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: opacity, transform;
 }
 
 .code-morph-loader.is-exiting .code-morph-loader__stage {
+  animation: none;
   opacity: 0;
-  filter: blur(1px);
-  transform: translate(-50%, -50%) scale(0.94);
+  transform: translate(-50%, -50%) scale(0.96);
+  transition:
+    opacity 220ms ease,
+    transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.code-morph-loader__mark {
-  width: clamp(155px, 16vw, 190px);
-  height: clamp(155px, 16vw, 190px);
-  overflow: visible;
+.code-morph-loader__bar {
+  position: relative;
+  width: 104px;
+  height: 2px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgb(var(--text-rgb) / 0.09);
 }
 
-.code-morph-loader__aura {
+.code-morph-loader__bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  transform: scaleX(0.72);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--logo-ink-a), var(--logo-ink-b));
+  animation: code-loader-fill 720ms cubic-bezier(0.25, 0.9, 0.3, 1) both;
+}
+
+[dir="rtl"] .code-morph-loader__bar::after {
+  transform-origin: right center;
+}
+
+.code-morph-loader.is-complete .code-morph-loader__bar::after {
+  animation: none;
+  transform: scaleX(1);
+  transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes code-loader-mark-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes code-loader-fill {
+  from {
+    transform: scaleX(0.04);
+  }
+  to {
+    transform: scaleX(0.72);
+  }
+}
+
+/* Loader mark ------------------------------------------------------ */
+
+.code-mark--loader {
+  width: 64px;
+  height: 64px;
+}
+
+/* The chevrons breathe gently while waiting - one shared rhythm. */
+.code-mark--loader .code-mark__chevron--top {
+  animation: code-mark-breathe-top 1600ms ease-in-out 360ms infinite;
+}
+
+.code-mark--loader .code-mark__chevron--bottom {
+  animation: code-mark-breathe-bottom 1600ms ease-in-out 360ms infinite;
+}
+
+.code-mark--loader .code-mark__accents,
+.code-mark--loader .code-mark__dots {
+  animation: code-mark-accent-pulse 1600ms ease-in-out 360ms infinite;
+}
+
+.code-morph-loader.is-complete .code-mark__chevron--top,
+.code-morph-loader.is-complete .code-mark__chevron--bottom,
+.code-morph-loader.is-complete .code-mark__accents,
+.code-morph-loader.is-complete .code-mark__dots {
+  animation: none;
+  transform: none;
   opacity: 1;
 }
 
-.code-morph-loader__micro-ring {
-  fill: none;
-  stroke-width: 0.8;
-  stroke-linecap: round;
-  stroke-dasharray: 1 13;
-  opacity: 0.26;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: code-morph-micro-spin 16s linear infinite;
-}
-
-.code-morph-loader__symbol-stroke {
-  fill: none;
-  stroke-width: 6.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.code-morph-loader__symbol-glow {
-  fill: none;
-  stroke-width: 16;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  opacity: 0.075;
-}
-
-.code-morph-loader__code-slash {
-  fill: none;
-  stroke-width: 7;
-  stroke-linecap: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.code-morph-loader__moving-slash,
-.code-morph-loader__moving-slash-glow {
-  fill: none;
-  stroke-linecap: round;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.code-morph-loader__moving-slash {
-  stroke-width: 8;
-  vector-effect: non-scaling-stroke;
-}
-
-.code-morph-loader__moving-slash-glow {
-  stroke-width: 16;
-}
-
-.code-morph-loader__infinity-shimmer {
-  fill: none;
-  stroke: rgb(var(--text-rgb) / 0.66);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-dasharray: 2 46;
-  opacity: 0;
-  transition: opacity 300ms ease;
-  animation: code-morph-shimmer 1.25s linear infinite paused;
-  vector-effect: non-scaling-stroke;
-}
-
-.code-morph-loader__infinity-shimmer.is-active {
-  opacity: 0.44;
-  animation-play-state: running;
-}
-
-@keyframes code-morph-shimmer {
-  to {
-    stroke-dashoffset: -96;
+@keyframes code-mark-breathe-top {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-1.4px, -1.4px);
   }
 }
 
-@keyframes code-morph-micro-spin {
-  to {
-    transform: rotate(360deg);
+@keyframes code-mark-breathe-bottom {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(1.4px, 1.4px);
   }
 }
 
-@media (max-width: 480px) {
-  .code-morph-loader__mark {
-    width: 155px;
-    height: 155px;
+@keyframes code-mark-accent-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .code-morph-loader__infinity-shimmer,
-  .code-morph-loader__micro-ring {
+  .code-morph-loader__stage,
+  .code-mark--loader .code-mark__chevron--top,
+  .code-mark--loader .code-mark__chevron--bottom,
+  .code-mark--loader .code-mark__accents,
+  .code-mark--loader .code-mark__dots {
     animation: none;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  .code-mark--loader .code-mark__chevron--top,
+  .code-mark--loader .code-mark__chevron--bottom,
+  .code-mark--loader .code-mark__accents,
+  .code-mark--loader .code-mark__dots {
+    transform: none;
+  }
+
+  .code-morph-loader__bar::after {
+    animation: none;
+    transform: scaleX(0.72);
   }
 
   .code-morph-loader,

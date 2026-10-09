@@ -7,7 +7,15 @@
 }
 
 @font-face {
-  font-family: "VazirmatnLocal";
+  font-family: "Estedad";
+  src: url("/fonts/estedad/Estedad-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EstedadFallback";
   src: local("Vazirmatn"), local("IRANSans"), local("Tahoma");
   font-display: swap;
 }
@@ -39,37 +47,25 @@
   color-scheme: dark;
 
   --font-latin: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-fa: "Estedad", "EstedadFallback", Tahoma, sans-serif;
 
-  --bg: #070816;
-  --bg-mid: #10102b;
-  --surface: #111329;
+  --bg: #050816;
+  --bg-mid: #0d1238;
+  --surface: #10172f;
+  --primary: #0096c7;
+  --secondary: #38bdf8;
+  --accent: #3b82f6;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
 
-  --primary: #7c4dff;
-  --secondary: #3485ff;
-  --accent: #c04dff;
-
-  --text: #f4f3ff;
-  --muted: #9295b5;
-
-  --logo-cyan: #38bdf8;
-  --logo-rose: #c04dff;
-  --logo-amber: #ff6bae;
-
-  --logo-cyan-rgb: 56 189 248;
-  --logo-rose-rgb: 192 77 255;
-  --logo-amber-rgb: 255 107 174;
-
-  --bg-rgb: 7 8 22;
-  --bg-mid-rgb: 16 16 43;
-  --surface-rgb: 17 19 41;
-
-  --primary-rgb: 124 77 255;
-  --secondary-rgb: 52 133 255;
-  --accent-rgb: 192 77 255;
-
-  --text-rgb: 244 243 255;
-  --muted-rgb: 146 149 181;
-
+  --primary-rgb: 0 150 199; /* بود: 109 93 252 */
+  --secondary-rgb: 56 189 248;
+  --accent-rgb: 59 130 246; /* بود: 139 92 246 */
+  --bg-rgb: 5 8 22;
+  --bg-mid-rgb: 13 18 56;
+  --surface-rgb: 16 23 47;
+  --text-rgb: 226 232 240;
+  --muted-rgb: 148 163 184;
   --shadow-rgb: 0 0 0;
 
   --brand-html: #e34f26;
@@ -96,67 +92,6 @@
   --brand-chartjs-yellow: #ffce56;
   --brand-chartjs-pink: #fe6184;
   --brand-chartjs-frame: #e7e9ed;
-  --brand-api: #85ea2d;
-  --brand-responsive: #22d3ee;
-  --brand-performance: #f59e0b;
-
-  --contrib-empty: #161b22;
-  --contrib-level-1: #0e4429;
-  --contrib-level-2: #006d32;
-  --contrib-level-3: #26a641;
-  --contrib-level-4: #39d353;
-}
-:root {
-  color-scheme: dark;
-
-  --bg: #050816;
-  --bg-mid: #0d1238;
-  --surface: #10172f;
-
-  --secondary: #3485ff;
-  --primary: #7c4dff;
-  --accent: #8b5cf6;
-
-  --text: #f4f3ff;
-  --muted: #94a3b8;
-
-  --logo-cyan: #38bdf8;
-  --logo-rose: #8b5cf6;
-  --logo-amber: #6366f1;
-
-  --logo-cyan-rgb: 56 189 248;
-  --logo-rose-rgb: 139 92 246;
-  --logo-amber-rgb: 99 102 241;
-
-  --bg-rgb: 5 8 22;
-  --bg-mid-rgb: 13 18 56;
-  --surface-rgb: 16 23 47;
-
-  --primary-rgb: 124 77 255;
-  --secondary-rgb: 52 133 255;
-  --accent-rgb: 139 92 246;
-
-  --text-rgb: 244 243 255;
-  --muted-rgb: 148 163 184;
-
-  --shadow-rgb: 0 0 0;
-
-  --brand-html: #e34f26;
-  --brand-css: #663399;
-  --brand-javascript: #f7df1e;
-  --brand-react: #61dafb;
-  --brand-next: #ffffff;
-  --brand-tailwind: #38bdf8;
-  --brand-bootstrap: #7952b3;
-  --brand-redux: #764abc;
-  --brand-git: #f05032;
-  --brand-npm: #cb3837;
-  --brand-vercel: #ffffff;
-  --brand-netlify: #00c7b7;
-  --brand-github: #ffffff;
-  --brand-linkedin: #0a66c2;
-  --brand-telegram: #26a5e4;
-  --brand-email: #ea4335;
   --brand-api: #85ea2d;
   --brand-responsive: #22d3ee;
   --brand-performance: #f59e0b;
@@ -202,6 +137,9 @@ html :is(h1, h2, h3, h4, .section-title).latin-title,
   font-family: var(--font-latin);
   font-feature-settings: "ss01", "cv01";
   letter-spacing: -0.03em;
+}
+button {
+  cursor: pointer;
 }
 
 html.lenis,

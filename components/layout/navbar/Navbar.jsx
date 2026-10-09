@@ -201,23 +201,22 @@ export default function Navbar({ lang, setLang, isReady = true }) {
 
         <aside className={cn("mobile-drawer", isRtl ? "mobile-drawer--rtl text-right" : "mobile-drawer--ltr text-left")} dir={dir} role="dialog" aria-modal="true" aria-label={t.mobileMenuTitle}>
           <div className="mobile-drawer-orb" aria-hidden="true" />
-
           <div className="relative flex items-start justify-between gap-4 text-[var(--text)]">
-            <div className="flex min-w-0 items-center gap-3">
-              <span className="grid size-11 shrink-0 place-items-center rounded-2xl border border-[rgb(var(--accent-rgb)/0.22)] bg-[rgb(var(--accent-rgb)/0.09)]">
-                <Sparkles aria-hidden="true" size={18} className="text-[var(--accent)] drop-shadow-[0_0_8px_rgb(var(--accent-rgb)/0.5)]" />
-              </span>
-              <div className="min-w-0">
+            <div>
+              <div className="flex min-w-0 items-center gap-3">
+                <span className="grid size-11 shrink-0 place-items-center rounded-2xl border border-[rgb(var(--accent-rgb)/0.22)] bg-[rgb(var(--accent-rgb)/0.09)]">
+                  <Sparkles aria-hidden="true" size={18} className="text-[var(--accent)] drop-shadow-[0_0_8px_rgb(var(--accent-rgb)/0.5)]" />
+                </span>
                 <strong className="block text-base font-black text-[var(--text)]">{t.mobileMenuTitle}</strong>
-                <p className="mt-1 text-sm leading-6 text-[rgb(var(--text-rgb)/0.68)]">{t.mobileMenuSubtitle}</p>
               </div>
+
+              <p className="mt-1 text-sm leading-6 text-[rgb(var(--text-rgb)/0.68)]">{t.mobileMenuSubtitle}</p>
             </div>
 
             <button type="button" className="grid size-10 shrink-0 place-items-center rounded-2xl border border-[rgb(var(--text-rgb)/0.09)] bg-[rgb(var(--text-rgb)/0.055)] text-[var(--text)] transition hover:border-[rgb(var(--accent-rgb)/0.34)] hover:bg-[rgb(var(--accent-rgb)/0.1)] focus-visible:outline-none" aria-label={t.close} onClick={closeMenu}>
               <X aria-hidden="true" size={19} />
             </button>
           </div>
-
           <div className="relative mt-8 grid gap-3">
             {navItems.map((item, index) => {
               const isActive = activeSection === item.id;
@@ -230,7 +229,6 @@ export default function Navbar({ lang, setLang, isReady = true }) {
               );
             })}
           </div>
-
           <div className="relative mt-6">
             <ResumeDownloadButton lang={lang} label={t.resume} variant="mobile" onDownloadEnd={closeMenu} />
           </div>

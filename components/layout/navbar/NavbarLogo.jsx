@@ -1,5 +1,7 @@
+"use client";
+
 import CodeMarkLogo from "./CodeMarkLogo";
 
-export default function NavbarLogo() {
-  return <CodeMarkLogo variant="nav" title="Amir Rezazade code mark" />;
+export default function NavbarLogo(props) {
+  return <CodeMarkLogo variant="nav" {...props} />;
 }

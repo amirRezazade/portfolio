@@ -27,14 +27,10 @@ export default function Footer({ lang }) {
       <div className={cn("mx-auto flex w-full items-center justify-between gap-4 rounded-[28px] border border-[rgb(var(--accent-rgb)/0.12)] bg-[rgb(var(--bg-rgb)/0.24)] px-5 py-4 text-sm text-[rgb(var(--muted-rgb)/0.86)] shadow-[inset_0_1px_0_rgb(var(--text-rgb)/0.035)] backdrop-blur-[3px] max-md:flex-col max-md:items-stretch xs:rounded-3xl xs:px-4", isRtl ? "text-right" : "text-left")}>
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 max-md:justify-center">
           <span className="font-black text-[rgb(var(--text-rgb)/0.88)]">{t.copyright}</span>
+          <Heart aria-hidden="true" size={14} className="text-[var(--accent)]" />
         </div>
 
         <div className="flex flex-wrap items-center justify-end gap-3 max-md:justify-center">
-          <span className="inline-flex items-center gap-1.5 font-bold">
-            <Heart aria-hidden="true" size={14} className="text-[var(--accent)]" />
-            {t.note}
-          </span>
-
           <nav className="inline-flex items-center gap-2" aria-label={t.aria}>
             {socialLinks.map((link) => (
               <a
