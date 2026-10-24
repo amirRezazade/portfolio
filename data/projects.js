@@ -41,7 +41,7 @@ export const projectsContent = {
         tech: ["JavaScript", "React", "React Router", "Tailwind CSS", "api", "Swiper"],
         links: {
           code: "https://github.com/amirRezazade/Digi-Plus",
-          demo: "https://digi-plus.netlify.app/",
+          demo: "https://digi-plus-store.vercel.app/",
         },
         featured: true,
       },
@@ -56,7 +56,7 @@ export const projectsContent = {
         tech: ["JavaScript", "React", "Next.js", "Tailwind CSS", "swiper", "API"],
         links: {
           code: "https://github.com/amirRezazade/digi-media-NextJs",
-          demo: "https://digi-media-next.netlify.app/",
+          demo: "https://digi-media-next.vercel.app/",
         },
         featured: true,
       },
@@ -118,7 +118,7 @@ export const projectsContent = {
         tech: ["JavaScript", "React", "React Router", "Tailwind CSS", "api", "Swiper"],
         links: {
           code: "https://github.com/amirRezazade/Digi-Plus",
-          demo: "https://digi-plus.netlify.app/",
+          demo: "https://digi-plus-store.vercel.app/",
         },
         featured: true,
       },
@@ -133,7 +133,7 @@ export const projectsContent = {
         tech: ["JavaScript", "React", "Next.js", "Tailwind CSS", "swiper", "API"],
         links: {
           code: "https://github.com/amirRezazade/digi-media-NextJs",
-          demo: "https://digi-media-next.netlify.app/",
+          demo: "https://digi-media-next.vercel.app/",
         },
         featured: true,
       },
