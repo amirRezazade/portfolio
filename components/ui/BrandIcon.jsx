@@ -1,7 +1,7 @@
 "use client";
 
 import { Code2, Gauge, Layers3 } from "lucide-react";
-import { SiBootstrap, SiCss, SiGit, SiGithub, SiGmail, SiHtml5, SiJavascript, SiNetlify, SiNextdotjs, SiNpm, SiReact, SiTailwindcss, SiTelegram, SiVercel } from "react-icons/si";
+import { SiBootstrap, SiCss, SiGit, SiGithub, SiGmail, SiHtml5, SiJavascript, SiTypescript, SiNetlify, SiNextdotjs, SiNpm, SiReact, SiTailwindcss, SiTelegram, SiVercel } from "react-icons/si";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function ApiIcon({ className, style, ...props }) {
@@ -80,6 +80,7 @@ const brandIcons = {
   html: { Icon: SiHtml5, color: "var(--brand-html)" },
   css: { Icon: SiCss, color: "var(--brand-css)" },
   javascript: { Icon: SiJavascript, color: "var(--brand-javascript)" },
+  typescript: { Icon: SiTypescript, color: "var(--brand-typescript)" },
   react: { Icon: SiReact, color: "var(--brand-react)" },
   "next.js": { Icon: SiNextdotjs, color: "var(--brand-next)" },
   nextjs: { Icon: SiNextdotjs, color: "var(--brand-next)" },

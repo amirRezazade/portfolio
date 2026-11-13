@@ -13,7 +13,7 @@ export const skillsContent = {
       {
         title: "Core",
         subtitle: "پایه‌هایی که هر رابط وب روی آن ساخته می‌شود",
-        items: ["HTML", "CSS", "JavaScript"],
+        items: ["HTML", "CSS", "JavaScript", "TypeScript"],
       },
       {
         title: "Frameworks",
@@ -33,7 +33,7 @@ export const skillsContent = {
       {
         title: "Tools",
         subtitle: "ابزارهای توسعه، کنترل نسخه و انتشار پروژه",
-        items: ["Git", "npm", "Vercel", "Netlify"],
+        items: ["Git", "npm"],
       },
     ],
   },
@@ -51,7 +51,7 @@ export const skillsContent = {
       {
         title: "Core",
         subtitle: "The foundations every web interface is built on",
-        items: ["HTML", "CSS", "JavaScript"],
+        items: ["HTML", "CSS", "JavaScript", "TypeScript"],
       },
       {
         title: "Frameworks",
@@ -71,7 +71,7 @@ export const skillsContent = {
       {
         title: "Tools",
         subtitle: "Development, version control, and project deployment",
-        items: ["Git", "npm", "Vercel", "Netlify"],
+        items: ["Git", "npm"],
       },
     ],
   },
